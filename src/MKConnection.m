@@ -1047,6 +1047,9 @@ out:
             }
             NSUInteger session = [pds getUnsignedInt];
             NSUInteger seq = [pds getUnsignedInt];
+            if (seq == 0) {
+                return;
+            }
             NSMutableData *voicePacketData = [[NSMutableData alloc] initWithCapacity:[pds left]+1];
             [voicePacketData setLength:[pds left]+1];
             unsigned char *bytes = [voicePacketData mutableBytes];
