@@ -745,7 +745,7 @@
                 [_delegate serverModel:self userKicked:user byUser:actor forReason:reason];
             }
         } else {
-            [_delegate serverModel:self userDisconnected:user];
+            [_delegate serverModel:self userDisconnected:user forReason: reason];
         }
 
         [_delegate serverModel:self userLeft:user];

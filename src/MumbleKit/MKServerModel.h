@@ -278,7 +278,7 @@
 ///
 /// @param model   The MKServerModel in which this event originated.
 /// @param user    The user that disconnected.
-- (void) serverModel:(MKServerModel *)model userDisconnected:(MKUser *)user;
+- (void) serverModel:(MKServerModel *)model userDisconnected:(MKUser *)user forReason:(NSString *)reason;
 
 /// Called when a user leaves the server.
 ///
