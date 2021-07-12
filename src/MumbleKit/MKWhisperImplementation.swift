@@ -39,6 +39,36 @@ import Foundation
     }
 }
 
+@objc open class WhisperTargetChannel : NSObject, WhisperTarget {
+    private let channel: MKChannel
+    private let includeLinked: Bool
+    private let includeSubchannels: Bool
+    private let groupRestriction: String?
+
+    @objc public init(_ channel: MKChannel!, includeLinked: Bool, includeSubchannels: Bool, groupRestriction: String?) {
+        self.channel = channel
+        self.includeLinked = includeLinked
+        self.includeSubchannels = includeSubchannels
+        self.groupRestriction = groupRestriction
+    }
+
+    @objc open func createTarget() -> MPVoiceTarget_Target? {
+        guard let builder = MPVoiceTarget_Target.builder() else {
+            return nil
+        }
+        builder.setLinks(includeLinked)
+        builder.setChildren(includeSubchannels)
+        if let restriction = groupRestriction {
+            builder.setGroup(restriction)
+        }
+        builder.setChannelId(UInt32(channel.channelId()))
+        return builder.build()
+    }
+
+    @objc open func getName() -> String {
+        return channel.channelName() ?? ""
+    }
+}
 @objc class WhisperTargetList: NSObject {
     public let TARGET_MIN: Int = 1
     public let TARGET_MAX: Int = 30

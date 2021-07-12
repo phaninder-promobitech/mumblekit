@@ -606,6 +606,8 @@
 
 - (BOOL) registerUserForWhispering:(MKUser *)user;
 
+- (BOOL) registerChannelForShouting:(MKChannel *)channel;
+
 - (void) unregisterFromWhispering;
 
 @end

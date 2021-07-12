@@ -1105,6 +1105,22 @@
     }
 }
 
+- (BOOL) registerChannelForShouting:(MKChannel *)channel {
+    WhisperTargetChannel * target = [[WhisperTargetChannel alloc] init: channel
+                                                         includeLinked: true
+                                                    includeSubchannels:true
+                                                      groupRestriction: nil];
+    NSInteger idValue = [self registerWhisperTarget: target];
+    if (idValue > 0) {
+        _voiceTargetId = idValue;
+        [self setVoiceTargetID: idValue];
+        return true;
+    } else {
+        return false;
+    }
+    return false;
+}
+
 - (void) unregisterFromWhispering {
     if (_voiceTargetId > 0) {
         [_whisperTargetList free:_voiceTargetId];
@@ -1112,7 +1128,7 @@
     }
 }
 
-- (NSInteger) registerWhisperTarget:(WhisperTargetUsers *)target {
+- (NSInteger) registerWhisperTarget:(id<WhisperTarget>)target {
     NSInteger idValue = [_whisperTargetList append: target];
     if (idValue < 0) {
         return -1;
