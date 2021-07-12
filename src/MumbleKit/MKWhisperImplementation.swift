@@ -84,7 +84,7 @@ import Foundation
             return
 //            throw IllegalArgumentException()
         }
-//        mTakenIds = mTakenIds & !1 << slot
+        mTakenIds &= ~(1 << slot);
     }
 
     @objc public func spaceRemaining() -> Int32 {

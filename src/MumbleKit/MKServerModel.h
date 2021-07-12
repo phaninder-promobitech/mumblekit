@@ -606,4 +606,6 @@
 
 - (BOOL) registerUserForWhispering:(MKUser *)user;
 
+- (void) unregisterFromWhispering;
+
 @end

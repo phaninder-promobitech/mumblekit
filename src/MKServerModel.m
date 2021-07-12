@@ -1098,10 +1098,17 @@
     NSInteger idValue = [self registerWhisperTarget: target];
     if (idValue > 0) {
         _voiceTargetId = idValue;
-        [[MKAudio sharedAudio] setTargetID:idValue];
+        [self setVoiceTargetID: idValue];
         return true;
     } else {
         return false;
+    }
+}
+
+- (void) unregisterFromWhispering {
+    if (_voiceTargetId > 0) {
+        [_whisperTargetList free:_voiceTargetId];
+        [self removeTargetID];
     }
 }
 
@@ -1127,6 +1134,11 @@
         _voiceTargetId = targetID;
         [[MKAudio sharedAudio] setTargetID:targetID];
     }
+}
+
+- (void) removeTargetID {
+    _voiceTargetId = 0;
+    [[MKAudio sharedAudio] clearTargetID];
 }
 
 @end
