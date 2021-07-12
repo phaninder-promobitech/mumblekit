@@ -225,4 +225,8 @@ typedef struct _MKAudioSettings {
 /// info will be mostly empty, but still valid.
 - (NSDictionary *) copyAudioOutputMixerDebugInfo;
 
+- (void) setTargetID:(int)targetID;
+
+- (void) clearTargetID;
+
 @end

@@ -76,6 +76,7 @@
     NSMutableData          *_opusBuffer;
     
     MKConnection           *_connection;
+    int                    mTargetId;
 }
 @end
 
@@ -102,7 +103,7 @@
     _vadGateEnabled = _settings.enableVadGate;
     _vadGateTimeSeconds = _settings.vadGateTimeSeconds;
     _vadOpenLastTime = [[NSDate date] timeIntervalSince1970];
-
+    mTargetId = 0;
     // Fall back to CELT if Opus is not enabled.
     if (![[MKVersion sharedVersion] isOpusEnabled] && _settings.codec == MKCodecFormatOpus) {
         _settings.codec = MKCodecFormatCELT;
@@ -566,7 +567,7 @@
      * flags = 0x1f;
      */
     flags |= (udpMessageType << 5);
-
+    flags |= mTargetId & 0x1F;
     unsigned char data[1024];
     data[0] = (unsigned char )(flags & 0xff);
     
@@ -640,5 +641,14 @@
 - (void) setMuted:(BOOL)muted {
     _muted = muted;
 }
+
+- (void) setTargetID:(int)targetID {
+    mTargetId = targetID;
+}
+
+- (void) clearTargetID {
+    mTargetId = 0;
+}
+
 
 @end

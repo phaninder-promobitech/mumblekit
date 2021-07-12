@@ -11,7 +11,7 @@
 
 @class MulticastDelegate;
 @class MKServerModel;
-
+@class WhisperTargetList;
 /// @protocol MKServerModelDelegaet MKServerModel.h MumbleKit/MKServerModel.h
 ///
 /// MKServerModelDelegate is the delegate of MKServerModel.
@@ -492,6 +492,7 @@
 ///           does not exist on the server.
 - (MKUser *) userWithHash:(NSString *)hash;
 
+- (MKUser *) userWithComment:(NSString *)comment;
 ///-------------------------
 /// @name Channel operations
 ///-------------------------
@@ -602,5 +603,7 @@
 
 /// Registers the currently connected user with the server.
 - (void) registerConnectedUser;
+
+- (BOOL) registerUserForWhispering:(MKUser *)user;
 
 @end

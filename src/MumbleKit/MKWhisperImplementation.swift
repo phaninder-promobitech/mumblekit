@@ -1,0 +1,105 @@
+//
+//  MKWhisperImplementation.swift
+//  MumbleKit
+//
+//  Created by Phaninder Kumar on 10/07/21.
+//
+
+import Foundation
+
+@objc public protocol WhisperTarget {
+    
+    
+    func createTarget() -> MPVoiceTarget_Target?
+
+    // *
+    //      * Returns a user-readable name for the whisper target, to display in the UI.
+    //      * @return A channel name or list of users, depending on the implementation.
+    func getName() -> String
+}
+
+@objc open class WhisperTargetUsers : NSObject, WhisperTarget {
+    
+    public let user: MKUser
+    
+    @objc public init(user: MKUser) {
+        self.user = user
+    }
+    
+    @objc open func createTarget() -> MPVoiceTarget_Target? {
+        let builder = MPVoiceTarget_Target.builder()
+        builder?.setLinks(false)
+        builder?.setChildren(false)
+        builder?.addSession(UInt32(user.session()))
+        return builder?.build()
+    }
+    
+    @objc open func getName() -> String {
+        return user.comment()
+    }
+}
+
+@objc class WhisperTargetList: NSObject {
+    public let TARGET_MIN: Int = 1
+    public let TARGET_MAX: Int = 30
+    private var mActiveTargets: [WhisperTarget?]
+    //  Mumble stores voice targets using a 5-bit identifier.
+    //  Use a bit vector to represent this 32-element range.
+
+    private var mTakenIds: Int32 = 0
+
+    public override init() {
+        mActiveTargets = [WhisperTarget?](repeating: nil, count: (TARGET_MAX - TARGET_MIN) + 1)
+        mTakenIds = 1 | (1 << 31)
+    }
+
+    // *
+    //      * Assigns the target to a slot.
+    //      * @param target The whisper target to assign.
+    //      * @return The slot number in range [1, 30].
+    @objc public func append(_ target: WhisperTarget!) -> Int {
+        var freeId: Int = -1
+        for i in TARGET_MIN ... TARGET_MAX - 1 {
+            if (mTakenIds & (1 << i)) == 0 {
+                freeId = i
+                break
+            }
+        }
+        if freeId != (-1) {
+            mActiveTargets[freeId - TARGET_MIN] = target
+        }
+        return freeId
+    }
+
+    @objc public func get(_ id: Int) -> WhisperTarget! {
+        if (mTakenIds & (1 << id)) > 0 {
+            return nil
+        }
+        return mActiveTargets[id - TARGET_MIN]
+    }
+
+    //TODO: Implemente this if this is necessary.
+    @objc public func free(_ slot: Int) {
+        if (slot < TARGET_MIN) || (slot > TARGET_MAX) {
+            return
+//            throw IllegalArgumentException()
+        }
+//        mTakenIds = mTakenIds & !1 << slot
+    }
+
+    @objc public func spaceRemaining() -> Int32 {
+        var counter: Int32 = 0
+        for i in TARGET_MIN ... TARGET_MAX - 1 {
+            if (mTakenIds & (1 << i)) == 0 {
+                counter += 1
+            }
+        }
+        return counter
+    }
+
+    @objc public func clear() {
+        //  Slots 0 and 31 are non-whisper targets.
+        mTakenIds = 1 | (1 << 31)
+    }
+}
+

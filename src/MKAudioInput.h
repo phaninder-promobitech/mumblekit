@@ -29,5 +29,6 @@
 - (void) setSelfMuted:(BOOL)selfMuted;
 - (void) setSuppressed:(BOOL)suppressed;
 - (void) setMuted:(BOOL)muted;
-
+- (void) setTargetID:(int)targetID;
+- (void) clearTargetID;
 @end

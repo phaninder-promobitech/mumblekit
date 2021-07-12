@@ -19,7 +19,7 @@
 #import <MumbleKit/MKTextMessage.h>
 
 #import "MulticastDelegate.h"
-
+#import "MumbleKit-Swift.h"
 #import <MumbleKit/MKChannelACL.h>
 #import <MumbleKit/MKChannelGroup.h>
 
@@ -36,7 +36,9 @@
     MKUser                    *_connectedUser;
     NSMutableDictionary       *_userMap;
     NSMutableDictionary       *_channelMap;
-    id<MKServerModelDelegate> _delegate;    
+    id<MKServerModelDelegate> _delegate;
+    WhisperTargetList         *_whisperTargetList;
+    NSInteger                 _voiceTargetId;
 }
 
 // Notifications
@@ -81,7 +83,7 @@
 
         _userMap = [[NSMutableDictionary alloc] init];
         _channelMap = [[NSMutableDictionary alloc] init];
-
+        _whisperTargetList = [[WhisperTargetList alloc] init];
         _rootChannel = [[MKChannel alloc] init];
         [_rootChannel setChannelId:0];
         [_rootChannel setChannelName:@"Root"];
@@ -905,6 +907,14 @@
     return [_userMap objectForKey:[NSNumber numberWithUnsignedInteger:session]];
 }
 
+- (MKUser *) userWithComment:(NSString *)comment {
+    NSArray *usersArray = [_userMap allValues];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"comment==%@",comment];
+    NSArray *results = [usersArray filteredArrayUsingPredicate:predicate];
+    return [results firstObject];
+}
+
+
 - (MKUser *) userWithHash:(NSString *)hash {
     return nil;
 }
@@ -1078,6 +1088,45 @@
     
     NSData *data = [[mpus build] data];
     [_connection sendMessageWithType:UserStateMessage data:data];
+}
+
+#pragma mark -
+#pragma mark Whisper
+
+- (BOOL) registerUserForWhispering:(MKUser *)user {
+    WhisperTargetUsers *target = [[WhisperTargetUsers alloc] initWithUser: user];
+    NSInteger idValue = [self registerWhisperTarget: target];
+    if (idValue > 0) {
+        _voiceTargetId = idValue;
+        [[MKAudio sharedAudio] setTargetID:idValue];
+        return true;
+    } else {
+        return false;
+    }
+}
+
+- (NSInteger) registerWhisperTarget:(WhisperTargetUsers *)target {
+    NSInteger idValue = [_whisperTargetList append: target];
+    if (idValue < 0) {
+        return -1;
+    }
+    MPVoiceTarget_Target *voiceTarget = [target createTarget];
+    MPVoiceTarget_Builder *vtb = [MPVoiceTarget builder];
+    [vtb setId:idValue];
+    [vtb addTargets:voiceTarget];
+    NSData *data;
+    data = [[vtb build] data];
+    [_connection sendMessageWithType:VoiceTargetMessage data: data];
+    return idValue;
+}
+
+- (void) setVoiceTargetID:(int)targetID {
+    if ((targetID & ~0x1F) > 0) {
+        NSLog(@"Hey its an exception");
+    } else {
+        _voiceTargetId = targetID;
+        [[MKAudio sharedAudio] setTargetID:targetID];
+    }
 }
 
 @end
