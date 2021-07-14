@@ -20,22 +20,24 @@ import Foundation
 
 @objc open class WhisperTargetUsers : NSObject, WhisperTarget {
     
-    public let user: MKUser
+    public let users: [MKUser]
     
-    @objc public init(user: MKUser) {
-        self.user = user
+    @objc public init(users: [MKUser]) {
+        self.users = users
     }
     
     @objc open func createTarget() -> MPVoiceTarget_Target? {
         let builder = MPVoiceTarget_Target.builder()
         builder?.setLinks(false)
         builder?.setChildren(false)
-        builder?.addSession(UInt32(user.session()))
+        for user in users {
+            builder?.addSession(UInt32(user.session()))
+        }
         return builder?.build()
     }
     
     @objc open func getName() -> String {
-        return user.comment()
+        return users.first?.comment() ?? ""
     }
 }
 
@@ -133,3 +135,29 @@ import Foundation
     }
 }
 
+@objc public extension MKServerModel {
+    
+    @objc func fetchUsersWithIds(_ userIds: [String]) -> [MKUser] {
+        guard let userMap = self.userMap() as? [Int: MKUser] else { return [] }
+        let filteredUsers = userMap.values.filter { (user) -> Bool in
+            userIds.contains(user.comment() ?? "")
+        }
+        return filteredUsers
+    }
+    
+    @objc func sendMessageToUsers(_ users: [MKUser], andChannelId channelId: String?, talkType type: Int) {
+        guard let connectedUser = self.connectedUser(),
+              let userId = connectedUser.comment() else { return }
+        var dict = ["user_id": userId,
+                    "sent_at": Int(Date().timeIntervalSince1970 * 1000),
+                    "type": type,
+                    "session_id": connectedUser.session()] as [String : Any]
+        if let channelId = channelId {
+            dict["channel_id"] = channelId
+        }
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: dict),
+              let jsonString = String(data: jsonData, encoding: .utf8) else { return }
+        self.send(MKTextMessage(plainText: jsonString), toTreeChannels: nil, andChannels: nil, andUsers: users)
+    }
+    
+}

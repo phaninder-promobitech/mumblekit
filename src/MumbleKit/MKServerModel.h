@@ -493,6 +493,9 @@
 - (MKUser *) userWithHash:(NSString *)hash;
 
 - (MKUser *) userWithComment:(NSString *)comment;
+
+- (NSArray<MKUser *> *) usersWithCommentIds:(NSArray<NSString *> *)comments;
+
 ///-------------------------
 /// @name Channel operations
 ///-------------------------
@@ -604,10 +607,14 @@
 /// Registers the currently connected user with the server.
 - (void) registerConnectedUser;
 
-- (BOOL) registerUserForWhispering:(MKUser *)user;
+- (void) sendMessageToUsers:(NSArray<MKUser *> *)users onChannel: (NSString *)channelID talkType:(NSInteger)type;
+
+- (BOOL) registerUsersForWhispering:(NSArray<MKUser *> *)users onChannel:(NSString *)channelID;
 
 - (BOOL) registerChannelForShouting:(MKChannel *)channel;
 
 - (void) unregisterFromWhispering;
+
+- (NSDictionary *)userMap;
 
 @end

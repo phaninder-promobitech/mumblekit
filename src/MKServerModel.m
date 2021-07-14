@@ -914,6 +914,13 @@
     return [results firstObject];
 }
 
+- (NSArray<MKUser *> *) usersWithCommentIds:(NSArray<NSString *> *)comments {
+    return [self fetchUsersWithIds: comments];
+}
+
+- (NSDictionary *)userMap {
+    return _userMap;
+}
 
 - (MKUser *) userWithHash:(NSString *)hash {
     return nil;
@@ -1093,8 +1100,12 @@
 #pragma mark -
 #pragma mark Whisper
 
-- (BOOL) registerUserForWhispering:(MKUser *)user {
-    WhisperTargetUsers *target = [[WhisperTargetUsers alloc] initWithUser: user];
+- (void) sendMessageToUsers:(NSArray<MKUser *> *)users onChannel: (NSString *)channelID talkType:(NSInteger)type {
+    [self sendMessageToUsers: users andChannelId: channelID talkType: type];
+}
+
+- (BOOL) registerUsersForWhispering:(NSArray<MKUser *> *)users onChannel:(NSString *)channelID {
+    WhisperTargetUsers *target = [[WhisperTargetUsers alloc] initWithUsers:users];
     NSInteger idValue = [self registerWhisperTarget: target];
     if (idValue > 0) {
         _voiceTargetId = idValue;
