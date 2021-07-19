@@ -145,15 +145,19 @@ import Foundation
         return filteredUsers
     }
     
-    @objc func sendMessageToUsers(_ users: [MKUser], andChannelId channelId: String?, talkType type: Int) {
+    @objc func sendMessageToUsers(_ users: [MKUser], fromUserName userName: String, andChannelId channelId: String?, withChannelName channelName: String?, talkType type: Int) {
         guard let connectedUser = self.connectedUser(),
               let userId = connectedUser.comment() else { return }
         var dict = ["user_id": userId,
                     "sent_at": Int(Date().timeIntervalSince1970 * 1000),
                     "type": type,
-                    "session_id": connectedUser.session()] as [String : Any]
+                    "session_id": connectedUser.session(),
+                    "user_name": userName] as [String : Any]
         if let channelId = channelId {
             dict["channel_id"] = channelId
+        }
+        if let channelName = channelName {
+            dict["channel_name"] = channelName
         }
         guard let jsonData = try? JSONSerialization.data(withJSONObject: dict),
               let jsonString = String(data: jsonData, encoding: .utf8) else { return }

@@ -607,7 +607,7 @@
 /// Registers the currently connected user with the server.
 - (void) registerConnectedUser;
 
-- (void) sendMessageToUsers:(NSArray<MKUser *> *)users onChannel: (NSString *)channelID talkType:(NSInteger)type;
+- (void) sendMessageToUsers:(NSArray<MKUser *> *)users fromUserName:(NSString *)name onChannel: (NSString *)channelID withChannelName:(NSString *)channelName talkType:(NSInteger)type;
 
 - (BOOL) registerUsersForWhispering:(NSArray<MKUser *> *)users onChannel:(NSString *)channelID;
 

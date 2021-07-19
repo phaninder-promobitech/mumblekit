@@ -1100,8 +1100,8 @@
 #pragma mark -
 #pragma mark Whisper
 
-- (void) sendMessageToUsers:(NSArray<MKUser *> *)users onChannel: (NSString *)channelID talkType:(NSInteger)type {
-    [self sendMessageToUsers: users andChannelId: channelID talkType: type];
+- (void) sendMessageToUsers:(NSArray<MKUser *> *)users fromUserName:(NSString *)name onChannel: (NSString *)channelID withChannelName:(NSString *)channelName talkType:(NSInteger)type {
+    [self sendMessageToUsers:users fromUserName:name andChannelId:channelID withChannelName:channelName talkType:type];
 }
 
 - (BOOL) registerUsersForWhispering:(NSArray<MKUser *> *)users onChannel:(NSString *)channelID {
