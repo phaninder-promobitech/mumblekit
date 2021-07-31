@@ -599,6 +599,7 @@
 ///-----------------------------
 
 - (void) setSelfMuted:(BOOL)selfMuted andSelfDeafened:(BOOL)selfDeafened;
+- (void) setSelfDeafened:(BOOL)selfDeafened;
 
 ///------------------------
 /// @name Self Registration
@@ -616,5 +617,11 @@
 - (void) unregisterFromWhispering;
 
 - (NSDictionary *)userMap;
+
+- (MKUser *) fetchPrioritySpeaker;
+
+- (void) setPrioritySpeaker:(MKUser *)user;
+
+- (void) removePrioritySpeaker;
 
 @end

@@ -1085,6 +1085,10 @@
     [_connection sendMessageWithType:UserStateMessage data:data];
 }
 
+- (void) setSelfDeafened:(BOOL)selfDeafened{
+    [[AudioPriorityManager shared] setAudioPauseState: selfDeafened];
+}
+
 #pragma mark -
 #pragma mark Self Registration
 
@@ -1167,5 +1171,18 @@
     _voiceTargetId = 0;
     [[MKAudio sharedAudio] clearTargetID];
 }
+
+- (MKUser *) fetchPrioritySpeaker {
+    return [[AudioPriorityManager shared] fetchPrioritySpeaker];
+}
+
+- (void) setPrioritySpeaker:(MKUser *)user {
+    [[AudioPriorityManager shared] setPrioritySpeaker:user];
+}
+
+- (void) removePrioritySpeaker {
+    [[AudioPriorityManager shared] clearPrioritySpeaker];
+}
+
 
 @end

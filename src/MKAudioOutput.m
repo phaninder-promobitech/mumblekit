@@ -8,6 +8,7 @@
 #import "MKAudioOutputUser.h"
 #import "MKAudioOutputSidetone.h"
 #import "MKAudioDevice.h"
+#import "MumbleKit-Swift.h"
 
 #import <AudioUnit/AudioUnit.h>
 #import <AudioUnit/AUComponent.h>
@@ -276,8 +277,11 @@
         [_outputs setObject:outputUser forKey:[NSNumber numberWithUnsignedInteger:session]];
         [_outputLock unlock];
     }
-
-    [outputUser addFrame:data forSequence:seq];
+    BOOL isAudioAllowed = [[AudioPriorityManager shared] isAudioAllowedForUser: session];
+    
+    if (isAudioAllowed) {
+        [outputUser addFrame:data forSequence:seq];
+    }
     [outputUser release];
 }
 

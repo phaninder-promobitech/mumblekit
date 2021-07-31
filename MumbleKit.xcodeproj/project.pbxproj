@@ -134,6 +134,8 @@
 		28CE05CB1687A454006E2739 /* MKVoiceProcessingDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 284C1ABB161CABCC00B87340 /* MKVoiceProcessingDevice.m */; };
 		28F2FAD513E37BA000034BF2 /* MKAudioOutputUserPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F2FAD413E37BA000034BF2 /* MKAudioOutputUserPrivate.h */; };
 		28F2FAD613E37BA000034BF2 /* MKAudioOutputUserPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F2FAD413E37BA000034BF2 /* MKAudioOutputUserPrivate.h */; };
+		3775A2DA26B54FB70002A298 /* MKPrioritySpeakerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775A2D926B54FB70002A298 /* MKPrioritySpeakerImplementation.swift */; };
+		3775A2DB26B54FC00002A298 /* MKPrioritySpeakerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775A2D926B54FB70002A298 /* MKPrioritySpeakerImplementation.swift */; };
 		378755FF2698D4DD009BE1C9 /* MKWhisperImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378755FE2698D4DD009BE1C9 /* MKWhisperImplementation.swift */; };
 		378756002698D4DD009BE1C9 /* MKWhisperImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378755FE2698D4DD009BE1C9 /* MKWhisperImplementation.swift */; };
 		37974C83269C0039004A4AC0 /* MKWhisper.h in Headers */ = {isa = PBXBuildFile; fileRef = 37974C82269C0039004A4AC0 /* MKWhisper.h */; };
@@ -428,6 +430,7 @@
 		28CC3711132EDC7300241269 /* libSpeex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSpeex.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CC3712132EDC7300241269 /* libSpeexDSP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSpeexDSP.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F2FAD413E37BA000034BF2 /* MKAudioOutputUserPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKAudioOutputUserPrivate.h; path = src/MKAudioOutputUserPrivate.h; sourceTree = SOURCE_ROOT; };
+		3775A2D926B54FB70002A298 /* MKPrioritySpeakerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKPrioritySpeakerImplementation.swift; path = src/MumbleKit/MKPrioritySpeakerImplementation.swift; sourceTree = SOURCE_ROOT; };
 		378755FD2698D4DC009BE1C9 /* MumbleKit (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MumbleKit (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		378755FE2698D4DD009BE1C9 /* MKWhisperImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKWhisperImplementation.swift; path = src/MumbleKit/MKWhisperImplementation.swift; sourceTree = SOURCE_ROOT; };
 		37974C82269C0039004A4AC0 /* MKWhisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKWhisper.h; path = src/MumbleKit/MKWhisper.h; sourceTree = SOURCE_ROOT; };
@@ -576,6 +579,7 @@
 				2845A7D8132D9C520034D631 /* MKVersion.h */,
 				2879526714C1BDD800567430 /* MKTextMessage.h */,
 				378755FE2698D4DD009BE1C9 /* MKWhisperImplementation.swift */,
+				3775A2D926B54FB70002A298 /* MKPrioritySpeakerImplementation.swift */,
 				378755FD2698D4DC009BE1C9 /* MumbleKit (iOS)-Bridging-Header.h */,
 			);
 			name = "Public Headers";
@@ -1023,6 +1027,7 @@
 				2845A7B7132D9C220034D631 /* MKVersion.m in Sources */,
 				378756002698D4DD009BE1C9 /* MKWhisperImplementation.swift in Sources */,
 				2845A7B9132D9C220034D631 /* MulticastDelegate.m in Sources */,
+				3775A2DB26B54FC00002A298 /* MKPrioritySpeakerImplementation.swift in Sources */,
 				28CC36FB132ED92500241269 /* Mumble.pb.m in Sources */,
 				28CC36FD132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */,
 				282F6B0B13624187008F555B /* MKServerPinger.m in Sources */,
@@ -1059,6 +1064,7 @@
 				2845A7B6132D9C220034D631 /* MKVersion.m in Sources */,
 				378755FF2698D4DD009BE1C9 /* MKWhisperImplementation.swift in Sources */,
 				2845A7B8132D9C220034D631 /* MulticastDelegate.m in Sources */,
+				3775A2DA26B54FB70002A298 /* MKPrioritySpeakerImplementation.swift in Sources */,
 				28CC36FA132ED92500241269 /* Mumble.pb.m in Sources */,
 				28CC36FC132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */,
 				282F6B0A13624187008F555B /* MKServerPinger.m in Sources */,
