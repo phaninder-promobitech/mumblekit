@@ -151,7 +151,7 @@ import Foundation
         var dict = ["user_id": userId,
                     "sent_at": Int(Date().timeIntervalSince1970 * 1000),
                     "type": type,
-                    "session_id": connectedUser.session(),
+                    "ptt_session_id": connectedUser.session(),
                     "user_name": userName] as [String : Any]
         if let channelId = channelId {
             dict["channel_id"] = channelId
