@@ -11,7 +11,7 @@
 
 @class MulticastDelegate;
 @class MKServerModel;
-
+@class WhisperTargetList;
 /// @protocol MKServerModelDelegaet MKServerModel.h MumbleKit/MKServerModel.h
 ///
 /// MKServerModelDelegate is the delegate of MKServerModel.
@@ -492,6 +492,10 @@
 ///           does not exist on the server.
 - (MKUser *) userWithHash:(NSString *)hash;
 
+- (MKUser *) userWithComment:(NSString *)comment;
+
+- (NSArray<MKUser *> *) usersWithCommentIds:(NSArray<NSString *> *)comments;
+
 ///-------------------------
 /// @name Channel operations
 ///-------------------------
@@ -595,6 +599,7 @@
 ///-----------------------------
 
 - (void) setSelfMuted:(BOOL)selfMuted andSelfDeafened:(BOOL)selfDeafened;
+- (void) setSelfDeafened:(BOOL)selfDeafened;
 
 ///------------------------
 /// @name Self Registration
@@ -602,5 +607,21 @@
 
 /// Registers the currently connected user with the server.
 - (void) registerConnectedUser;
+
+- (void) sendMessageToUsers:(NSArray<MKUser *> *)users fromUserName:(NSString *)name onChannel: (NSString *)channelID withChannelName:(NSString *)channelName talkType:(NSInteger)type;
+
+- (BOOL) registerUsersForWhispering:(NSArray<MKUser *> *)users onChannel:(NSString *)channelID;
+
+- (BOOL) registerChannelForShouting:(MKChannel *)channel;
+
+- (void) unregisterFromWhispering;
+
+- (NSDictionary *)userMap;
+
+- (MKUser *) fetchPrioritySpeaker;
+
+- (void) setPrioritySpeaker:(MKUser *)user;
+
+- (void) removePrioritySpeaker;
 
 @end

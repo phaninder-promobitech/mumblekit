@@ -464,6 +464,19 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
     }
 }
 
+
+- (void) setTargetID:(int)targetID {
+    @synchronized(self) {
+        [_audioInput setTargetID:targetID];
+    }
+}
+
+- (void) clearTargetID {
+    @synchronized(self) {
+        [_audioInput clearTargetID];
+    }
+}
+
 - (BOOL) echoCancellationAvailable {
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
     NSDictionary *dict = nil;
