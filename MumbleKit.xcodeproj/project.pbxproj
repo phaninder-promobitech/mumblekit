@@ -119,8 +119,6 @@
 		28CC36F7132ED8C300241269 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CC36F6132ED8C300241269 /* CoreAudio.framework */; };
 		28CC36FA132ED92500241269 /* Mumble.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC36F8132ED92500241269 /* Mumble.pb.m */; };
 		28CC36FB132ED92500241269 /* Mumble.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC36F8132ED92500241269 /* Mumble.pb.m */; };
-		28CC36FC132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC36F9132ED92500241269 /* ObjectivecDescriptor.pb.m */; };
-		28CC36FD132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CC36F9132ED92500241269 /* ObjectivecDescriptor.pb.m */; };
 		28CC3704132EDA5200241269 /* CELT-0.7.0.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2849235E132ED67E00B4EAAC /* CELT-0.7.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		28CC3705132EDA5200241269 /* OpenSSL.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2849235F132ED67E00B4EAAC /* OpenSSL.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		28CC3706132EDA5200241269 /* ProtocolBuffers.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28492360132ED67E00B4EAAC /* ProtocolBuffers.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -178,13 +176,6 @@
 			remoteGlobalIDString = 28F58C45132AF1070053C348;
 			remoteInfo = "OpenSSL (iOS)";
 		};
-		283363CD13EE070400A04F04 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2845A6A6132D99550034D631;
-			remoteInfo = "ProtocolBuffers (iOS)";
-		};
 		283363CF13EE070400A04F04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28492348132ED65700B4EAAC /* SpeexDSP.xcodeproj */;
@@ -212,20 +203,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 28656110132AE7A80011637C;
 			remoteInfo = "CELT-0.7 (Mac)";
-		};
-		28492329132ED61800B4EAAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2845A6A7132D99550034D631;
-			remoteInfo = "ProtocolBuffers (iOS)";
-		};
-		2849232B132ED61800B4EAAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2845A6B8132D99600034D631;
-			remoteInfo = "ProtocolBuffers (Mac)";
 		};
 		28492335132ED63800B4EAAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -276,13 +253,6 @@
 			remoteGlobalIDString = 28F58C56132AF1170053C348;
 			remoteInfo = "OpenSSL (Mac)";
 		};
-		28492356132ED66F00B4EAAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2845A6B7132D99600034D631;
-			remoteInfo = "ProtocolBuffers (Mac)";
-		};
 		28492358132ED66F00B4EAAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28492307132ED60700B4EAAC /* CELT-0.7.xcodeproj */;
@@ -324,6 +294,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 287D85A514E6D474002B5D79;
 			remoteInfo = "Opus (iOS)";
+		};
+		3793152B26CBE7C900E54809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ProtocolBuffers;
+		};
+		3793152D26CBE7C900E54809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C5B03F76125179F30087887C;
+			remoteInfo = UnitTests1;
+		};
+		3793152F26CBE7C900E54809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 097A223F1B8B10BB00D02243;
+			remoteInfo = ProtocolBuffers.framework;
+		};
+		3793153126CBE7C900E54809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F25B8131D41431E0023759A;
+			remoteInfo = UnitTests;
+		};
+		3793154A26CBFE0500E54809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = ProtocolBuffers;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -394,7 +399,6 @@
 		2845A7D7132D9C520034D631 /* MKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKUtils.h; path = src/MKUtils.h; sourceTree = SOURCE_ROOT; };
 		2845A7D8132D9C520034D631 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKVersion.h; path = src/MumbleKit/MKVersion.h; sourceTree = SOURCE_ROOT; };
 		28492307132ED60700B4EAAC /* CELT-0.7.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CELT-0.7.xcodeproj"; path = "3rdparty/celt-0.7.0-build/CELT-0.7.xcodeproj"; sourceTree = "<group>"; };
-		28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers.xcodeproj; path = 3rdparty/protobufbuild/ProtocolBuffers.xcodeproj; sourceTree = "<group>"; };
 		2849232D132ED63600B4EAAC /* OpenSSL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenSSL.xcodeproj; path = 3rdparty/opensslbuild/OpenSSL.xcodeproj; sourceTree = "<group>"; };
 		2849233C132ED64C00B4EAAC /* Speex.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Speex.xcodeproj; path = 3rdparty/speexbuild/Speex.xcodeproj; sourceTree = "<group>"; };
 		28492348132ED65700B4EAAC /* SpeexDSP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpeexDSP.xcodeproj; path = 3rdparty/speexdspbuild/SpeexDSP.xcodeproj; sourceTree = "<group>"; };
@@ -423,7 +427,6 @@
 		28CC36F4132ED8BA00241269 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
 		28CC36F6132ED8C300241269 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
 		28CC36F8132ED92500241269 /* Mumble.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mumble.pb.m; path = proto/Mumble.pb.m; sourceTree = SOURCE_ROOT; };
-		28CC36F9132ED92500241269 /* ObjectivecDescriptor.pb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectivecDescriptor.pb.m; path = proto/ObjectivecDescriptor.pb.m; sourceTree = SOURCE_ROOT; };
 		28CC370E132EDC7300241269 /* libCELT-0.7.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libCELT-0.7.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CC370F132EDC7300241269 /* libOpenSSL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libOpenSSL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CC3710132EDC7300241269 /* libProtocolBuffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProtocolBuffers.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -433,6 +436,7 @@
 		3775A2D926B54FB70002A298 /* MKPrioritySpeakerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKPrioritySpeakerImplementation.swift; path = src/MumbleKit/MKPrioritySpeakerImplementation.swift; sourceTree = SOURCE_ROOT; };
 		378755FD2698D4DC009BE1C9 /* MumbleKit (iOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MumbleKit (iOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		378755FE2698D4DD009BE1C9 /* MKWhisperImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MKWhisperImplementation.swift; path = src/MumbleKit/MKWhisperImplementation.swift; sourceTree = SOURCE_ROOT; };
+		3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProtocolBuffers.xcodeproj; path = "3rdparty/protobuf/protobuf-objc/src/runtime/ProtocolBuffers.xcodeproj"; sourceTree = "<group>"; };
 		37974C82269C0039004A4AC0 /* MKWhisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKWhisper.h; path = src/MumbleKit/MKWhisper.h; sourceTree = SOURCE_ROOT; };
 		BCD11DF1158F3FD600321E06 /* MKPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKPermission.h; path = src/MumbleKit/MKPermission.h; sourceTree = SOURCE_ROOT; };
 		BCD11DF4158F40A900321E06 /* MKAccessControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKAccessControl.h; path = src/MumbleKit/MKAccessControl.h; sourceTree = SOURCE_ROOT; };
@@ -495,8 +499,8 @@
 		2835C27E132AE4150095FB41 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */,
 				2849232D132ED63600B4EAAC /* OpenSSL.xcodeproj */,
-				28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */,
 				28492307132ED60700B4EAAC /* CELT-0.7.xcodeproj */,
 				285B425814E6E1200045E282 /* Opus.xcodeproj */,
 				2849233C132ED64C00B4EAAC /* Speex.xcodeproj */,
@@ -528,7 +532,6 @@
 			isa = PBXGroup;
 			children = (
 				28CC36F8132ED92500241269 /* Mumble.pb.m */,
-				28CC36F9132ED92500241269 /* ObjectivecDescriptor.pb.m */,
 				BCD11E06158F40FA00321E06 /* MKAccessControl.m */,
 				2845A781132D9C220034D631 /* CryptState.cpp */,
 				2845A782132D9C220034D631 /* MKAudio.m */,
@@ -620,15 +623,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28492322132ED61800B4EAAC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2849232A132ED61800B4EAAC /* libProtocolBuffers.a */,
-				2849232C132ED61800B4EAAC /* ProtocolBuffers.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2849232E132ED63600B4EAAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +708,17 @@
 				28CC3712132EDC7300241269 /* libSpeexDSP.a */,
 			);
 			name = "iOS Frameworks";
+			sourceTree = "<group>";
+		};
+		3793152526CBE7C900E54809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3793152C26CBE7C900E54809 /* libProtocolBuffers.a */,
+				3793152E26CBE7C900E54809 /* UnitTests.xctest */,
+				3793153026CBE7C900E54809 /* ProtocolBuffers.framework */,
+				3793153226CBE7C900E54809 /* UnitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -814,7 +819,6 @@
 			dependencies = (
 				0245A133154F593C00476144 /* PBXTargetDependency */,
 				28492355132ED66F00B4EAAC /* PBXTargetDependency */,
-				28492357132ED66F00B4EAAC /* PBXTargetDependency */,
 				28492359132ED66F00B4EAAC /* PBXTargetDependency */,
 				2849235B132ED66F00B4EAAC /* PBXTargetDependency */,
 				2849235D132ED66F00B4EAAC /* PBXTargetDependency */,
@@ -835,10 +839,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				3793154B26CBFE0500E54809 /* PBXTargetDependency */,
 				28FB39E8150C4D6F00E6E522 /* PBXTargetDependency */,
 				283363CA13EE070400A04F04 /* PBXTargetDependency */,
 				283363CC13EE070400A04F04 /* PBXTargetDependency */,
-				283363CE13EE070400A04F04 /* PBXTargetDependency */,
 				283363D013EE070400A04F04 /* PBXTargetDependency */,
 				283363D213EE070400A04F04 /* PBXTargetDependency */,
 			);
@@ -888,8 +892,8 @@
 					ProjectRef = 285B425814E6E1200045E282 /* Opus.xcodeproj */;
 				},
 				{
-					ProductGroup = 28492322132ED61800B4EAAC /* Products */;
-					ProjectRef = 28492321132ED61800B4EAAC /* ProtocolBuffers.xcodeproj */;
+					ProductGroup = 3793152526CBE7C900E54809 /* Products */;
+					ProjectRef = 3793152426CBE7C800E54809 /* ProtocolBuffers.xcodeproj */;
 				},
 				{
 					ProductGroup = 2849233D132ED64C00B4EAAC /* Products */;
@@ -921,20 +925,6 @@
 			fileType = "compiled.mach-o.dylib";
 			path = "CELT-0.7.0.dylib";
 			remoteRef = 28492311132ED60700B4EAAC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2849232A132ED61800B4EAAC /* libProtocolBuffers.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libProtocolBuffers.a;
-			remoteRef = 28492329132ED61800B4EAAC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2849232C132ED61800B4EAAC /* ProtocolBuffers.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = ProtocolBuffers.dylib;
-			remoteRef = 2849232B132ED61800B4EAAC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		28492336132ED63800B4EAAC /* libOpenSSL.a */ = {
@@ -993,6 +983,34 @@
 			remoteRef = 285B426214E6E1200045E282 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3793152C26CBE7C900E54809 /* libProtocolBuffers.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProtocolBuffers.a;
+			remoteRef = 3793152B26CBE7C900E54809 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3793152E26CBE7C900E54809 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 3793152D26CBE7C900E54809 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3793153026CBE7C900E54809 /* ProtocolBuffers.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProtocolBuffers.framework;
+			remoteRef = 3793152F26CBE7C900E54809 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3793153226CBE7C900E54809 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 3793153126CBE7C900E54809 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1029,7 +1047,6 @@
 				2845A7B9132D9C220034D631 /* MulticastDelegate.m in Sources */,
 				3775A2DB26B54FC00002A298 /* MKPrioritySpeakerImplementation.swift in Sources */,
 				28CC36FB132ED92500241269 /* Mumble.pb.m in Sources */,
-				28CC36FD132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */,
 				282F6B0B13624187008F555B /* MKServerPinger.m in Sources */,
 				2879526514C1BAB900567430 /* MKTextMessage.m in Sources */,
 				281EADA81530EA30000793AB /* MKDistinguishedNameParser.m in Sources */,
@@ -1066,7 +1083,6 @@
 				2845A7B8132D9C220034D631 /* MulticastDelegate.m in Sources */,
 				3775A2DA26B54FB70002A298 /* MKPrioritySpeakerImplementation.swift in Sources */,
 				28CC36FA132ED92500241269 /* Mumble.pb.m in Sources */,
-				28CC36FC132ED92500241269 /* ObjectivecDescriptor.pb.m in Sources */,
 				282F6B0A13624187008F555B /* MKServerPinger.m in Sources */,
 				2879526414C1BAB900567430 /* MKTextMessage.m in Sources */,
 				281EADA71530EA30000793AB /* MKDistinguishedNameParser.m in Sources */,
@@ -1098,11 +1114,6 @@
 			name = "OpenSSL (iOS)";
 			targetProxy = 283363CB13EE070400A04F04 /* PBXContainerItemProxy */;
 		};
-		283363CE13EE070400A04F04 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ProtocolBuffers (iOS)";
-			targetProxy = 283363CD13EE070400A04F04 /* PBXContainerItemProxy */;
-		};
 		283363D013EE070400A04F04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SpeexDSP (iOS)";
@@ -1117,11 +1128,6 @@
 			isa = PBXTargetDependency;
 			name = "OpenSSL (Mac)";
 			targetProxy = 28492354132ED66F00B4EAAC /* PBXContainerItemProxy */;
-		};
-		28492357132ED66F00B4EAAC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ProtocolBuffers (Mac)";
-			targetProxy = 28492356132ED66F00B4EAAC /* PBXContainerItemProxy */;
 		};
 		28492359132ED66F00B4EAAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1142,6 +1148,11 @@
 			isa = PBXTargetDependency;
 			name = "Opus (iOS)";
 			targetProxy = 28FB39E7150C4D6F00E6E522 /* PBXContainerItemProxy */;
+		};
+		3793154B26CBFE0500E54809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProtocolBuffers;
+			targetProxy = 3793154A26CBFE0500E54809 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1183,6 +1194,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/src\"",
+					"\"$(SRCROOT)/proto\"",
+					"\"$(SRCROOT)/3rdparty/speex/include\"",
+					"\"$(SRCROOT)/3rdparty/celt-0.7.0/libcelt\"",
+					"\"$(SRCROOT)/3rdparty/opus/include\"",
+					"\"$(SRCROOT)/3rdparty/openssl/include\"",
+					"\"$(SRCROOT)/3rdparty/protobuf/protobuf-objc/src/runtime/Classes\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbleKit (iOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1213,6 +1233,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/src\"",
+					"\"$(SRCROOT)/proto\"",
+					"\"$(SRCROOT)/3rdparty/speex/include\"",
+					"\"$(SRCROOT)/3rdparty/celt-0.7.0/libcelt\"",
+					"\"$(SRCROOT)/3rdparty/opus/include\"",
+					"\"$(SRCROOT)/3rdparty/openssl/include\"",
+					"\"$(SRCROOT)/3rdparty/protobuf/protobuf-objc/src/runtime/Classes\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbleKit (iOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1251,6 +1280,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/src\"",
+					"\"$(SRCROOT)/proto\"",
+					"\"$(SRCROOT)/3rdparty/speex/include\"",
+					"\"$(SRCROOT)/3rdparty/celt-0.7.0/libcelt\"",
+					"\"$(SRCROOT)/3rdparty/opus/include\"",
+					"\"$(SRCROOT)/3rdparty/openssl/include\"",
+					"\"$(SRCROOT)/3rdparty/protobuf/protobuf-objc/src/runtime/Classes\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbleKit (iOS)-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1263,6 +1301,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/src\"",
+					"\"$(SRCROOT)/proto\"",
+					"\"$(SRCROOT)/3rdparty/speex/include\"",
+					"\"$(SRCROOT)/3rdparty/celt-0.7.0/libcelt\"",
+					"\"$(SRCROOT)/3rdparty/opus/include\"",
+					"\"$(SRCROOT)/3rdparty/openssl/include\"",
+					"\"$(SRCROOT)/3rdparty/protobuf/protobuf-objc/src/runtime/Classes\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SWIFT_OBJC_BRIDGING_HEADER = "MumbleKit (iOS)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -210,9 +210,9 @@
     if ([msg hasUserId]) {
         [user setUserId:[msg userId]];
     }
-    if ([msg hasCertHash]) {
-        [user setUserHash:[msg certHash]];
-    }
+//    if ([msg hasCertHash]) {
+//        [user setUserHash:[msg certHash]];
+//    }
     // Call this after both the userId and certHash has been assigned
     // to the user.
     if (!newUser && [msg hasUserId]) {
@@ -381,9 +381,9 @@
     if (![msg hasType])
         return;
 
-    MPPermissionDenied_DenyType denyType = [msg type];
+    MPPermissionDeniedDenyType denyType = [msg type];
     switch (denyType) {
-        case MPPermissionDenied_DenyTypePermission: {
+        case MPPermissionDeniedDenyTypePermission: {
             MKChannel *channel = nil;
             if ([msg hasChannelId]) {
                 channel = [self channelWithId:(NSUInteger)[msg channelId]];
@@ -399,23 +399,23 @@
             [_delegate serverModel:self permissionDenied:perm forUser:user inChannel:channel];
             break;
         }
-        case MPPermissionDenied_DenyTypeSuperUser: {
+        case MPPermissionDeniedDenyTypeSuperUser: {
             [_delegate serverModelModifySuperUserError:self];
             break;
         }
-        case MPPermissionDenied_DenyTypeChannelName: {
+        case MPPermissionDeniedDenyTypeChannelName: {
             [_delegate serverModelChannelNameError:self];
             break;
         }
-        case MPPermissionDenied_DenyTypeTextTooLong: {
+        case MPPermissionDeniedDenyTypeTextTooLong: {
             [_delegate serverModelTextMessageTooLongError:self];
             break;
         }
-        case MPPermissionDenied_DenyTypeTemporaryChannel: {
+        case MPPermissionDeniedDenyTypeTemporaryChannel: {
             [_delegate serverModelTemporaryChannelError:self];
             break;
         }
-        case MPPermissionDenied_DenyTypeMissingCertificate: {
+        case MPPermissionDeniedDenyTypeMissingCertificate: {
             MKUser *user = [self connectedUser];
             if ([msg hasSession]) {
                 user = [self userWithSession:(NSUInteger)[msg session]];
@@ -423,14 +423,14 @@
             [_delegate serverModel:self missingCertificateErrorForUser:user];
             break;
         }
-        case MPPermissionDenied_DenyTypeUserName: {
+        case MPPermissionDeniedDenyTypeUserName: {
             NSString *name = nil;
             if ([msg hasName])
                 name = [msg name];
             [_delegate serverModel:self invalidUsernameErrorForName:name];
             break;
         }
-        case MPPermissionDenied_DenyTypeChannelFull: {
+        case MPPermissionDeniedDenyTypeChannelFull: {
             [_delegate serverModelChannelFullError:self];
             break;
         }
@@ -469,7 +469,7 @@
     acl.acls = [NSMutableArray array];
     acl.groups = [NSMutableArray array];
     
-    for (MPACL_ChanACL *chanACL in msg.acls) {
+    for (MPACLChanACL *chanACL in msg.acls) {
         MKChannelACL *channelACL = [[MKChannelACL alloc] init];
         if (chanACL.hasUserId) {
             channelACL.userID = chanACL.userId;
@@ -490,7 +490,7 @@
     }
     
     
-    for (MPACL_ChanGroup *chanGroup in msg.groups) {
+    for (MPACLChanGroup *chanGroup in msg.groups) {
         MKChannelGroup *channelGroup = [[MKChannelGroup alloc] init];
         channelGroup.name = chanGroup.name;
         channelGroup.inheritable = chanGroup.inheritable;
@@ -933,7 +933,7 @@
 
 // Request to join a channel.
 - (void) joinChannel:(MKChannel *)chan {
-    MPUserState_Builder *userState = [MPUserState builder];
+    MPUserStateBuilder *userState = [MPUserState builder];
     [userState setSession:(uint32_t)[[self connectedUser] session]];
     [userState setChannelId:(uint32_t)[chan channelId]];
 
@@ -943,7 +943,7 @@
 
 // Create a channel
 - (void) createChannelWithName:(NSString *)channelName parent:(MKChannel *)parent temporary:(BOOL)temp {
-    MPChannelState_Builder *channelState = [MPChannelState builder];
+    MPChannelStateBuilder *channelState = [MPChannelState builder];
     channelState.name = channelName;
     channelState.parent = (uint32_t)parent.channelId;
     channelState.temporary = temp;
@@ -954,7 +954,7 @@
 
 // Request the access control for a channel
 - (void) requestAccessControlForChannel:(MKChannel *)channel {
-    MPACL_Builder *mpacl = [MPACL builder];
+    MPACLBuilder *mpacl = [MPACL builder];
     mpacl.channelId = (uint32_t)channel.channelId;
     mpacl.query = YES;
     
@@ -964,7 +964,7 @@
 
 // Set the access control for a channel
 - (void) setAccessControl:(MKAccessControl *)accessControl forChannel:(MKChannel *)channel {
-    MPACL_Builder *mpacl = [MPACL builder];
+    MPACLBuilder *mpacl = [MPACL builder];
     mpacl.channelId = (uint32_t)channel.channelId;
     mpacl.query = YES;
     mpacl.inheritAcls = accessControl.inheritACLs;
@@ -975,7 +975,7 @@
             continue;
         }
         
-        MPACL_ChanACL_Builder *chanACL = [MPACL_ChanACL builder];
+        MPACLChanACLBuilder *chanACL = [MPACLChanACL builder];
         chanACL.applyHere = channelACL.applyHere;
         chanACL.applySubs = channelACL.applySubs;
         chanACL.deny = channelACL.deny;
@@ -997,7 +997,7 @@
             continue;
         }
         
-        MPACL_ChanGroup_Builder *chanGroup = [MPACL_ChanGroup builder];
+        MPACLChanGroupBuilder *chanGroup = [MPACLChanGroup builder];
         chanGroup.name = channelGroup.name;
         chanGroup.inherit = channelGroup.inherit;
         chanGroup.inheritable = channelGroup.inheritable;
@@ -1031,7 +1031,7 @@
         [userSessions addObject:[NSNumber numberWithUnsignedLong:[user session]]];
     }
 
-    MPTextMessage_Builder *textMessage = [MPTextMessage builder];
+    MPTextMessageBuilder *textMessage = [MPTextMessage builder];
     [textMessage setTreeIdArray:treeIds];
     [textMessage setChannelIdArray:channelIds];
     [textMessage setSessionArray:userSessions];
@@ -1057,7 +1057,7 @@
 #pragma mark Server operations
 
 - (void) setAccessTokens:(NSArray *)tokens {
-    MPAuthenticate_Builder *authenticate = [MPAuthenticate builder];
+    MPAuthenticateBuilder *authenticate = [MPAuthenticate builder];
     [authenticate setTokensArray:tokens];
 
     NSData *data = [[authenticate build] data];
@@ -1077,7 +1077,7 @@
 #pragma mark Mute/deafen operations
 
 - (void) setSelfMuted:(BOOL)selfMuted andSelfDeafened:(BOOL)selfDeafened {
-    MPUserState_Builder *mpus = [MPUserState builder];
+    MPUserStateBuilder *mpus = [MPUserState builder];
     [mpus setSelfMute:selfMuted];
     [mpus setSelfDeaf:selfDeafened];
     
@@ -1093,7 +1093,7 @@
 #pragma mark Self Registration
 
 - (void) registerConnectedUser {
-    MPUserState_Builder *mpus = [MPUserState builder];
+    MPUserStateBuilder *mpus = [MPUserState builder];
     [mpus setSession:(uint32_t)[_connectedUser session]];
     [mpus setUserId:0];
     
@@ -1148,8 +1148,8 @@
     if (idValue < 0) {
         return -1;
     }
-    MPVoiceTarget_Target *voiceTarget = [target createTarget];
-    MPVoiceTarget_Builder *vtb = [MPVoiceTarget builder];
+    MPVoiceTargetTarget *voiceTarget = [target createTarget];
+    MPVoiceTargetBuilder *vtb = [MPVoiceTarget builder];
     [vtb setId:idValue];
     [vtb addTargets:voiceTarget];
     NSData *data;

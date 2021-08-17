@@ -10,7 +10,7 @@ import Foundation
 @objc public protocol WhisperTarget {
     
     
-    func createTarget() -> MPVoiceTarget_Target?
+    func createTarget() -> MPVoiceTargetTarget?
 
     // *
     //      * Returns a user-readable name for the whisper target, to display in the UI.
@@ -26,8 +26,8 @@ import Foundation
         self.users = users
     }
     
-    @objc open func createTarget() -> MPVoiceTarget_Target? {
-        let builder = MPVoiceTarget_Target.builder()
+    @objc open func createTarget() -> MPVoiceTargetTarget? {
+        let builder = MPVoiceTargetTarget.builder()
         builder?.setLinks(false)
         builder?.setChildren(false)
         for user in users {
@@ -54,8 +54,8 @@ import Foundation
         self.groupRestriction = groupRestriction
     }
 
-    @objc open func createTarget() -> MPVoiceTarget_Target? {
-        guard let builder = MPVoiceTarget_Target.builder() else {
+    @objc open func createTarget() -> MPVoiceTargetTarget? {
+        guard let builder = MPVoiceTargetTarget.builder() else {
             return nil
         }
         builder.setLinks(includeLinked)
