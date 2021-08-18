@@ -28,7 +28,6 @@ import Foundation
     
     @objc open func setPrioritySpeaker(_ user: MKUser) {
         prioritySpeaker = user
-//        shouldPauseAudio = false
     }
         
     @objc open func clearPrioritySpeaker() {
@@ -46,7 +45,6 @@ import Foundation
         guard let speaker = self.prioritySpeaker else {
             return !shouldPauseAudio
         }
-//        shouldPauseAudio = false
         return speaker.session() == session
     }
  

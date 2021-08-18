@@ -1184,5 +1184,12 @@
     [[AudioPriorityManager shared] clearPrioritySpeaker];
 }
 
+- (void) addChannelListener:(UInt32)channelID {
+    MPUserStateBuilder *mpus = [MPUserState builder];
+    [mpus addListeningChannelAdd:channelID];
+
+    NSData *data = [[mpus build] data];
+    [_connection sendMessageWithType:UserStateMessage data:data];
+}
 
 @end
