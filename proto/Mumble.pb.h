@@ -2,168 +2,173 @@
 
 #import "ProtocolBuffers.h"
 
-#import "ObjectivecDescriptor.pb.h"
+// @@protoc_insertion_point(imports)
 
 @class MPACL;
-@class MPACL_Builder;
-@class MPACL_ChanACL;
-@class MPACL_ChanACL_Builder;
-@class MPACL_ChanGroup;
-@class MPACL_ChanGroup_Builder;
+@class MPACLBuilder;
+@class MPACLChanACL;
+@class MPACLChanACLBuilder;
+@class MPACLChanGroup;
+@class MPACLChanGroupBuilder;
 @class MPAuthenticate;
-@class MPAuthenticate_Builder;
+@class MPAuthenticateBuilder;
 @class MPBanList;
-@class MPBanList_BanEntry;
-@class MPBanList_BanEntry_Builder;
-@class MPBanList_Builder;
+@class MPBanListBanEntry;
+@class MPBanListBanEntryBuilder;
+@class MPBanListBuilder;
 @class MPChannelRemove;
-@class MPChannelRemove_Builder;
+@class MPChannelRemoveBuilder;
 @class MPChannelState;
-@class MPChannelState_Builder;
+@class MPChannelStateBuilder;
 @class MPCodecVersion;
-@class MPCodecVersion_Builder;
+@class MPCodecVersionBuilder;
 @class MPContextAction;
+@class MPContextActionBuilder;
 @class MPContextActionModify;
-@class MPContextActionModify_Builder;
-@class MPContextAction_Builder;
+@class MPContextActionModifyBuilder;
 @class MPCryptSetup;
-@class MPCryptSetup_Builder;
+@class MPCryptSetupBuilder;
 @class MPPermissionDenied;
-@class MPPermissionDenied_Builder;
+@class MPPermissionDeniedBuilder;
 @class MPPermissionQuery;
-@class MPPermissionQuery_Builder;
+@class MPPermissionQueryBuilder;
 @class MPPing;
-@class MPPing_Builder;
+@class MPPingBuilder;
+@class MPPluginDataTransmission;
+@class MPPluginDataTransmissionBuilder;
 @class MPQueryUsers;
-@class MPQueryUsers_Builder;
+@class MPQueryUsersBuilder;
 @class MPReject;
-@class MPReject_Builder;
+@class MPRejectBuilder;
 @class MPRequestBlob;
-@class MPRequestBlob_Builder;
+@class MPRequestBlobBuilder;
 @class MPServerConfig;
-@class MPServerConfig_Builder;
+@class MPServerConfigBuilder;
 @class MPServerSync;
-@class MPServerSync_Builder;
+@class MPServerSyncBuilder;
 @class MPSuggestConfig;
-@class MPSuggestConfig_Builder;
+@class MPSuggestConfigBuilder;
 @class MPTextMessage;
-@class MPTextMessage_Builder;
+@class MPTextMessageBuilder;
 @class MPUDPTunnel;
-@class MPUDPTunnel_Builder;
+@class MPUDPTunnelBuilder;
 @class MPUserList;
-@class MPUserList_Builder;
-@class MPUserList_User;
-@class MPUserList_User_Builder;
+@class MPUserListBuilder;
+@class MPUserListUser;
+@class MPUserListUserBuilder;
 @class MPUserRemove;
-@class MPUserRemove_Builder;
+@class MPUserRemoveBuilder;
 @class MPUserState;
-@class MPUserState_Builder;
+@class MPUserStateBuilder;
 @class MPUserStats;
-@class MPUserStats_Builder;
-@class MPUserStats_Stats;
-@class MPUserStats_Stats_Builder;
+@class MPUserStatsBuilder;
+@class MPUserStatsStats;
+@class MPUserStatsStatsBuilder;
 @class MPVersion;
-@class MPVersion_Builder;
+@class MPVersionBuilder;
 @class MPVoiceTarget;
-@class MPVoiceTarget_Builder;
-@class MPVoiceTarget_Target;
-@class MPVoiceTarget_Target_Builder;
+@class MPVoiceTargetBuilder;
+@class MPVoiceTargetTarget;
+@class MPVoiceTargetTargetBuilder;
 @class ObjectiveCFileOptions;
-@class ObjectiveCFileOptions_Builder;
+@class ObjectiveCFileOptionsBuilder;
 @class PBDescriptorProto;
-@class PBDescriptorProto_Builder;
-@class PBDescriptorProto_ExtensionRange;
-@class PBDescriptorProto_ExtensionRange_Builder;
+@class PBDescriptorProtoBuilder;
+@class PBDescriptorProtoExtensionRange;
+@class PBDescriptorProtoExtensionRangeBuilder;
+@class PBDescriptorProtoReservedRange;
+@class PBDescriptorProtoReservedRangeBuilder;
 @class PBEnumDescriptorProto;
-@class PBEnumDescriptorProto_Builder;
+@class PBEnumDescriptorProtoBuilder;
 @class PBEnumOptions;
-@class PBEnumOptions_Builder;
+@class PBEnumOptionsBuilder;
 @class PBEnumValueDescriptorProto;
-@class PBEnumValueDescriptorProto_Builder;
+@class PBEnumValueDescriptorProtoBuilder;
 @class PBEnumValueOptions;
-@class PBEnumValueOptions_Builder;
+@class PBEnumValueOptionsBuilder;
 @class PBFieldDescriptorProto;
-@class PBFieldDescriptorProto_Builder;
+@class PBFieldDescriptorProtoBuilder;
 @class PBFieldOptions;
-@class PBFieldOptions_Builder;
+@class PBFieldOptionsBuilder;
 @class PBFileDescriptorProto;
-@class PBFileDescriptorProto_Builder;
+@class PBFileDescriptorProtoBuilder;
 @class PBFileDescriptorSet;
-@class PBFileDescriptorSet_Builder;
+@class PBFileDescriptorSetBuilder;
 @class PBFileOptions;
-@class PBFileOptions_Builder;
+@class PBFileOptionsBuilder;
 @class PBMessageOptions;
-@class PBMessageOptions_Builder;
+@class PBMessageOptionsBuilder;
 @class PBMethodDescriptorProto;
-@class PBMethodDescriptorProto_Builder;
+@class PBMethodDescriptorProtoBuilder;
 @class PBMethodOptions;
-@class PBMethodOptions_Builder;
+@class PBMethodOptionsBuilder;
+@class PBOneofDescriptorProto;
+@class PBOneofDescriptorProtoBuilder;
 @class PBServiceDescriptorProto;
-@class PBServiceDescriptorProto_Builder;
+@class PBServiceDescriptorProtoBuilder;
 @class PBServiceOptions;
-@class PBServiceOptions_Builder;
+@class PBServiceOptionsBuilder;
 @class PBSourceCodeInfo;
-@class PBSourceCodeInfo_Builder;
-@class PBSourceCodeInfo_Location;
-@class PBSourceCodeInfo_Location_Builder;
+@class PBSourceCodeInfoBuilder;
+@class PBSourceCodeInfoLocation;
+@class PBSourceCodeInfoLocationBuilder;
 @class PBUninterpretedOption;
-@class PBUninterpretedOption_Builder;
-@class PBUninterpretedOption_NamePart;
-@class PBUninterpretedOption_NamePart_Builder;
-#ifndef __has_feature
-  #define __has_feature(x) 0 // Compatibility with non-clang compilers.
-#endif // __has_feature
+@class PBUninterpretedOptionBuilder;
+@class PBUninterpretedOptionNamePart;
+@class PBUninterpretedOptionNamePartBuilder;
 
-#ifndef NS_RETURNS_NOT_RETAINED
-  #if __has_feature(attribute_ns_returns_not_retained)
-    #define NS_RETURNS_NOT_RETAINED __attribute__((ns_returns_not_retained))
-  #else
-    #define NS_RETURNS_NOT_RETAINED
-  #endif
-#endif
 
-typedef enum {
-  MPReject_RejectTypeNone = 0,
-  MPReject_RejectTypeWrongVersion = 1,
-  MPReject_RejectTypeInvalidUsername = 2,
-  MPReject_RejectTypeWrongUserPw = 3,
-  MPReject_RejectTypeWrongServerPw = 4,
-  MPReject_RejectTypeUsernameInUse = 5,
-  MPReject_RejectTypeServerFull = 6,
-  MPReject_RejectTypeNoCertificate = 7,
-} MPReject_RejectType;
+typedef NS_ENUM(SInt32, MPRejectRejectType) {
+  MPRejectRejectTypeNone = 0,
+  MPRejectRejectTypeWrongVersion = 1,
+  MPRejectRejectTypeInvalidUsername = 2,
+  MPRejectRejectTypeWrongUserPw = 3,
+  MPRejectRejectTypeWrongServerPw = 4,
+  MPRejectRejectTypeUsernameInUse = 5,
+  MPRejectRejectTypeServerFull = 6,
+  MPRejectRejectTypeNoCertificate = 7,
+  MPRejectRejectTypeAuthenticatorFail = 8,
+};
 
-BOOL MPReject_RejectTypeIsValidValue(MPReject_RejectType value);
+BOOL MPRejectRejectTypeIsValidValue(MPRejectRejectType value);
+NSString *NSStringFromMPRejectRejectType(MPRejectRejectType value);
 
-typedef enum {
-  MPPermissionDenied_DenyTypeText = 0,
-  MPPermissionDenied_DenyTypePermission = 1,
-  MPPermissionDenied_DenyTypeSuperUser = 2,
-  MPPermissionDenied_DenyTypeChannelName = 3,
-  MPPermissionDenied_DenyTypeTextTooLong = 4,
-  MPPermissionDenied_DenyTypeH9K = 5,
-  MPPermissionDenied_DenyTypeTemporaryChannel = 6,
-  MPPermissionDenied_DenyTypeMissingCertificate = 7,
-  MPPermissionDenied_DenyTypeUserName = 8,
-  MPPermissionDenied_DenyTypeChannelFull = 9,
-} MPPermissionDenied_DenyType;
+typedef NS_ENUM(SInt32, MPPermissionDeniedDenyType) {
+  MPPermissionDeniedDenyTypeText = 0,
+  MPPermissionDeniedDenyTypePermission = 1,
+  MPPermissionDeniedDenyTypeSuperUser = 2,
+  MPPermissionDeniedDenyTypeChannelName = 3,
+  MPPermissionDeniedDenyTypeTextTooLong = 4,
+  MPPermissionDeniedDenyTypeH9K = 5,
+  MPPermissionDeniedDenyTypeTemporaryChannel = 6,
+  MPPermissionDeniedDenyTypeMissingCertificate = 7,
+  MPPermissionDeniedDenyTypeUserName = 8,
+  MPPermissionDeniedDenyTypeChannelFull = 9,
+  MPPermissionDeniedDenyTypeNestingLimit = 10,
+  MPPermissionDeniedDenyTypeChannelCountLimit = 11,
+  MPPermissionDeniedDenyTypeChannelListenerLimit = 12,
+  MPPermissionDeniedDenyTypeUserListenerLimit = 13,
+};
 
-BOOL MPPermissionDenied_DenyTypeIsValidValue(MPPermissionDenied_DenyType value);
+BOOL MPPermissionDeniedDenyTypeIsValidValue(MPPermissionDeniedDenyType value);
+NSString *NSStringFromMPPermissionDeniedDenyType(MPPermissionDeniedDenyType value);
 
-typedef enum {
-  MPContextActionModify_ContextServer = 1,
-  MPContextActionModify_ContextChannel = 2,
-  MPContextActionModify_ContextUser = 4,
-} MPContextActionModify_Context;
+typedef NS_ENUM(SInt32, MPContextActionModifyContext) {
+  MPContextActionModifyContextServer = 1,
+  MPContextActionModifyContextChannel = 2,
+  MPContextActionModifyContextUser = 4,
+};
 
-BOOL MPContextActionModify_ContextIsValidValue(MPContextActionModify_Context value);
+BOOL MPContextActionModifyContextIsValidValue(MPContextActionModifyContext value);
+NSString *NSStringFromMPContextActionModifyContext(MPContextActionModifyContext value);
 
-typedef enum {
-  MPContextActionModify_OperationAdd = 0,
-  MPContextActionModify_OperationRemove = 1,
-} MPContextActionModify_Operation;
+typedef NS_ENUM(SInt32, MPContextActionModifyOperation) {
+  MPContextActionModifyOperationAdd = 0,
+  MPContextActionModifyOperationRemove = 1,
+};
 
-BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation value);
+BOOL MPContextActionModifyOperationIsValidValue(MPContextActionModifyOperation value);
+NSString *NSStringFromMPContextActionModifyOperation(MPContextActionModifyOperation value);
 
 
 @interface MPMumbleRoot : NSObject {
@@ -172,7 +177,11 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry;
 @end
 
-@interface MPVersion : PBGeneratedMessage {
+#define Version_version @"version"
+#define Version_release @"release"
+#define Version_os @"os"
+#define Version_os_version @"osVersion"
+@interface MPVersion : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasRelease_:1;
   BOOL hasOs_:1;
@@ -181,26 +190,26 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   NSString* release;
   NSString* os;
   NSString* osVersion;
-  uint32_t version;
+  UInt32 version;
 }
 - (BOOL) hasVersion;
 - (BOOL) hasRelease;
 - (BOOL) hasOs;
 - (BOOL) hasOsVersion;
-@property (readonly) uint32_t version;
-@property (readonly, retain) NSString* release;
-@property (readonly, retain) NSString* os;
-@property (readonly, retain) NSString* osVersion;
+@property (readonly) UInt32 version;
+@property (readonly, strong) NSString* release;
+@property (readonly, strong) NSString* os;
+@property (readonly, strong) NSString* osVersion;
 
-+ (MPVersion*) defaultInstance;
-- (MPVersion*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPVersion_Builder*) builder;
-+ (MPVersion_Builder*) builder;
-+ (MPVersion_Builder*) builderWithPrototype:(MPVersion*) prototype;
-- (MPVersion_Builder*) toBuilder;
+- (MPVersionBuilder*) builder;
++ (MPVersionBuilder*) builder;
++ (MPVersionBuilder*) builderWithPrototype:(MPVersion*) prototype;
+- (MPVersionBuilder*) toBuilder;
 
 + (MPVersion*) parseFromData:(NSData*) data;
 + (MPVersion*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -210,61 +219,62 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPVersion*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPVersion_Builder : PBGeneratedMessage_Builder {
+@interface MPVersionBuilder : PBGeneratedMessageBuilder {
 @private
-  MPVersion* result;
+  MPVersion* resultVersion;
 }
 
 - (MPVersion*) defaultInstance;
 
-- (MPVersion_Builder*) clear;
-- (MPVersion_Builder*) clone;
+- (MPVersionBuilder*) clear;
+- (MPVersionBuilder*) clone;
 
 - (MPVersion*) build;
 - (MPVersion*) buildPartial;
 
-- (MPVersion_Builder*) mergeFrom:(MPVersion*) other;
-- (MPVersion_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPVersion_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPVersionBuilder*) mergeFrom:(MPVersion*) other;
+- (MPVersionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPVersionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasVersion;
-- (uint32_t) version;
-- (MPVersion_Builder*) setVersion:(uint32_t) value;
-- (MPVersion_Builder*) clearVersion;
+- (UInt32) version;
+- (MPVersionBuilder*) setVersion:(UInt32) value;
+- (MPVersionBuilder*) clearVersion;
 
 - (BOOL) hasRelease;
 - (NSString*) release;
-- (MPVersion_Builder*) setRelease:(NSString*) value;
-- (MPVersion_Builder*) clearRelease;
+- (MPVersionBuilder*) setRelease:(NSString*) value;
+- (MPVersionBuilder*) clearRelease;
 
 - (BOOL) hasOs;
 - (NSString*) os;
-- (MPVersion_Builder*) setOs:(NSString*) value;
-- (MPVersion_Builder*) clearOs;
+- (MPVersionBuilder*) setOs:(NSString*) value;
+- (MPVersionBuilder*) clearOs;
 
 - (BOOL) hasOsVersion;
 - (NSString*) osVersion;
-- (MPVersion_Builder*) setOsVersion:(NSString*) value;
-- (MPVersion_Builder*) clearOsVersion;
+- (MPVersionBuilder*) setOsVersion:(NSString*) value;
+- (MPVersionBuilder*) clearOsVersion;
 @end
 
-@interface MPUDPTunnel : PBGeneratedMessage {
+#define UDPTunnel_packet @"packet"
+@interface MPUDPTunnel : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasPacket_:1;
   NSData* packet;
 }
 - (BOOL) hasPacket;
-@property (readonly, retain) NSData* packet;
+@property (readonly, strong) NSData* packet;
 
-+ (MPUDPTunnel*) defaultInstance;
-- (MPUDPTunnel*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUDPTunnel_Builder*) builder;
-+ (MPUDPTunnel_Builder*) builder;
-+ (MPUDPTunnel_Builder*) builderWithPrototype:(MPUDPTunnel*) prototype;
-- (MPUDPTunnel_Builder*) toBuilder;
+- (MPUDPTunnelBuilder*) builder;
++ (MPUDPTunnelBuilder*) builder;
++ (MPUDPTunnelBuilder*) builderWithPrototype:(MPUDPTunnel*) prototype;
+- (MPUDPTunnelBuilder*) toBuilder;
 
 + (MPUDPTunnel*) parseFromData:(NSData*) data;
 + (MPUDPTunnel*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -274,30 +284,35 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPUDPTunnel*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUDPTunnel_Builder : PBGeneratedMessage_Builder {
+@interface MPUDPTunnelBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUDPTunnel* result;
+  MPUDPTunnel* resultUdptunnel;
 }
 
 - (MPUDPTunnel*) defaultInstance;
 
-- (MPUDPTunnel_Builder*) clear;
-- (MPUDPTunnel_Builder*) clone;
+- (MPUDPTunnelBuilder*) clear;
+- (MPUDPTunnelBuilder*) clone;
 
 - (MPUDPTunnel*) build;
 - (MPUDPTunnel*) buildPartial;
 
-- (MPUDPTunnel_Builder*) mergeFrom:(MPUDPTunnel*) other;
-- (MPUDPTunnel_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUDPTunnel_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUDPTunnelBuilder*) mergeFrom:(MPUDPTunnel*) other;
+- (MPUDPTunnelBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUDPTunnelBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasPacket;
 - (NSData*) packet;
-- (MPUDPTunnel_Builder*) setPacket:(NSData*) value;
-- (MPUDPTunnel_Builder*) clearPacket;
+- (MPUDPTunnelBuilder*) setPacket:(NSData*) value;
+- (MPUDPTunnelBuilder*) clearPacket;
 @end
 
-@interface MPAuthenticate : PBGeneratedMessage {
+#define Authenticate_username @"username"
+#define Authenticate_password @"password"
+#define Authenticate_tokens @"tokens"
+#define Authenticate_celt_versions @"celtVersions"
+#define Authenticate_opus @"opus"
+@interface MPAuthenticate : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasOpus_:1;
   BOOL hasUsername_:1;
@@ -306,28 +321,28 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   NSString* username;
   NSString* password;
   PBAppendableArray * celtVersionsArray;
-  PBAppendableArray * tokensArray;
+  NSMutableArray * tokensArray;
 }
 - (BOOL) hasUsername;
 - (BOOL) hasPassword;
 - (BOOL) hasOpus;
-@property (readonly, retain) NSString* username;
-@property (readonly, retain) NSString* password;
-@property (readonly, retain) PBArray * tokens;
-@property (readonly, retain) PBArray * celtVersions;
+@property (readonly, strong) NSString* username;
+@property (readonly, strong) NSString* password;
+@property (readonly, strong) NSArray * tokens;
+@property (readonly, strong) PBArray * celtVersions;
 - (BOOL) opus;
 - (NSString*)tokensAtIndex:(NSUInteger)index;
-- (int32_t)celtVersionsAtIndex:(NSUInteger)index;
+- (SInt32)celtVersionsAtIndex:(NSUInteger)index;
 
-+ (MPAuthenticate*) defaultInstance;
-- (MPAuthenticate*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPAuthenticate_Builder*) builder;
-+ (MPAuthenticate_Builder*) builder;
-+ (MPAuthenticate_Builder*) builderWithPrototype:(MPAuthenticate*) prototype;
-- (MPAuthenticate_Builder*) toBuilder;
+- (MPAuthenticateBuilder*) builder;
++ (MPAuthenticateBuilder*) builder;
++ (MPAuthenticateBuilder*) builderWithPrototype:(MPAuthenticate*) prototype;
+- (MPAuthenticateBuilder*) toBuilder;
 
 + (MPAuthenticate*) parseFromData:(NSData*) data;
 + (MPAuthenticate*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -337,54 +352,64 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPAuthenticate*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPAuthenticate_Builder : PBGeneratedMessage_Builder {
+@interface MPAuthenticateBuilder : PBGeneratedMessageBuilder {
 @private
-  MPAuthenticate* result;
+  MPAuthenticate* resultAuthenticate;
 }
 
 - (MPAuthenticate*) defaultInstance;
 
-- (MPAuthenticate_Builder*) clear;
-- (MPAuthenticate_Builder*) clone;
+- (MPAuthenticateBuilder*) clear;
+- (MPAuthenticateBuilder*) clone;
 
 - (MPAuthenticate*) build;
 - (MPAuthenticate*) buildPartial;
 
-- (MPAuthenticate_Builder*) mergeFrom:(MPAuthenticate*) other;
-- (MPAuthenticate_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPAuthenticate_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPAuthenticateBuilder*) mergeFrom:(MPAuthenticate*) other;
+- (MPAuthenticateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPAuthenticateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasUsername;
 - (NSString*) username;
-- (MPAuthenticate_Builder*) setUsername:(NSString*) value;
-- (MPAuthenticate_Builder*) clearUsername;
+- (MPAuthenticateBuilder*) setUsername:(NSString*) value;
+- (MPAuthenticateBuilder*) clearUsername;
 
 - (BOOL) hasPassword;
 - (NSString*) password;
-- (MPAuthenticate_Builder*) setPassword:(NSString*) value;
-- (MPAuthenticate_Builder*) clearPassword;
+- (MPAuthenticateBuilder*) setPassword:(NSString*) value;
+- (MPAuthenticateBuilder*) clearPassword;
 
-- (PBAppendableArray *)tokens;
+- (NSMutableArray *)tokens;
 - (NSString*)tokensAtIndex:(NSUInteger)index;
-- (MPAuthenticate_Builder *)addTokens:(NSString*)value;
-- (MPAuthenticate_Builder *)setTokensArray:(NSArray *)array;
-- (MPAuthenticate_Builder *)setTokensValues:(const NSString* *)values count:(NSUInteger)count;
-- (MPAuthenticate_Builder *)clearTokens;
+- (MPAuthenticateBuilder *)addTokens:(NSString*)value;
+- (MPAuthenticateBuilder *)setTokensArray:(NSArray *)array;
+- (MPAuthenticateBuilder *)clearTokens;
 
 - (PBAppendableArray *)celtVersions;
-- (int32_t)celtVersionsAtIndex:(NSUInteger)index;
-- (MPAuthenticate_Builder *)addCeltVersions:(int32_t)value;
-- (MPAuthenticate_Builder *)setCeltVersionsArray:(NSArray *)array;
-- (MPAuthenticate_Builder *)setCeltVersionsValues:(const int32_t *)values count:(NSUInteger)count;
-- (MPAuthenticate_Builder *)clearCeltVersions;
+- (SInt32)celtVersionsAtIndex:(NSUInteger)index;
+- (MPAuthenticateBuilder *)addCeltVersions:(SInt32)value;
+- (MPAuthenticateBuilder *)setCeltVersionsArray:(NSArray *)array;
+- (MPAuthenticateBuilder *)setCeltVersionsValues:(const SInt32 *)values count:(NSUInteger)count;
+- (MPAuthenticateBuilder *)clearCeltVersions;
 
 - (BOOL) hasOpus;
 - (BOOL) opus;
-- (MPAuthenticate_Builder*) setOpus:(BOOL) value;
-- (MPAuthenticate_Builder*) clearOpus;
+- (MPAuthenticateBuilder*) setOpus:(BOOL) value;
+- (MPAuthenticateBuilder*) clearOpus;
 @end
 
-@interface MPPing : PBGeneratedMessage {
+#define Ping_timestamp @"timestamp"
+#define Ping_good @"good"
+#define Ping_late @"late"
+#define Ping_lost @"lost"
+#define Ping_resync @"resync"
+#define Ping_udp_packets @"udpPackets"
+#define Ping_tcp_packets @"tcpPackets"
+#define Ping_udp_ping_avg @"udpPingAvg"
+#define Ping_udp_ping_var @"udpPingVar"
+#define Ping_tcp_ping_avg @"tcpPingAvg"
+#define Ping_tcp_ping_var @"tcpPingVar"
+@interface MPPing : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasUdpPingAvg_:1;
   BOOL hasUdpPingVar_:1;
@@ -401,13 +426,13 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   Float32 udpPingVar;
   Float32 tcpPingAvg;
   Float32 tcpPingVar;
-  uint64_t timestamp;
-  uint32_t good;
-  uint32_t late;
-  uint32_t lost;
-  uint32_t resync;
-  uint32_t udpPackets;
-  uint32_t tcpPackets;
+  UInt64 timestamp;
+  UInt32 good;
+  UInt32 late;
+  UInt32 lost;
+  UInt32 resync;
+  UInt32 udpPackets;
+  UInt32 tcpPackets;
 }
 - (BOOL) hasTimestamp;
 - (BOOL) hasGood;
@@ -420,27 +445,27 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasUdpPingVar;
 - (BOOL) hasTcpPingAvg;
 - (BOOL) hasTcpPingVar;
-@property (readonly) uint64_t timestamp;
-@property (readonly) uint32_t good;
-@property (readonly) uint32_t late;
-@property (readonly) uint32_t lost;
-@property (readonly) uint32_t resync;
-@property (readonly) uint32_t udpPackets;
-@property (readonly) uint32_t tcpPackets;
+@property (readonly) UInt64 timestamp;
+@property (readonly) UInt32 good;
+@property (readonly) UInt32 late;
+@property (readonly) UInt32 lost;
+@property (readonly) UInt32 resync;
+@property (readonly) UInt32 udpPackets;
+@property (readonly) UInt32 tcpPackets;
 @property (readonly) Float32 udpPingAvg;
 @property (readonly) Float32 udpPingVar;
 @property (readonly) Float32 tcpPingAvg;
 @property (readonly) Float32 tcpPingVar;
 
-+ (MPPing*) defaultInstance;
-- (MPPing*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPPing_Builder*) builder;
-+ (MPPing_Builder*) builder;
-+ (MPPing_Builder*) builderWithPrototype:(MPPing*) prototype;
-- (MPPing_Builder*) toBuilder;
+- (MPPingBuilder*) builder;
++ (MPPingBuilder*) builder;
++ (MPPingBuilder*) builderWithPrototype:(MPPing*) prototype;
+- (MPPingBuilder*) toBuilder;
 
 + (MPPing*) parseFromData:(NSData*) data;
 + (MPPing*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -450,100 +475,102 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPPing*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPPing_Builder : PBGeneratedMessage_Builder {
+@interface MPPingBuilder : PBGeneratedMessageBuilder {
 @private
-  MPPing* result;
+  MPPing* resultPing;
 }
 
 - (MPPing*) defaultInstance;
 
-- (MPPing_Builder*) clear;
-- (MPPing_Builder*) clone;
+- (MPPingBuilder*) clear;
+- (MPPingBuilder*) clone;
 
 - (MPPing*) build;
 - (MPPing*) buildPartial;
 
-- (MPPing_Builder*) mergeFrom:(MPPing*) other;
-- (MPPing_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPPing_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPPingBuilder*) mergeFrom:(MPPing*) other;
+- (MPPingBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPPingBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasTimestamp;
-- (uint64_t) timestamp;
-- (MPPing_Builder*) setTimestamp:(uint64_t) value;
-- (MPPing_Builder*) clearTimestamp;
+- (UInt64) timestamp;
+- (MPPingBuilder*) setTimestamp:(UInt64) value;
+- (MPPingBuilder*) clearTimestamp;
 
 - (BOOL) hasGood;
-- (uint32_t) good;
-- (MPPing_Builder*) setGood:(uint32_t) value;
-- (MPPing_Builder*) clearGood;
+- (UInt32) good;
+- (MPPingBuilder*) setGood:(UInt32) value;
+- (MPPingBuilder*) clearGood;
 
 - (BOOL) hasLate;
-- (uint32_t) late;
-- (MPPing_Builder*) setLate:(uint32_t) value;
-- (MPPing_Builder*) clearLate;
+- (UInt32) late;
+- (MPPingBuilder*) setLate:(UInt32) value;
+- (MPPingBuilder*) clearLate;
 
 - (BOOL) hasLost;
-- (uint32_t) lost;
-- (MPPing_Builder*) setLost:(uint32_t) value;
-- (MPPing_Builder*) clearLost;
+- (UInt32) lost;
+- (MPPingBuilder*) setLost:(UInt32) value;
+- (MPPingBuilder*) clearLost;
 
 - (BOOL) hasResync;
-- (uint32_t) resync;
-- (MPPing_Builder*) setResync:(uint32_t) value;
-- (MPPing_Builder*) clearResync;
+- (UInt32) resync;
+- (MPPingBuilder*) setResync:(UInt32) value;
+- (MPPingBuilder*) clearResync;
 
 - (BOOL) hasUdpPackets;
-- (uint32_t) udpPackets;
-- (MPPing_Builder*) setUdpPackets:(uint32_t) value;
-- (MPPing_Builder*) clearUdpPackets;
+- (UInt32) udpPackets;
+- (MPPingBuilder*) setUdpPackets:(UInt32) value;
+- (MPPingBuilder*) clearUdpPackets;
 
 - (BOOL) hasTcpPackets;
-- (uint32_t) tcpPackets;
-- (MPPing_Builder*) setTcpPackets:(uint32_t) value;
-- (MPPing_Builder*) clearTcpPackets;
+- (UInt32) tcpPackets;
+- (MPPingBuilder*) setTcpPackets:(UInt32) value;
+- (MPPingBuilder*) clearTcpPackets;
 
 - (BOOL) hasUdpPingAvg;
 - (Float32) udpPingAvg;
-- (MPPing_Builder*) setUdpPingAvg:(Float32) value;
-- (MPPing_Builder*) clearUdpPingAvg;
+- (MPPingBuilder*) setUdpPingAvg:(Float32) value;
+- (MPPingBuilder*) clearUdpPingAvg;
 
 - (BOOL) hasUdpPingVar;
 - (Float32) udpPingVar;
-- (MPPing_Builder*) setUdpPingVar:(Float32) value;
-- (MPPing_Builder*) clearUdpPingVar;
+- (MPPingBuilder*) setUdpPingVar:(Float32) value;
+- (MPPingBuilder*) clearUdpPingVar;
 
 - (BOOL) hasTcpPingAvg;
 - (Float32) tcpPingAvg;
-- (MPPing_Builder*) setTcpPingAvg:(Float32) value;
-- (MPPing_Builder*) clearTcpPingAvg;
+- (MPPingBuilder*) setTcpPingAvg:(Float32) value;
+- (MPPingBuilder*) clearTcpPingAvg;
 
 - (BOOL) hasTcpPingVar;
 - (Float32) tcpPingVar;
-- (MPPing_Builder*) setTcpPingVar:(Float32) value;
-- (MPPing_Builder*) clearTcpPingVar;
+- (MPPingBuilder*) setTcpPingVar:(Float32) value;
+- (MPPingBuilder*) clearTcpPingVar;
 @end
 
-@interface MPReject : PBGeneratedMessage {
+#define Reject_type @"type"
+#define Reject_reason @"reason"
+@interface MPReject : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasReason_:1;
   BOOL hasType_:1;
   NSString* reason;
-  MPReject_RejectType type;
+  MPRejectRejectType type;
 }
 - (BOOL) hasType;
 - (BOOL) hasReason;
-@property (readonly) MPReject_RejectType type;
-@property (readonly, retain) NSString* reason;
+@property (readonly) MPRejectRejectType type;
+@property (readonly, strong) NSString* reason;
 
-+ (MPReject*) defaultInstance;
-- (MPReject*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPReject_Builder*) builder;
-+ (MPReject_Builder*) builder;
-+ (MPReject_Builder*) builderWithPrototype:(MPReject*) prototype;
-- (MPReject_Builder*) toBuilder;
+- (MPRejectBuilder*) builder;
++ (MPRejectBuilder*) builder;
++ (MPRejectBuilder*) builderWithPrototype:(MPReject*) prototype;
+- (MPRejectBuilder*) toBuilder;
 
 + (MPReject*) parseFromData:(NSData*) data;
 + (MPReject*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -553,148 +580,67 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPReject*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPReject_Builder : PBGeneratedMessage_Builder {
+@interface MPRejectBuilder : PBGeneratedMessageBuilder {
 @private
-  MPReject* result;
+  MPReject* resultReject;
 }
 
 - (MPReject*) defaultInstance;
 
-- (MPReject_Builder*) clear;
-- (MPReject_Builder*) clone;
+- (MPRejectBuilder*) clear;
+- (MPRejectBuilder*) clone;
 
 - (MPReject*) build;
 - (MPReject*) buildPartial;
 
-- (MPReject_Builder*) mergeFrom:(MPReject*) other;
-- (MPReject_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPReject_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPRejectBuilder*) mergeFrom:(MPReject*) other;
+- (MPRejectBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPRejectBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasType;
-- (MPReject_RejectType) type;
-- (MPReject_Builder*) setType:(MPReject_RejectType) value;
-- (MPReject_Builder*) clearType;
+- (MPRejectRejectType) type;
+- (MPRejectBuilder*) setType:(MPRejectRejectType) value;
+- (MPRejectBuilder*) clearType;
 
 - (BOOL) hasReason;
 - (NSString*) reason;
-- (MPReject_Builder*) setReason:(NSString*) value;
-- (MPReject_Builder*) clearReason;
+- (MPRejectBuilder*) setReason:(NSString*) value;
+- (MPRejectBuilder*) clearReason;
 @end
 
-@interface MPServerConfig : PBGeneratedMessage {
-@private
-  BOOL hasAllowHtml_:1;
-  BOOL hasWelcomeText_:1;
-  BOOL hasMaxBandwidth_:1;
-  BOOL hasMessageLength_:1;
-  BOOL hasImageMessageLength_:1;
-  BOOL allowHtml_:1;
-  NSString* welcomeText;
-  uint32_t maxBandwidth;
-  uint32_t messageLength;
-  uint32_t imageMessageLength;
-}
-- (BOOL) hasMaxBandwidth;
-- (BOOL) hasWelcomeText;
-- (BOOL) hasAllowHtml;
-- (BOOL) hasMessageLength;
-- (BOOL) hasImageMessageLength;
-@property (readonly) uint32_t maxBandwidth;
-@property (readonly, retain) NSString* welcomeText;
-- (BOOL) allowHtml;
-@property (readonly) uint32_t messageLength;
-@property (readonly) uint32_t imageMessageLength;
-
-+ (MPServerConfig*) defaultInstance;
-- (MPServerConfig*) defaultInstance;
-
-- (BOOL) isInitialized;
-- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPServerConfig_Builder*) builder;
-+ (MPServerConfig_Builder*) builder;
-+ (MPServerConfig_Builder*) builderWithPrototype:(MPServerConfig*) prototype;
-- (MPServerConfig_Builder*) toBuilder;
-
-+ (MPServerConfig*) parseFromData:(NSData*) data;
-+ (MPServerConfig*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPServerConfig*) parseFromInputStream:(NSInputStream*) input;
-+ (MPServerConfig*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPServerConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPServerConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-@end
-
-@interface MPServerConfig_Builder : PBGeneratedMessage_Builder {
-@private
-  MPServerConfig* result;
-}
-
-- (MPServerConfig*) defaultInstance;
-
-- (MPServerConfig_Builder*) clear;
-- (MPServerConfig_Builder*) clone;
-
-- (MPServerConfig*) build;
-- (MPServerConfig*) buildPartial;
-
-- (MPServerConfig_Builder*) mergeFrom:(MPServerConfig*) other;
-- (MPServerConfig_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPServerConfig_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-
-- (BOOL) hasMaxBandwidth;
-- (uint32_t) maxBandwidth;
-- (MPServerConfig_Builder*) setMaxBandwidth:(uint32_t) value;
-- (MPServerConfig_Builder*) clearMaxBandwidth;
-
-- (BOOL) hasWelcomeText;
-- (NSString*) welcomeText;
-- (MPServerConfig_Builder*) setWelcomeText:(NSString*) value;
-- (MPServerConfig_Builder*) clearWelcomeText;
-
-- (BOOL) hasAllowHtml;
-- (BOOL) allowHtml;
-- (MPServerConfig_Builder*) setAllowHtml:(BOOL) value;
-- (MPServerConfig_Builder*) clearAllowHtml;
-
-- (BOOL) hasMessageLength;
-- (uint32_t) messageLength;
-- (MPServerConfig_Builder*) setMessageLength:(uint32_t) value;
-- (MPServerConfig_Builder*) clearMessageLength;
-
-- (BOOL) hasImageMessageLength;
-- (uint32_t) imageMessageLength;
-- (MPServerConfig_Builder*) setImageMessageLength:(uint32_t) value;
-- (MPServerConfig_Builder*) clearImageMessageLength;
-@end
-
-@interface MPServerSync : PBGeneratedMessage {
+#define ServerSync_session @"session"
+#define ServerSync_max_bandwidth @"maxBandwidth"
+#define ServerSync_welcome_text @"welcomeText"
+#define ServerSync_permissions @"permissions"
+@interface MPServerSync : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasPermissions_:1;
   BOOL hasWelcomeText_:1;
   BOOL hasSession_:1;
   BOOL hasMaxBandwidth_:1;
-  uint64_t permissions;
+  UInt64 permissions;
   NSString* welcomeText;
-  uint32_t session;
-  uint32_t maxBandwidth;
+  UInt32 session;
+  UInt32 maxBandwidth;
 }
 - (BOOL) hasSession;
 - (BOOL) hasMaxBandwidth;
 - (BOOL) hasWelcomeText;
 - (BOOL) hasPermissions;
-@property (readonly) uint32_t session;
-@property (readonly) uint32_t maxBandwidth;
-@property (readonly, retain) NSString* welcomeText;
-@property (readonly) uint64_t permissions;
+@property (readonly) UInt32 session;
+@property (readonly) UInt32 maxBandwidth;
+@property (readonly, strong) NSString* welcomeText;
+@property (readonly) UInt64 permissions;
 
-+ (MPServerSync*) defaultInstance;
-- (MPServerSync*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPServerSync_Builder*) builder;
-+ (MPServerSync_Builder*) builder;
-+ (MPServerSync_Builder*) builderWithPrototype:(MPServerSync*) prototype;
-- (MPServerSync_Builder*) toBuilder;
+- (MPServerSyncBuilder*) builder;
++ (MPServerSyncBuilder*) builder;
++ (MPServerSyncBuilder*) builderWithPrototype:(MPServerSync*) prototype;
+- (MPServerSyncBuilder*) toBuilder;
 
 + (MPServerSync*) parseFromData:(NSData*) data;
 + (MPServerSync*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -704,61 +650,62 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPServerSync*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPServerSync_Builder : PBGeneratedMessage_Builder {
+@interface MPServerSyncBuilder : PBGeneratedMessageBuilder {
 @private
-  MPServerSync* result;
+  MPServerSync* resultServerSync;
 }
 
 - (MPServerSync*) defaultInstance;
 
-- (MPServerSync_Builder*) clear;
-- (MPServerSync_Builder*) clone;
+- (MPServerSyncBuilder*) clear;
+- (MPServerSyncBuilder*) clone;
 
 - (MPServerSync*) build;
 - (MPServerSync*) buildPartial;
 
-- (MPServerSync_Builder*) mergeFrom:(MPServerSync*) other;
-- (MPServerSync_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPServerSync_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPServerSyncBuilder*) mergeFrom:(MPServerSync*) other;
+- (MPServerSyncBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPServerSyncBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPServerSync_Builder*) setSession:(uint32_t) value;
-- (MPServerSync_Builder*) clearSession;
+- (UInt32) session;
+- (MPServerSyncBuilder*) setSession:(UInt32) value;
+- (MPServerSyncBuilder*) clearSession;
 
 - (BOOL) hasMaxBandwidth;
-- (uint32_t) maxBandwidth;
-- (MPServerSync_Builder*) setMaxBandwidth:(uint32_t) value;
-- (MPServerSync_Builder*) clearMaxBandwidth;
+- (UInt32) maxBandwidth;
+- (MPServerSyncBuilder*) setMaxBandwidth:(UInt32) value;
+- (MPServerSyncBuilder*) clearMaxBandwidth;
 
 - (BOOL) hasWelcomeText;
 - (NSString*) welcomeText;
-- (MPServerSync_Builder*) setWelcomeText:(NSString*) value;
-- (MPServerSync_Builder*) clearWelcomeText;
+- (MPServerSyncBuilder*) setWelcomeText:(NSString*) value;
+- (MPServerSyncBuilder*) clearWelcomeText;
 
 - (BOOL) hasPermissions;
-- (uint64_t) permissions;
-- (MPServerSync_Builder*) setPermissions:(uint64_t) value;
-- (MPServerSync_Builder*) clearPermissions;
+- (UInt64) permissions;
+- (MPServerSyncBuilder*) setPermissions:(UInt64) value;
+- (MPServerSyncBuilder*) clearPermissions;
 @end
 
-@interface MPChannelRemove : PBGeneratedMessage {
+#define ChannelRemove_channel_id @"channelId"
+@interface MPChannelRemove : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasChannelId_:1;
-  uint32_t channelId;
+  UInt32 channelId;
 }
 - (BOOL) hasChannelId;
-@property (readonly) uint32_t channelId;
+@property (readonly) UInt32 channelId;
 
-+ (MPChannelRemove*) defaultInstance;
-- (MPChannelRemove*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPChannelRemove_Builder*) builder;
-+ (MPChannelRemove_Builder*) builder;
-+ (MPChannelRemove_Builder*) builderWithPrototype:(MPChannelRemove*) prototype;
-- (MPChannelRemove_Builder*) toBuilder;
+- (MPChannelRemoveBuilder*) builder;
++ (MPChannelRemoveBuilder*) builder;
++ (MPChannelRemoveBuilder*) builderWithPrototype:(MPChannelRemove*) prototype;
+- (MPChannelRemoveBuilder*) toBuilder;
 
 + (MPChannelRemove*) parseFromData:(NSData*) data;
 + (MPChannelRemove*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -768,45 +715,64 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPChannelRemove*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPChannelRemove_Builder : PBGeneratedMessage_Builder {
+@interface MPChannelRemoveBuilder : PBGeneratedMessageBuilder {
 @private
-  MPChannelRemove* result;
+  MPChannelRemove* resultChannelRemove;
 }
 
 - (MPChannelRemove*) defaultInstance;
 
-- (MPChannelRemove_Builder*) clear;
-- (MPChannelRemove_Builder*) clone;
+- (MPChannelRemoveBuilder*) clear;
+- (MPChannelRemoveBuilder*) clone;
 
 - (MPChannelRemove*) build;
 - (MPChannelRemove*) buildPartial;
 
-- (MPChannelRemove_Builder*) mergeFrom:(MPChannelRemove*) other;
-- (MPChannelRemove_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPChannelRemove_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPChannelRemoveBuilder*) mergeFrom:(MPChannelRemove*) other;
+- (MPChannelRemoveBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPChannelRemoveBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPChannelRemove_Builder*) setChannelId:(uint32_t) value;
-- (MPChannelRemove_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPChannelRemoveBuilder*) setChannelId:(UInt32) value;
+- (MPChannelRemoveBuilder*) clearChannelId;
 @end
 
-@interface MPChannelState : PBGeneratedMessage {
+#define ChannelState_channel_id @"channelId"
+#define ChannelState_parent @"parent"
+#define ChannelState_name @"name"
+#define ChannelState_links @"links"
+#define ChannelState_description @"pb_description"
+#define ChannelState_links_add @"linksAdd"
+#define ChannelState_links_remove @"linksRemove"
+#define ChannelState_temporary @"temporary"
+#define ChannelState_position @"position"
+#define ChannelState_description_hash @"descriptionHash"
+#define ChannelState_max_users @"maxUsers"
+#define ChannelState_is_enter_restricted @"isEnterRestricted"
+#define ChannelState_can_enter @"canEnter"
+@interface MPChannelState : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasTemporary_:1;
+  BOOL hasIsEnterRestricted_:1;
+  BOOL hasCanEnter_:1;
   BOOL hasPosition_:1;
   BOOL hasName_:1;
   BOOL hasDescription_:1;
   BOOL hasDescriptionHash_:1;
   BOOL hasChannelId_:1;
   BOOL hasParent_:1;
+  BOOL hasMaxUsers_:1;
   BOOL temporary_:1;
-  int32_t position;
+  BOOL isEnterRestricted_:1;
+  BOOL canEnter_:1;
+  SInt32 position;
   NSString* name;
-  NSString* description;
+  NSString* pb_description;
   NSData* descriptionHash;
-  uint32_t channelId;
-  uint32_t parent;
+  UInt32 channelId;
+  UInt32 parent;
+  UInt32 maxUsers;
   PBAppendableArray * linksArray;
   PBAppendableArray * linksAddArray;
   PBAppendableArray * linksRemoveArray;
@@ -818,29 +784,35 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasTemporary;
 - (BOOL) hasPosition;
 - (BOOL) hasDescriptionHash;
-@property (readonly) uint32_t channelId;
-@property (readonly) uint32_t parent;
-@property (readonly, retain) NSString* name;
-@property (readonly, retain) PBArray * links;
-@property (readonly, retain) NSString* description;
-@property (readonly, retain) PBArray * linksAdd;
-@property (readonly, retain) PBArray * linksRemove;
+- (BOOL) hasMaxUsers;
+- (BOOL) hasIsEnterRestricted;
+- (BOOL) hasCanEnter;
+@property (readonly) UInt32 channelId;
+@property (readonly) UInt32 parent;
+@property (readonly, strong) NSString* name;
+@property (readonly, strong) PBArray * links;
+@property (readonly, strong) NSString* pb_description;
+@property (readonly, strong) PBArray * linksAdd;
+@property (readonly, strong) PBArray * linksRemove;
 - (BOOL) temporary;
-@property (readonly) int32_t position;
-@property (readonly, retain) NSData* descriptionHash;
-- (uint32_t)linksAtIndex:(NSUInteger)index;
-- (uint32_t)linksAddAtIndex:(NSUInteger)index;
-- (uint32_t)linksRemoveAtIndex:(NSUInteger)index;
+@property (readonly) SInt32 position;
+@property (readonly, strong) NSData* descriptionHash;
+@property (readonly) UInt32 maxUsers;
+- (BOOL) isEnterRestricted;
+- (BOOL) canEnter;
+- (UInt32)linksAtIndex:(NSUInteger)index;
+- (UInt32)linksAddAtIndex:(NSUInteger)index;
+- (UInt32)linksRemoveAtIndex:(NSUInteger)index;
 
-+ (MPChannelState*) defaultInstance;
-- (MPChannelState*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPChannelState_Builder*) builder;
-+ (MPChannelState_Builder*) builder;
-+ (MPChannelState_Builder*) builderWithPrototype:(MPChannelState*) prototype;
-- (MPChannelState_Builder*) toBuilder;
+- (MPChannelStateBuilder*) builder;
++ (MPChannelStateBuilder*) builder;
++ (MPChannelStateBuilder*) builderWithPrototype:(MPChannelState*) prototype;
+- (MPChannelStateBuilder*) toBuilder;
 
 + (MPChannelState*) parseFromData:(NSData*) data;
 + (MPChannelState*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -850,81 +822,100 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPChannelState*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPChannelState_Builder : PBGeneratedMessage_Builder {
+@interface MPChannelStateBuilder : PBGeneratedMessageBuilder {
 @private
-  MPChannelState* result;
+  MPChannelState* resultChannelState;
 }
 
 - (MPChannelState*) defaultInstance;
 
-- (MPChannelState_Builder*) clear;
-- (MPChannelState_Builder*) clone;
+- (MPChannelStateBuilder*) clear;
+- (MPChannelStateBuilder*) clone;
 
 - (MPChannelState*) build;
 - (MPChannelState*) buildPartial;
 
-- (MPChannelState_Builder*) mergeFrom:(MPChannelState*) other;
-- (MPChannelState_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPChannelState_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPChannelStateBuilder*) mergeFrom:(MPChannelState*) other;
+- (MPChannelStateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPChannelStateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPChannelState_Builder*) setChannelId:(uint32_t) value;
-- (MPChannelState_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPChannelStateBuilder*) setChannelId:(UInt32) value;
+- (MPChannelStateBuilder*) clearChannelId;
 
 - (BOOL) hasParent;
-- (uint32_t) parent;
-- (MPChannelState_Builder*) setParent:(uint32_t) value;
-- (MPChannelState_Builder*) clearParent;
+- (UInt32) parent;
+- (MPChannelStateBuilder*) setParent:(UInt32) value;
+- (MPChannelStateBuilder*) clearParent;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPChannelState_Builder*) setName:(NSString*) value;
-- (MPChannelState_Builder*) clearName;
+- (MPChannelStateBuilder*) setName:(NSString*) value;
+- (MPChannelStateBuilder*) clearName;
 
 - (PBAppendableArray *)links;
-- (uint32_t)linksAtIndex:(NSUInteger)index;
-- (MPChannelState_Builder *)addLinks:(uint32_t)value;
-- (MPChannelState_Builder *)setLinksArray:(NSArray *)array;
-- (MPChannelState_Builder *)setLinksValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPChannelState_Builder *)clearLinks;
+- (UInt32)linksAtIndex:(NSUInteger)index;
+- (MPChannelStateBuilder *)addLinks:(UInt32)value;
+- (MPChannelStateBuilder *)setLinksArray:(NSArray *)array;
+- (MPChannelStateBuilder *)setLinksValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPChannelStateBuilder *)clearLinks;
 
 - (BOOL) hasDescription;
-- (NSString*) description;
-- (MPChannelState_Builder*) setDescription:(NSString*) value;
-- (MPChannelState_Builder*) clearDescription;
+- (NSString*) pb_description;
+- (MPChannelStateBuilder*) setDescription:(NSString*) value;
+- (MPChannelStateBuilder*) clearDescription;
 
 - (PBAppendableArray *)linksAdd;
-- (uint32_t)linksAddAtIndex:(NSUInteger)index;
-- (MPChannelState_Builder *)addLinksAdd:(uint32_t)value;
-- (MPChannelState_Builder *)setLinksAddArray:(NSArray *)array;
-- (MPChannelState_Builder *)setLinksAddValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPChannelState_Builder *)clearLinksAdd;
+- (UInt32)linksAddAtIndex:(NSUInteger)index;
+- (MPChannelStateBuilder *)addLinksAdd:(UInt32)value;
+- (MPChannelStateBuilder *)setLinksAddArray:(NSArray *)array;
+- (MPChannelStateBuilder *)setLinksAddValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPChannelStateBuilder *)clearLinksAdd;
 
 - (PBAppendableArray *)linksRemove;
-- (uint32_t)linksRemoveAtIndex:(NSUInteger)index;
-- (MPChannelState_Builder *)addLinksRemove:(uint32_t)value;
-- (MPChannelState_Builder *)setLinksRemoveArray:(NSArray *)array;
-- (MPChannelState_Builder *)setLinksRemoveValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPChannelState_Builder *)clearLinksRemove;
+- (UInt32)linksRemoveAtIndex:(NSUInteger)index;
+- (MPChannelStateBuilder *)addLinksRemove:(UInt32)value;
+- (MPChannelStateBuilder *)setLinksRemoveArray:(NSArray *)array;
+- (MPChannelStateBuilder *)setLinksRemoveValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPChannelStateBuilder *)clearLinksRemove;
 
 - (BOOL) hasTemporary;
 - (BOOL) temporary;
-- (MPChannelState_Builder*) setTemporary:(BOOL) value;
-- (MPChannelState_Builder*) clearTemporary;
+- (MPChannelStateBuilder*) setTemporary:(BOOL) value;
+- (MPChannelStateBuilder*) clearTemporary;
 
 - (BOOL) hasPosition;
-- (int32_t) position;
-- (MPChannelState_Builder*) setPosition:(int32_t) value;
-- (MPChannelState_Builder*) clearPosition;
+- (SInt32) position;
+- (MPChannelStateBuilder*) setPosition:(SInt32) value;
+- (MPChannelStateBuilder*) clearPosition;
 
 - (BOOL) hasDescriptionHash;
 - (NSData*) descriptionHash;
-- (MPChannelState_Builder*) setDescriptionHash:(NSData*) value;
-- (MPChannelState_Builder*) clearDescriptionHash;
+- (MPChannelStateBuilder*) setDescriptionHash:(NSData*) value;
+- (MPChannelStateBuilder*) clearDescriptionHash;
+
+- (BOOL) hasMaxUsers;
+- (UInt32) maxUsers;
+- (MPChannelStateBuilder*) setMaxUsers:(UInt32) value;
+- (MPChannelStateBuilder*) clearMaxUsers;
+
+- (BOOL) hasIsEnterRestricted;
+- (BOOL) isEnterRestricted;
+- (MPChannelStateBuilder*) setIsEnterRestricted:(BOOL) value;
+- (MPChannelStateBuilder*) clearIsEnterRestricted;
+
+- (BOOL) hasCanEnter;
+- (BOOL) canEnter;
+- (MPChannelStateBuilder*) setCanEnter:(BOOL) value;
+- (MPChannelStateBuilder*) clearCanEnter;
 @end
 
-@interface MPUserRemove : PBGeneratedMessage {
+#define UserRemove_session @"session"
+#define UserRemove_actor @"actor"
+#define UserRemove_reason @"reason"
+#define UserRemove_ban @"ban"
+@interface MPUserRemove : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasBan_:1;
   BOOL hasReason_:1;
@@ -932,27 +923,27 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL hasActor_:1;
   BOOL ban_:1;
   NSString* reason;
-  uint32_t session;
-  uint32_t actor;
+  UInt32 session;
+  UInt32 actor;
 }
 - (BOOL) hasSession;
 - (BOOL) hasActor;
 - (BOOL) hasReason;
 - (BOOL) hasBan;
-@property (readonly) uint32_t session;
-@property (readonly) uint32_t actor;
-@property (readonly, retain) NSString* reason;
+@property (readonly) UInt32 session;
+@property (readonly) UInt32 actor;
+@property (readonly, strong) NSString* reason;
 - (BOOL) ban;
 
-+ (MPUserRemove*) defaultInstance;
-- (MPUserRemove*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserRemove_Builder*) builder;
-+ (MPUserRemove_Builder*) builder;
-+ (MPUserRemove_Builder*) builderWithPrototype:(MPUserRemove*) prototype;
-- (MPUserRemove_Builder*) toBuilder;
+- (MPUserRemoveBuilder*) builder;
++ (MPUserRemoveBuilder*) builder;
++ (MPUserRemoveBuilder*) builderWithPrototype:(MPUserRemove*) prototype;
+- (MPUserRemoveBuilder*) toBuilder;
 
 + (MPUserRemove*) parseFromData:(NSData*) data;
 + (MPUserRemove*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -962,84 +953,109 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPUserRemove*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserRemove_Builder : PBGeneratedMessage_Builder {
+@interface MPUserRemoveBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserRemove* result;
+  MPUserRemove* resultUserRemove;
 }
 
 - (MPUserRemove*) defaultInstance;
 
-- (MPUserRemove_Builder*) clear;
-- (MPUserRemove_Builder*) clone;
+- (MPUserRemoveBuilder*) clear;
+- (MPUserRemoveBuilder*) clone;
 
 - (MPUserRemove*) build;
 - (MPUserRemove*) buildPartial;
 
-- (MPUserRemove_Builder*) mergeFrom:(MPUserRemove*) other;
-- (MPUserRemove_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserRemove_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserRemoveBuilder*) mergeFrom:(MPUserRemove*) other;
+- (MPUserRemoveBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserRemoveBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPUserRemove_Builder*) setSession:(uint32_t) value;
-- (MPUserRemove_Builder*) clearSession;
+- (UInt32) session;
+- (MPUserRemoveBuilder*) setSession:(UInt32) value;
+- (MPUserRemoveBuilder*) clearSession;
 
 - (BOOL) hasActor;
-- (uint32_t) actor;
-- (MPUserRemove_Builder*) setActor:(uint32_t) value;
-- (MPUserRemove_Builder*) clearActor;
+- (UInt32) actor;
+- (MPUserRemoveBuilder*) setActor:(UInt32) value;
+- (MPUserRemoveBuilder*) clearActor;
 
 - (BOOL) hasReason;
 - (NSString*) reason;
-- (MPUserRemove_Builder*) setReason:(NSString*) value;
-- (MPUserRemove_Builder*) clearReason;
+- (MPUserRemoveBuilder*) setReason:(NSString*) value;
+- (MPUserRemoveBuilder*) clearReason;
 
 - (BOOL) hasBan;
 - (BOOL) ban;
-- (MPUserRemove_Builder*) setBan:(BOOL) value;
-- (MPUserRemove_Builder*) clearBan;
+- (MPUserRemoveBuilder*) setBan:(BOOL) value;
+- (MPUserRemoveBuilder*) clearBan;
 @end
 
-@interface MPUserState : PBGeneratedMessage {
+#define UserState_session @"session"
+#define UserState_actor @"actor"
+#define UserState_name @"name"
+#define UserState_user_id @"userId"
+#define UserState_channel_id @"channelId"
+#define UserState_mute @"mute"
+#define UserState_deaf @"deaf"
+#define UserState_suppress @"suppress"
+#define UserState_self_mute @"selfMute"
+#define UserState_self_deaf @"selfDeaf"
+#define UserState_texture @"texture"
+#define UserState_plugin_context @"pluginContext"
+#define UserState_plugin_identity @"pluginIdentity"
+#define UserState_comment @"comment"
+#define UserState_hash @"pb_hash"
+#define UserState_comment_hash @"commentHash"
+#define UserState_texture_hash @"textureHash"
+#define UserState_priority_speaker @"prioritySpeaker"
+#define UserState_recording @"recording"
+#define UserState_temporary_access_tokens @"temporaryAccessTokens"
+#define UserState_listening_channel_add @"listeningChannelAdd"
+#define UserState_listening_channel_remove @"listeningChannelRemove"
+@interface MPUserState : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
-  BOOL hasRecording_:1;
-  BOOL hasPrioritySpeaker_:1;
-  BOOL hasSelfDeaf_:1;
-  BOOL hasSelfMute_:1;
-  BOOL hasSuppress_:1;
-  BOOL hasDeaf_:1;
   BOOL hasMute_:1;
+  BOOL hasDeaf_:1;
+  BOOL hasSuppress_:1;
+  BOOL hasSelfMute_:1;
+  BOOL hasSelfDeaf_:1;
+  BOOL hasPrioritySpeaker_:1;
+  BOOL hasRecording_:1;
   BOOL hasName_:1;
   BOOL hasPluginIdentity_:1;
   BOOL hasComment_:1;
-  BOOL hasCertHash_:1;
+  BOOL hasHash_:1;
   BOOL hasTexture_:1;
   BOOL hasPluginContext_:1;
   BOOL hasCommentHash_:1;
   BOOL hasTextureHash_:1;
-  BOOL hasChannelId_:1;
-  BOOL hasUserId_:1;
-  BOOL hasActor_:1;
   BOOL hasSession_:1;
-  BOOL recording_:1;
-  BOOL prioritySpeaker_:1;
-  BOOL selfDeaf_:1;
-  BOOL selfMute_:1;
-  BOOL suppress_:1;
-  BOOL deaf_:1;
+  BOOL hasActor_:1;
+  BOOL hasUserId_:1;
+  BOOL hasChannelId_:1;
   BOOL mute_:1;
+  BOOL deaf_:1;
+  BOOL suppress_:1;
+  BOOL selfMute_:1;
+  BOOL selfDeaf_:1;
+  BOOL prioritySpeaker_:1;
+  BOOL recording_:1;
   NSString* name;
   NSString* pluginIdentity;
   NSString* comment;
-  NSString* certHash;
+  NSString* pb_hash;
   NSData* texture;
   NSData* pluginContext;
   NSData* commentHash;
   NSData* textureHash;
-  uint32_t channelId;
-  uint32_t userId;
-  uint32_t actor;
-  uint32_t session;
+  UInt32 session;
+  UInt32 actor;
+  UInt32 userId;
+  UInt32 channelId;
+  NSMutableArray * temporaryAccessTokensArray;
+  PBAppendableArray * listeningChannelAddArray;
+  PBAppendableArray * listeningChannelRemoveArray;
 }
 - (BOOL) hasSession;
 - (BOOL) hasActor;
@@ -1055,40 +1071,46 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasPluginContext;
 - (BOOL) hasPluginIdentity;
 - (BOOL) hasComment;
-- (BOOL) hasCertHash;
+- (BOOL) hasHash;
 - (BOOL) hasCommentHash;
 - (BOOL) hasTextureHash;
 - (BOOL) hasPrioritySpeaker;
 - (BOOL) hasRecording;
-@property (readonly) uint32_t session;
-@property (readonly) uint32_t actor;
-@property (readonly, retain) NSString* name;
-@property (readonly) uint32_t userId;
-@property (readonly) uint32_t channelId;
+@property (readonly) UInt32 session;
+@property (readonly) UInt32 actor;
+@property (readonly, strong) NSString* name;
+@property (readonly) UInt32 userId;
+@property (readonly) UInt32 channelId;
 - (BOOL) mute;
 - (BOOL) deaf;
 - (BOOL) suppress;
 - (BOOL) selfMute;
 - (BOOL) selfDeaf;
-@property (readonly, retain) NSData* texture;
-@property (readonly, retain) NSData* pluginContext;
-@property (readonly, retain) NSString* pluginIdentity;
-@property (readonly, retain) NSString* comment;
-@property (readonly, retain) NSString* certHash;
-@property (readonly, retain) NSData* commentHash;
-@property (readonly, retain) NSData* textureHash;
+@property (readonly, strong) NSData* texture;
+@property (readonly, strong) NSData* pluginContext;
+@property (readonly, strong) NSString* pluginIdentity;
+@property (readonly, strong) NSString* comment;
+@property (readonly, strong) NSString* pb_hash;
+@property (readonly, strong) NSData* commentHash;
+@property (readonly, strong) NSData* textureHash;
 - (BOOL) prioritySpeaker;
 - (BOOL) recording;
+@property (readonly, strong) NSArray * temporaryAccessTokens;
+@property (readonly, strong) PBArray * listeningChannelAdd;
+@property (readonly, strong) PBArray * listeningChannelRemove;
+- (NSString*)temporaryAccessTokensAtIndex:(NSUInteger)index;
+- (UInt32)listeningChannelAddAtIndex:(NSUInteger)index;
+- (UInt32)listeningChannelRemoveAtIndex:(NSUInteger)index;
 
-+ (MPUserState*) defaultInstance;
-- (MPUserState*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserState_Builder*) builder;
-+ (MPUserState_Builder*) builder;
-+ (MPUserState_Builder*) builderWithPrototype:(MPUserState*) prototype;
-- (MPUserState_Builder*) toBuilder;
+- (MPUserStateBuilder*) builder;
++ (MPUserStateBuilder*) builder;
++ (MPUserStateBuilder*) builderWithPrototype:(MPUserState*) prototype;
+- (MPUserStateBuilder*) toBuilder;
 
 + (MPUserState*) parseFromData:(NSData*) data;
 + (MPUserState*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1098,139 +1120,161 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPUserState*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserState_Builder : PBGeneratedMessage_Builder {
+@interface MPUserStateBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserState* result;
+  MPUserState* resultUserState;
 }
 
 - (MPUserState*) defaultInstance;
 
-- (MPUserState_Builder*) clear;
-- (MPUserState_Builder*) clone;
+- (MPUserStateBuilder*) clear;
+- (MPUserStateBuilder*) clone;
 
 - (MPUserState*) build;
 - (MPUserState*) buildPartial;
 
-- (MPUserState_Builder*) mergeFrom:(MPUserState*) other;
-- (MPUserState_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserState_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserStateBuilder*) mergeFrom:(MPUserState*) other;
+- (MPUserStateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserStateBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPUserState_Builder*) setSession:(uint32_t) value;
-- (MPUserState_Builder*) clearSession;
+- (UInt32) session;
+- (MPUserStateBuilder*) setSession:(UInt32) value;
+- (MPUserStateBuilder*) clearSession;
 
 - (BOOL) hasActor;
-- (uint32_t) actor;
-- (MPUserState_Builder*) setActor:(uint32_t) value;
-- (MPUserState_Builder*) clearActor;
+- (UInt32) actor;
+- (MPUserStateBuilder*) setActor:(UInt32) value;
+- (MPUserStateBuilder*) clearActor;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPUserState_Builder*) setName:(NSString*) value;
-- (MPUserState_Builder*) clearName;
+- (MPUserStateBuilder*) setName:(NSString*) value;
+- (MPUserStateBuilder*) clearName;
 
 - (BOOL) hasUserId;
-- (uint32_t) userId;
-- (MPUserState_Builder*) setUserId:(uint32_t) value;
-- (MPUserState_Builder*) clearUserId;
+- (UInt32) userId;
+- (MPUserStateBuilder*) setUserId:(UInt32) value;
+- (MPUserStateBuilder*) clearUserId;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPUserState_Builder*) setChannelId:(uint32_t) value;
-- (MPUserState_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPUserStateBuilder*) setChannelId:(UInt32) value;
+- (MPUserStateBuilder*) clearChannelId;
 
 - (BOOL) hasMute;
 - (BOOL) mute;
-- (MPUserState_Builder*) setMute:(BOOL) value;
-- (MPUserState_Builder*) clearMute;
+- (MPUserStateBuilder*) setMute:(BOOL) value;
+- (MPUserStateBuilder*) clearMute;
 
 - (BOOL) hasDeaf;
 - (BOOL) deaf;
-- (MPUserState_Builder*) setDeaf:(BOOL) value;
-- (MPUserState_Builder*) clearDeaf;
+- (MPUserStateBuilder*) setDeaf:(BOOL) value;
+- (MPUserStateBuilder*) clearDeaf;
 
 - (BOOL) hasSuppress;
 - (BOOL) suppress;
-- (MPUserState_Builder*) setSuppress:(BOOL) value;
-- (MPUserState_Builder*) clearSuppress;
+- (MPUserStateBuilder*) setSuppress:(BOOL) value;
+- (MPUserStateBuilder*) clearSuppress;
 
 - (BOOL) hasSelfMute;
 - (BOOL) selfMute;
-- (MPUserState_Builder*) setSelfMute:(BOOL) value;
-- (MPUserState_Builder*) clearSelfMute;
+- (MPUserStateBuilder*) setSelfMute:(BOOL) value;
+- (MPUserStateBuilder*) clearSelfMute;
 
 - (BOOL) hasSelfDeaf;
 - (BOOL) selfDeaf;
-- (MPUserState_Builder*) setSelfDeaf:(BOOL) value;
-- (MPUserState_Builder*) clearSelfDeaf;
+- (MPUserStateBuilder*) setSelfDeaf:(BOOL) value;
+- (MPUserStateBuilder*) clearSelfDeaf;
 
 - (BOOL) hasTexture;
 - (NSData*) texture;
-- (MPUserState_Builder*) setTexture:(NSData*) value;
-- (MPUserState_Builder*) clearTexture;
+- (MPUserStateBuilder*) setTexture:(NSData*) value;
+- (MPUserStateBuilder*) clearTexture;
 
 - (BOOL) hasPluginContext;
 - (NSData*) pluginContext;
-- (MPUserState_Builder*) setPluginContext:(NSData*) value;
-- (MPUserState_Builder*) clearPluginContext;
+- (MPUserStateBuilder*) setPluginContext:(NSData*) value;
+- (MPUserStateBuilder*) clearPluginContext;
 
 - (BOOL) hasPluginIdentity;
 - (NSString*) pluginIdentity;
-- (MPUserState_Builder*) setPluginIdentity:(NSString*) value;
-- (MPUserState_Builder*) clearPluginIdentity;
+- (MPUserStateBuilder*) setPluginIdentity:(NSString*) value;
+- (MPUserStateBuilder*) clearPluginIdentity;
 
 - (BOOL) hasComment;
 - (NSString*) comment;
-- (MPUserState_Builder*) setComment:(NSString*) value;
-- (MPUserState_Builder*) clearComment;
+- (MPUserStateBuilder*) setComment:(NSString*) value;
+- (MPUserStateBuilder*) clearComment;
 
-- (BOOL) hasCertHash;
-- (NSString*) certHash;
-- (MPUserState_Builder*) setCertHash:(NSString*) value;
-- (MPUserState_Builder*) clearCertHash;
+- (BOOL) hasHash;
+- (NSString*) pb_hash;
+- (MPUserStateBuilder*) setHash:(NSString*) value;
+- (MPUserStateBuilder*) clearHash;
 
 - (BOOL) hasCommentHash;
 - (NSData*) commentHash;
-- (MPUserState_Builder*) setCommentHash:(NSData*) value;
-- (MPUserState_Builder*) clearCommentHash;
+- (MPUserStateBuilder*) setCommentHash:(NSData*) value;
+- (MPUserStateBuilder*) clearCommentHash;
 
 - (BOOL) hasTextureHash;
 - (NSData*) textureHash;
-- (MPUserState_Builder*) setTextureHash:(NSData*) value;
-- (MPUserState_Builder*) clearTextureHash;
+- (MPUserStateBuilder*) setTextureHash:(NSData*) value;
+- (MPUserStateBuilder*) clearTextureHash;
 
 - (BOOL) hasPrioritySpeaker;
 - (BOOL) prioritySpeaker;
-- (MPUserState_Builder*) setPrioritySpeaker:(BOOL) value;
-- (MPUserState_Builder*) clearPrioritySpeaker;
+- (MPUserStateBuilder*) setPrioritySpeaker:(BOOL) value;
+- (MPUserStateBuilder*) clearPrioritySpeaker;
 
 - (BOOL) hasRecording;
 - (BOOL) recording;
-- (MPUserState_Builder*) setRecording:(BOOL) value;
-- (MPUserState_Builder*) clearRecording;
+- (MPUserStateBuilder*) setRecording:(BOOL) value;
+- (MPUserStateBuilder*) clearRecording;
+
+- (NSMutableArray *)temporaryAccessTokens;
+- (NSString*)temporaryAccessTokensAtIndex:(NSUInteger)index;
+- (MPUserStateBuilder *)addTemporaryAccessTokens:(NSString*)value;
+- (MPUserStateBuilder *)setTemporaryAccessTokensArray:(NSArray *)array;
+- (MPUserStateBuilder *)clearTemporaryAccessTokens;
+
+- (PBAppendableArray *)listeningChannelAdd;
+- (UInt32)listeningChannelAddAtIndex:(NSUInteger)index;
+- (MPUserStateBuilder *)addListeningChannelAdd:(UInt32)value;
+- (MPUserStateBuilder *)setListeningChannelAddArray:(NSArray *)array;
+- (MPUserStateBuilder *)setListeningChannelAddValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPUserStateBuilder *)clearListeningChannelAdd;
+
+- (PBAppendableArray *)listeningChannelRemove;
+- (UInt32)listeningChannelRemoveAtIndex:(NSUInteger)index;
+- (MPUserStateBuilder *)addListeningChannelRemove:(UInt32)value;
+- (MPUserStateBuilder *)setListeningChannelRemoveArray:(NSArray *)array;
+- (MPUserStateBuilder *)setListeningChannelRemoveValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPUserStateBuilder *)clearListeningChannelRemove;
 @end
 
-@interface MPBanList : PBGeneratedMessage {
+#define BanList_bans @"bans"
+#define BanList_query @"query"
+@interface MPBanList : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasQuery_:1;
   BOOL query_:1;
-  PBAppendableArray * bansArray;
+  NSMutableArray * bansArray;
 }
 - (BOOL) hasQuery;
-@property (readonly, retain) PBArray * bans;
+@property (readonly, strong) NSArray<MPBanListBanEntry*> * bans;
 - (BOOL) query;
-- (MPBanList_BanEntry*)bansAtIndex:(NSUInteger)index;
+- (MPBanListBanEntry*)bansAtIndex:(NSUInteger)index;
 
-+ (MPBanList*) defaultInstance;
-- (MPBanList*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPBanList_Builder*) builder;
-+ (MPBanList_Builder*) builder;
-+ (MPBanList_Builder*) builderWithPrototype:(MPBanList*) prototype;
-- (MPBanList_Builder*) toBuilder;
+- (MPBanListBuilder*) builder;
++ (MPBanListBuilder*) builder;
++ (MPBanListBuilder*) builderWithPrototype:(MPBanList*) prototype;
+- (MPBanListBuilder*) toBuilder;
 
 + (MPBanList*) parseFromData:(NSData*) data;
 + (MPBanList*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1240,169 +1284,180 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPBanList*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPBanList_BanEntry : PBGeneratedMessage {
+#define BanEntry_address @"address"
+#define BanEntry_mask @"mask"
+#define BanEntry_name @"name"
+#define BanEntry_hash @"pb_hash"
+#define BanEntry_reason @"reason"
+#define BanEntry_start @"start"
+#define BanEntry_duration @"duration"
+@interface MPBanListBanEntry : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasName_:1;
-  BOOL hasCertHash_:1;
+  BOOL hasHash_:1;
   BOOL hasReason_:1;
   BOOL hasStart_:1;
   BOOL hasAddress_:1;
   BOOL hasMask_:1;
   BOOL hasDuration_:1;
   NSString* name;
-  NSString* certHash;
+  NSString* pb_hash;
   NSString* reason;
   NSString* start;
   NSData* address;
-  uint32_t mask;
-  uint32_t duration;
+  UInt32 mask;
+  UInt32 duration;
 }
 - (BOOL) hasAddress;
 - (BOOL) hasMask;
 - (BOOL) hasName;
-- (BOOL) hasCertHash;
+- (BOOL) hasHash;
 - (BOOL) hasReason;
 - (BOOL) hasStart;
 - (BOOL) hasDuration;
-@property (readonly, retain) NSData* address;
-@property (readonly) uint32_t mask;
-@property (readonly, retain) NSString* name;
-@property (readonly, retain) NSString* certHash;
-@property (readonly, retain) NSString* reason;
-@property (readonly, retain) NSString* start;
-@property (readonly) uint32_t duration;
+@property (readonly, strong) NSData* address;
+@property (readonly) UInt32 mask;
+@property (readonly, strong) NSString* name;
+@property (readonly, strong) NSString* pb_hash;
+@property (readonly, strong) NSString* reason;
+@property (readonly, strong) NSString* start;
+@property (readonly) UInt32 duration;
 
-+ (MPBanList_BanEntry*) defaultInstance;
-- (MPBanList_BanEntry*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPBanList_BanEntry_Builder*) builder;
-+ (MPBanList_BanEntry_Builder*) builder;
-+ (MPBanList_BanEntry_Builder*) builderWithPrototype:(MPBanList_BanEntry*) prototype;
-- (MPBanList_BanEntry_Builder*) toBuilder;
+- (MPBanListBanEntryBuilder*) builder;
++ (MPBanListBanEntryBuilder*) builder;
++ (MPBanListBanEntryBuilder*) builderWithPrototype:(MPBanListBanEntry*) prototype;
+- (MPBanListBanEntryBuilder*) toBuilder;
 
-+ (MPBanList_BanEntry*) parseFromData:(NSData*) data;
-+ (MPBanList_BanEntry*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPBanList_BanEntry*) parseFromInputStream:(NSInputStream*) input;
-+ (MPBanList_BanEntry*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPBanList_BanEntry*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPBanList_BanEntry*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPBanListBanEntry*) parseFromData:(NSData*) data;
++ (MPBanListBanEntry*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPBanListBanEntry*) parseFromInputStream:(NSInputStream*) input;
++ (MPBanListBanEntry*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPBanListBanEntry*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPBanListBanEntry*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPBanList_BanEntry_Builder : PBGeneratedMessage_Builder {
+@interface MPBanListBanEntryBuilder : PBGeneratedMessageBuilder {
 @private
-  MPBanList_BanEntry* result;
+  MPBanListBanEntry* resultBanEntry;
 }
 
-- (MPBanList_BanEntry*) defaultInstance;
+- (MPBanListBanEntry*) defaultInstance;
 
-- (MPBanList_BanEntry_Builder*) clear;
-- (MPBanList_BanEntry_Builder*) clone;
+- (MPBanListBanEntryBuilder*) clear;
+- (MPBanListBanEntryBuilder*) clone;
 
-- (MPBanList_BanEntry*) build;
-- (MPBanList_BanEntry*) buildPartial;
+- (MPBanListBanEntry*) build;
+- (MPBanListBanEntry*) buildPartial;
 
-- (MPBanList_BanEntry_Builder*) mergeFrom:(MPBanList_BanEntry*) other;
-- (MPBanList_BanEntry_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPBanList_BanEntry_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPBanListBanEntryBuilder*) mergeFrom:(MPBanListBanEntry*) other;
+- (MPBanListBanEntryBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPBanListBanEntryBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasAddress;
 - (NSData*) address;
-- (MPBanList_BanEntry_Builder*) setAddress:(NSData*) value;
-- (MPBanList_BanEntry_Builder*) clearAddress;
+- (MPBanListBanEntryBuilder*) setAddress:(NSData*) value;
+- (MPBanListBanEntryBuilder*) clearAddress;
 
 - (BOOL) hasMask;
-- (uint32_t) mask;
-- (MPBanList_BanEntry_Builder*) setMask:(uint32_t) value;
-- (MPBanList_BanEntry_Builder*) clearMask;
+- (UInt32) mask;
+- (MPBanListBanEntryBuilder*) setMask:(UInt32) value;
+- (MPBanListBanEntryBuilder*) clearMask;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPBanList_BanEntry_Builder*) setName:(NSString*) value;
-- (MPBanList_BanEntry_Builder*) clearName;
+- (MPBanListBanEntryBuilder*) setName:(NSString*) value;
+- (MPBanListBanEntryBuilder*) clearName;
 
-- (BOOL) hasCertHash;
-- (NSString*) certHash;
-- (MPBanList_BanEntry_Builder*) setCertHash:(NSString*) value;
-- (MPBanList_BanEntry_Builder*) clearCertHash;
+- (BOOL) hasHash;
+- (NSString*) pb_hash;
+- (MPBanListBanEntryBuilder*) setHash:(NSString*) value;
+- (MPBanListBanEntryBuilder*) clearHash;
 
 - (BOOL) hasReason;
 - (NSString*) reason;
-- (MPBanList_BanEntry_Builder*) setReason:(NSString*) value;
-- (MPBanList_BanEntry_Builder*) clearReason;
+- (MPBanListBanEntryBuilder*) setReason:(NSString*) value;
+- (MPBanListBanEntryBuilder*) clearReason;
 
 - (BOOL) hasStart;
 - (NSString*) start;
-- (MPBanList_BanEntry_Builder*) setStart:(NSString*) value;
-- (MPBanList_BanEntry_Builder*) clearStart;
+- (MPBanListBanEntryBuilder*) setStart:(NSString*) value;
+- (MPBanListBanEntryBuilder*) clearStart;
 
 - (BOOL) hasDuration;
-- (uint32_t) duration;
-- (MPBanList_BanEntry_Builder*) setDuration:(uint32_t) value;
-- (MPBanList_BanEntry_Builder*) clearDuration;
+- (UInt32) duration;
+- (MPBanListBanEntryBuilder*) setDuration:(UInt32) value;
+- (MPBanListBanEntryBuilder*) clearDuration;
 @end
 
-@interface MPBanList_Builder : PBGeneratedMessage_Builder {
+@interface MPBanListBuilder : PBGeneratedMessageBuilder {
 @private
-  MPBanList* result;
+  MPBanList* resultBanList;
 }
 
 - (MPBanList*) defaultInstance;
 
-- (MPBanList_Builder*) clear;
-- (MPBanList_Builder*) clone;
+- (MPBanListBuilder*) clear;
+- (MPBanListBuilder*) clone;
 
 - (MPBanList*) build;
 - (MPBanList*) buildPartial;
 
-- (MPBanList_Builder*) mergeFrom:(MPBanList*) other;
-- (MPBanList_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPBanList_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPBanListBuilder*) mergeFrom:(MPBanList*) other;
+- (MPBanListBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPBanListBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
-- (PBAppendableArray *)bans;
-- (MPBanList_BanEntry*)bansAtIndex:(NSUInteger)index;
-- (MPBanList_Builder *)addBans:(MPBanList_BanEntry*)value;
-- (MPBanList_Builder *)setBansArray:(NSArray *)array;
-- (MPBanList_Builder *)setBansValues:(const MPBanList_BanEntry* *)values count:(NSUInteger)count;
-- (MPBanList_Builder *)clearBans;
+- (NSMutableArray<MPBanListBanEntry*> *)bans;
+- (MPBanListBanEntry*)bansAtIndex:(NSUInteger)index;
+- (MPBanListBuilder *)addBans:(MPBanListBanEntry*)value;
+- (MPBanListBuilder *)setBansArray:(NSArray<MPBanListBanEntry*> *)array;
+- (MPBanListBuilder *)clearBans;
 
 - (BOOL) hasQuery;
 - (BOOL) query;
-- (MPBanList_Builder*) setQuery:(BOOL) value;
-- (MPBanList_Builder*) clearQuery;
+- (MPBanListBuilder*) setQuery:(BOOL) value;
+- (MPBanListBuilder*) clearQuery;
 @end
 
-@interface MPTextMessage : PBGeneratedMessage {
+#define TextMessage_actor @"actor"
+#define TextMessage_session @"session"
+#define TextMessage_channel_id @"channelId"
+#define TextMessage_tree_id @"treeId"
+#define TextMessage_message @"message"
+@interface MPTextMessage : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasMessage_:1;
   BOOL hasActor_:1;
   NSString* message;
-  uint32_t actor;
+  UInt32 actor;
   PBAppendableArray * sessionArray;
   PBAppendableArray * channelIdArray;
   PBAppendableArray * treeIdArray;
 }
 - (BOOL) hasActor;
 - (BOOL) hasMessage;
-@property (readonly) uint32_t actor;
-@property (readonly, retain) PBArray * session;
-@property (readonly, retain) PBArray * channelId;
-@property (readonly, retain) PBArray * treeId;
-@property (readonly, retain) NSString* message;
-- (uint32_t)sessionAtIndex:(NSUInteger)index;
-- (uint32_t)channelIdAtIndex:(NSUInteger)index;
-- (uint32_t)treeIdAtIndex:(NSUInteger)index;
+@property (readonly) UInt32 actor;
+@property (readonly, strong) PBArray * session;
+@property (readonly, strong) PBArray * channelId;
+@property (readonly, strong) PBArray * treeId;
+@property (readonly, strong) NSString* message;
+- (UInt32)sessionAtIndex:(NSUInteger)index;
+- (UInt32)channelIdAtIndex:(NSUInteger)index;
+- (UInt32)treeIdAtIndex:(NSUInteger)index;
 
-+ (MPTextMessage*) defaultInstance;
-- (MPTextMessage*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPTextMessage_Builder*) builder;
-+ (MPTextMessage_Builder*) builder;
-+ (MPTextMessage_Builder*) builderWithPrototype:(MPTextMessage*) prototype;
-- (MPTextMessage_Builder*) toBuilder;
+- (MPTextMessageBuilder*) builder;
++ (MPTextMessageBuilder*) builder;
++ (MPTextMessageBuilder*) builderWithPrototype:(MPTextMessage*) prototype;
+- (MPTextMessageBuilder*) toBuilder;
 
 + (MPTextMessage*) parseFromData:(NSData*) data;
 + (MPTextMessage*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1412,56 +1467,62 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPTextMessage*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPTextMessage_Builder : PBGeneratedMessage_Builder {
+@interface MPTextMessageBuilder : PBGeneratedMessageBuilder {
 @private
-  MPTextMessage* result;
+  MPTextMessage* resultTextMessage;
 }
 
 - (MPTextMessage*) defaultInstance;
 
-- (MPTextMessage_Builder*) clear;
-- (MPTextMessage_Builder*) clone;
+- (MPTextMessageBuilder*) clear;
+- (MPTextMessageBuilder*) clone;
 
 - (MPTextMessage*) build;
 - (MPTextMessage*) buildPartial;
 
-- (MPTextMessage_Builder*) mergeFrom:(MPTextMessage*) other;
-- (MPTextMessage_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPTextMessage_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPTextMessageBuilder*) mergeFrom:(MPTextMessage*) other;
+- (MPTextMessageBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPTextMessageBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasActor;
-- (uint32_t) actor;
-- (MPTextMessage_Builder*) setActor:(uint32_t) value;
-- (MPTextMessage_Builder*) clearActor;
+- (UInt32) actor;
+- (MPTextMessageBuilder*) setActor:(UInt32) value;
+- (MPTextMessageBuilder*) clearActor;
 
 - (PBAppendableArray *)session;
-- (uint32_t)sessionAtIndex:(NSUInteger)index;
-- (MPTextMessage_Builder *)addSession:(uint32_t)value;
-- (MPTextMessage_Builder *)setSessionArray:(NSArray *)array;
-- (MPTextMessage_Builder *)setSessionValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPTextMessage_Builder *)clearSession;
+- (UInt32)sessionAtIndex:(NSUInteger)index;
+- (MPTextMessageBuilder *)addSession:(UInt32)value;
+- (MPTextMessageBuilder *)setSessionArray:(NSArray *)array;
+- (MPTextMessageBuilder *)setSessionValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPTextMessageBuilder *)clearSession;
 
 - (PBAppendableArray *)channelId;
-- (uint32_t)channelIdAtIndex:(NSUInteger)index;
-- (MPTextMessage_Builder *)addChannelId:(uint32_t)value;
-- (MPTextMessage_Builder *)setChannelIdArray:(NSArray *)array;
-- (MPTextMessage_Builder *)setChannelIdValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPTextMessage_Builder *)clearChannelId;
+- (UInt32)channelIdAtIndex:(NSUInteger)index;
+- (MPTextMessageBuilder *)addChannelId:(UInt32)value;
+- (MPTextMessageBuilder *)setChannelIdArray:(NSArray *)array;
+- (MPTextMessageBuilder *)setChannelIdValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPTextMessageBuilder *)clearChannelId;
 
 - (PBAppendableArray *)treeId;
-- (uint32_t)treeIdAtIndex:(NSUInteger)index;
-- (MPTextMessage_Builder *)addTreeId:(uint32_t)value;
-- (MPTextMessage_Builder *)setTreeIdArray:(NSArray *)array;
-- (MPTextMessage_Builder *)setTreeIdValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPTextMessage_Builder *)clearTreeId;
+- (UInt32)treeIdAtIndex:(NSUInteger)index;
+- (MPTextMessageBuilder *)addTreeId:(UInt32)value;
+- (MPTextMessageBuilder *)setTreeIdArray:(NSArray *)array;
+- (MPTextMessageBuilder *)setTreeIdValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPTextMessageBuilder *)clearTreeId;
 
 - (BOOL) hasMessage;
 - (NSString*) message;
-- (MPTextMessage_Builder*) setMessage:(NSString*) value;
-- (MPTextMessage_Builder*) clearMessage;
+- (MPTextMessageBuilder*) setMessage:(NSString*) value;
+- (MPTextMessageBuilder*) clearMessage;
 @end
 
-@interface MPPermissionDenied : PBGeneratedMessage {
+#define PermissionDenied_permission @"permission"
+#define PermissionDenied_channel_id @"channelId"
+#define PermissionDenied_session @"session"
+#define PermissionDenied_reason @"reason"
+#define PermissionDenied_type @"type"
+#define PermissionDenied_name @"name"
+@interface MPPermissionDenied : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasReason_:1;
   BOOL hasName_:1;
@@ -1471,10 +1532,10 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL hasType_:1;
   NSString* reason;
   NSString* name;
-  uint32_t permission;
-  uint32_t channelId;
-  uint32_t session;
-  MPPermissionDenied_DenyType type;
+  UInt32 permission;
+  UInt32 channelId;
+  UInt32 session;
+  MPPermissionDeniedDenyType type;
 }
 - (BOOL) hasPermission;
 - (BOOL) hasChannelId;
@@ -1482,22 +1543,22 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasReason;
 - (BOOL) hasType;
 - (BOOL) hasName;
-@property (readonly) uint32_t permission;
-@property (readonly) uint32_t channelId;
-@property (readonly) uint32_t session;
-@property (readonly, retain) NSString* reason;
-@property (readonly) MPPermissionDenied_DenyType type;
-@property (readonly, retain) NSString* name;
+@property (readonly) UInt32 permission;
+@property (readonly) UInt32 channelId;
+@property (readonly) UInt32 session;
+@property (readonly, strong) NSString* reason;
+@property (readonly) MPPermissionDeniedDenyType type;
+@property (readonly, strong) NSString* name;
 
-+ (MPPermissionDenied*) defaultInstance;
-- (MPPermissionDenied*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPPermissionDenied_Builder*) builder;
-+ (MPPermissionDenied_Builder*) builder;
-+ (MPPermissionDenied_Builder*) builderWithPrototype:(MPPermissionDenied*) prototype;
-- (MPPermissionDenied_Builder*) toBuilder;
+- (MPPermissionDeniedBuilder*) builder;
++ (MPPermissionDeniedBuilder*) builder;
++ (MPPermissionDeniedBuilder*) builderWithPrototype:(MPPermissionDenied*) prototype;
+- (MPPermissionDeniedBuilder*) toBuilder;
 
 + (MPPermissionDenied*) parseFromData:(NSData*) data;
 + (MPPermissionDenied*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1507,85 +1568,90 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPPermissionDenied*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPPermissionDenied_Builder : PBGeneratedMessage_Builder {
+@interface MPPermissionDeniedBuilder : PBGeneratedMessageBuilder {
 @private
-  MPPermissionDenied* result;
+  MPPermissionDenied* resultPermissionDenied;
 }
 
 - (MPPermissionDenied*) defaultInstance;
 
-- (MPPermissionDenied_Builder*) clear;
-- (MPPermissionDenied_Builder*) clone;
+- (MPPermissionDeniedBuilder*) clear;
+- (MPPermissionDeniedBuilder*) clone;
 
 - (MPPermissionDenied*) build;
 - (MPPermissionDenied*) buildPartial;
 
-- (MPPermissionDenied_Builder*) mergeFrom:(MPPermissionDenied*) other;
-- (MPPermissionDenied_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPPermissionDenied_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPPermissionDeniedBuilder*) mergeFrom:(MPPermissionDenied*) other;
+- (MPPermissionDeniedBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPPermissionDeniedBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasPermission;
-- (uint32_t) permission;
-- (MPPermissionDenied_Builder*) setPermission:(uint32_t) value;
-- (MPPermissionDenied_Builder*) clearPermission;
+- (UInt32) permission;
+- (MPPermissionDeniedBuilder*) setPermission:(UInt32) value;
+- (MPPermissionDeniedBuilder*) clearPermission;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPPermissionDenied_Builder*) setChannelId:(uint32_t) value;
-- (MPPermissionDenied_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPPermissionDeniedBuilder*) setChannelId:(UInt32) value;
+- (MPPermissionDeniedBuilder*) clearChannelId;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPPermissionDenied_Builder*) setSession:(uint32_t) value;
-- (MPPermissionDenied_Builder*) clearSession;
+- (UInt32) session;
+- (MPPermissionDeniedBuilder*) setSession:(UInt32) value;
+- (MPPermissionDeniedBuilder*) clearSession;
 
 - (BOOL) hasReason;
 - (NSString*) reason;
-- (MPPermissionDenied_Builder*) setReason:(NSString*) value;
-- (MPPermissionDenied_Builder*) clearReason;
+- (MPPermissionDeniedBuilder*) setReason:(NSString*) value;
+- (MPPermissionDeniedBuilder*) clearReason;
 
 - (BOOL) hasType;
-- (MPPermissionDenied_DenyType) type;
-- (MPPermissionDenied_Builder*) setType:(MPPermissionDenied_DenyType) value;
-- (MPPermissionDenied_Builder*) clearType;
+- (MPPermissionDeniedDenyType) type;
+- (MPPermissionDeniedBuilder*) setType:(MPPermissionDeniedDenyType) value;
+- (MPPermissionDeniedBuilder*) clearType;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPPermissionDenied_Builder*) setName:(NSString*) value;
-- (MPPermissionDenied_Builder*) clearName;
+- (MPPermissionDeniedBuilder*) setName:(NSString*) value;
+- (MPPermissionDeniedBuilder*) clearName;
 @end
 
-@interface MPACL : PBGeneratedMessage {
+#define ACL_channel_id @"channelId"
+#define ACL_inherit_acls @"inheritAcls"
+#define ACL_groups @"groups"
+#define ACL_acls @"acls"
+#define ACL_query @"query"
+@interface MPACL : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasInheritAcls_:1;
   BOOL hasQuery_:1;
   BOOL hasChannelId_:1;
   BOOL inheritAcls_:1;
   BOOL query_:1;
-  uint32_t channelId;
-  PBAppendableArray * groupsArray;
-  PBAppendableArray * aclsArray;
+  UInt32 channelId;
+  NSMutableArray * groupsArray;
+  NSMutableArray * aclsArray;
 }
 - (BOOL) hasChannelId;
 - (BOOL) hasInheritAcls;
 - (BOOL) hasQuery;
-@property (readonly) uint32_t channelId;
+@property (readonly) UInt32 channelId;
 - (BOOL) inheritAcls;
-@property (readonly, retain) PBArray * groups;
-@property (readonly, retain) PBArray * acls;
+@property (readonly, strong) NSArray<MPACLChanGroup*> * groups;
+@property (readonly, strong) NSArray<MPACLChanACL*> * acls;
 - (BOOL) query;
-- (MPACL_ChanGroup*)groupsAtIndex:(NSUInteger)index;
-- (MPACL_ChanACL*)aclsAtIndex:(NSUInteger)index;
+- (MPACLChanGroup*)groupsAtIndex:(NSUInteger)index;
+- (MPACLChanACL*)aclsAtIndex:(NSUInteger)index;
 
-+ (MPACL*) defaultInstance;
-- (MPACL*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPACL_Builder*) builder;
-+ (MPACL_Builder*) builder;
-+ (MPACL_Builder*) builderWithPrototype:(MPACL*) prototype;
-- (MPACL_Builder*) toBuilder;
+- (MPACLBuilder*) builder;
++ (MPACLBuilder*) builder;
++ (MPACLBuilder*) builderWithPrototype:(MPACL*) prototype;
+- (MPACLBuilder*) toBuilder;
 
 + (MPACL*) parseFromData:(NSData*) data;
 + (MPACL*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1595,7 +1661,14 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPACL*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPACL_ChanGroup : PBGeneratedMessage {
+#define ChanGroup_name @"name"
+#define ChanGroup_inherited @"inherited"
+#define ChanGroup_inherit @"inherit"
+#define ChanGroup_inheritable @"inheritable"
+#define ChanGroup_add @"add"
+#define ChanGroup_remove @"remove"
+#define ChanGroup_inherited_members @"inheritedMembers"
+@interface MPACLChanGroup : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasInherited_:1;
   BOOL hasInherit_:1;
@@ -1613,95 +1686,102 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasInherited;
 - (BOOL) hasInherit;
 - (BOOL) hasInheritable;
-@property (readonly, retain) NSString* name;
+@property (readonly, strong) NSString* name;
 - (BOOL) inherited;
 - (BOOL) inherit;
 - (BOOL) inheritable;
-@property (readonly, retain) PBArray * add;
-@property (readonly, retain) PBArray * remove;
-@property (readonly, retain) PBArray * inheritedMembers;
-- (uint32_t)addAtIndex:(NSUInteger)index;
-- (uint32_t)removeAtIndex:(NSUInteger)index;
-- (uint32_t)inheritedMembersAtIndex:(NSUInteger)index;
+@property (readonly, strong) PBArray * add;
+@property (readonly, strong) PBArray * remove;
+@property (readonly, strong) PBArray * inheritedMembers;
+- (UInt32)addAtIndex:(NSUInteger)index;
+- (UInt32)removeAtIndex:(NSUInteger)index;
+- (UInt32)inheritedMembersAtIndex:(NSUInteger)index;
 
-+ (MPACL_ChanGroup*) defaultInstance;
-- (MPACL_ChanGroup*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPACL_ChanGroup_Builder*) builder;
-+ (MPACL_ChanGroup_Builder*) builder;
-+ (MPACL_ChanGroup_Builder*) builderWithPrototype:(MPACL_ChanGroup*) prototype;
-- (MPACL_ChanGroup_Builder*) toBuilder;
+- (MPACLChanGroupBuilder*) builder;
++ (MPACLChanGroupBuilder*) builder;
++ (MPACLChanGroupBuilder*) builderWithPrototype:(MPACLChanGroup*) prototype;
+- (MPACLChanGroupBuilder*) toBuilder;
 
-+ (MPACL_ChanGroup*) parseFromData:(NSData*) data;
-+ (MPACL_ChanGroup*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPACL_ChanGroup*) parseFromInputStream:(NSInputStream*) input;
-+ (MPACL_ChanGroup*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPACL_ChanGroup*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPACL_ChanGroup*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanGroup*) parseFromData:(NSData*) data;
++ (MPACLChanGroup*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanGroup*) parseFromInputStream:(NSInputStream*) input;
++ (MPACLChanGroup*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanGroup*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPACLChanGroup*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPACL_ChanGroup_Builder : PBGeneratedMessage_Builder {
+@interface MPACLChanGroupBuilder : PBGeneratedMessageBuilder {
 @private
-  MPACL_ChanGroup* result;
+  MPACLChanGroup* resultChanGroup;
 }
 
-- (MPACL_ChanGroup*) defaultInstance;
+- (MPACLChanGroup*) defaultInstance;
 
-- (MPACL_ChanGroup_Builder*) clear;
-- (MPACL_ChanGroup_Builder*) clone;
+- (MPACLChanGroupBuilder*) clear;
+- (MPACLChanGroupBuilder*) clone;
 
-- (MPACL_ChanGroup*) build;
-- (MPACL_ChanGroup*) buildPartial;
+- (MPACLChanGroup*) build;
+- (MPACLChanGroup*) buildPartial;
 
-- (MPACL_ChanGroup_Builder*) mergeFrom:(MPACL_ChanGroup*) other;
-- (MPACL_ChanGroup_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPACL_ChanGroup_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPACLChanGroupBuilder*) mergeFrom:(MPACLChanGroup*) other;
+- (MPACLChanGroupBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPACLChanGroupBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPACL_ChanGroup_Builder*) setName:(NSString*) value;
-- (MPACL_ChanGroup_Builder*) clearName;
+- (MPACLChanGroupBuilder*) setName:(NSString*) value;
+- (MPACLChanGroupBuilder*) clearName;
 
 - (BOOL) hasInherited;
 - (BOOL) inherited;
-- (MPACL_ChanGroup_Builder*) setInherited:(BOOL) value;
-- (MPACL_ChanGroup_Builder*) clearInherited;
+- (MPACLChanGroupBuilder*) setInherited:(BOOL) value;
+- (MPACLChanGroupBuilder*) clearInherited;
 
 - (BOOL) hasInherit;
 - (BOOL) inherit;
-- (MPACL_ChanGroup_Builder*) setInherit:(BOOL) value;
-- (MPACL_ChanGroup_Builder*) clearInherit;
+- (MPACLChanGroupBuilder*) setInherit:(BOOL) value;
+- (MPACLChanGroupBuilder*) clearInherit;
 
 - (BOOL) hasInheritable;
 - (BOOL) inheritable;
-- (MPACL_ChanGroup_Builder*) setInheritable:(BOOL) value;
-- (MPACL_ChanGroup_Builder*) clearInheritable;
+- (MPACLChanGroupBuilder*) setInheritable:(BOOL) value;
+- (MPACLChanGroupBuilder*) clearInheritable;
 
 - (PBAppendableArray *)add;
-- (uint32_t)addAtIndex:(NSUInteger)index;
-- (MPACL_ChanGroup_Builder *)addAdd:(uint32_t)value;
-- (MPACL_ChanGroup_Builder *)setAddArray:(NSArray *)array;
-- (MPACL_ChanGroup_Builder *)setAddValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPACL_ChanGroup_Builder *)clearAdd;
+- (UInt32)addAtIndex:(NSUInteger)index;
+- (MPACLChanGroupBuilder *)addAdd:(UInt32)value;
+- (MPACLChanGroupBuilder *)setAddArray:(NSArray *)array;
+- (MPACLChanGroupBuilder *)setAddValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPACLChanGroupBuilder *)clearAdd;
 
 - (PBAppendableArray *)remove;
-- (uint32_t)removeAtIndex:(NSUInteger)index;
-- (MPACL_ChanGroup_Builder *)addRemove:(uint32_t)value;
-- (MPACL_ChanGroup_Builder *)setRemoveArray:(NSArray *)array;
-- (MPACL_ChanGroup_Builder *)setRemoveValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPACL_ChanGroup_Builder *)clearRemove;
+- (UInt32)removeAtIndex:(NSUInteger)index;
+- (MPACLChanGroupBuilder *)addRemove:(UInt32)value;
+- (MPACLChanGroupBuilder *)setRemoveArray:(NSArray *)array;
+- (MPACLChanGroupBuilder *)setRemoveValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPACLChanGroupBuilder *)clearRemove;
 
 - (PBAppendableArray *)inheritedMembers;
-- (uint32_t)inheritedMembersAtIndex:(NSUInteger)index;
-- (MPACL_ChanGroup_Builder *)addInheritedMembers:(uint32_t)value;
-- (MPACL_ChanGroup_Builder *)setInheritedMembersArray:(NSArray *)array;
-- (MPACL_ChanGroup_Builder *)setInheritedMembersValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPACL_ChanGroup_Builder *)clearInheritedMembers;
+- (UInt32)inheritedMembersAtIndex:(NSUInteger)index;
+- (MPACLChanGroupBuilder *)addInheritedMembers:(UInt32)value;
+- (MPACLChanGroupBuilder *)setInheritedMembersArray:(NSArray *)array;
+- (MPACLChanGroupBuilder *)setInheritedMembersValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPACLChanGroupBuilder *)clearInheritedMembers;
 @end
 
-@interface MPACL_ChanACL : PBGeneratedMessage {
+#define ChanACL_apply_here @"applyHere"
+#define ChanACL_apply_subs @"applySubs"
+#define ChanACL_inherited @"inherited"
+#define ChanACL_user_id @"userId"
+#define ChanACL_group @"group"
+#define ChanACL_grant @"grant"
+#define ChanACL_deny @"deny"
+@interface MPACLChanACL : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasApplyHere_:1;
   BOOL hasApplySubs_:1;
@@ -1714,9 +1794,9 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL applySubs_:1;
   BOOL inherited_:1;
   NSString* group;
-  uint32_t userId;
-  uint32_t grant;
-  uint32_t deny;
+  UInt32 userId;
+  UInt32 grant;
+  UInt32 deny;
 }
 - (BOOL) hasApplyHere;
 - (BOOL) hasApplySubs;
@@ -1728,148 +1808,148 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) applyHere;
 - (BOOL) applySubs;
 - (BOOL) inherited;
-@property (readonly) uint32_t userId;
-@property (readonly, retain) NSString* group;
-@property (readonly) uint32_t grant;
-@property (readonly) uint32_t deny;
+@property (readonly) UInt32 userId;
+@property (readonly, strong) NSString* group;
+@property (readonly) UInt32 grant;
+@property (readonly) UInt32 deny;
 
-+ (MPACL_ChanACL*) defaultInstance;
-- (MPACL_ChanACL*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPACL_ChanACL_Builder*) builder;
-+ (MPACL_ChanACL_Builder*) builder;
-+ (MPACL_ChanACL_Builder*) builderWithPrototype:(MPACL_ChanACL*) prototype;
-- (MPACL_ChanACL_Builder*) toBuilder;
+- (MPACLChanACLBuilder*) builder;
++ (MPACLChanACLBuilder*) builder;
++ (MPACLChanACLBuilder*) builderWithPrototype:(MPACLChanACL*) prototype;
+- (MPACLChanACLBuilder*) toBuilder;
 
-+ (MPACL_ChanACL*) parseFromData:(NSData*) data;
-+ (MPACL_ChanACL*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPACL_ChanACL*) parseFromInputStream:(NSInputStream*) input;
-+ (MPACL_ChanACL*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPACL_ChanACL*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPACL_ChanACL*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanACL*) parseFromData:(NSData*) data;
++ (MPACLChanACL*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanACL*) parseFromInputStream:(NSInputStream*) input;
++ (MPACLChanACL*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPACLChanACL*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPACLChanACL*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPACL_ChanACL_Builder : PBGeneratedMessage_Builder {
+@interface MPACLChanACLBuilder : PBGeneratedMessageBuilder {
 @private
-  MPACL_ChanACL* result;
+  MPACLChanACL* resultChanAcl;
 }
 
-- (MPACL_ChanACL*) defaultInstance;
+- (MPACLChanACL*) defaultInstance;
 
-- (MPACL_ChanACL_Builder*) clear;
-- (MPACL_ChanACL_Builder*) clone;
+- (MPACLChanACLBuilder*) clear;
+- (MPACLChanACLBuilder*) clone;
 
-- (MPACL_ChanACL*) build;
-- (MPACL_ChanACL*) buildPartial;
+- (MPACLChanACL*) build;
+- (MPACLChanACL*) buildPartial;
 
-- (MPACL_ChanACL_Builder*) mergeFrom:(MPACL_ChanACL*) other;
-- (MPACL_ChanACL_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPACL_ChanACL_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPACLChanACLBuilder*) mergeFrom:(MPACLChanACL*) other;
+- (MPACLChanACLBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPACLChanACLBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasApplyHere;
 - (BOOL) applyHere;
-- (MPACL_ChanACL_Builder*) setApplyHere:(BOOL) value;
-- (MPACL_ChanACL_Builder*) clearApplyHere;
+- (MPACLChanACLBuilder*) setApplyHere:(BOOL) value;
+- (MPACLChanACLBuilder*) clearApplyHere;
 
 - (BOOL) hasApplySubs;
 - (BOOL) applySubs;
-- (MPACL_ChanACL_Builder*) setApplySubs:(BOOL) value;
-- (MPACL_ChanACL_Builder*) clearApplySubs;
+- (MPACLChanACLBuilder*) setApplySubs:(BOOL) value;
+- (MPACLChanACLBuilder*) clearApplySubs;
 
 - (BOOL) hasInherited;
 - (BOOL) inherited;
-- (MPACL_ChanACL_Builder*) setInherited:(BOOL) value;
-- (MPACL_ChanACL_Builder*) clearInherited;
+- (MPACLChanACLBuilder*) setInherited:(BOOL) value;
+- (MPACLChanACLBuilder*) clearInherited;
 
 - (BOOL) hasUserId;
-- (uint32_t) userId;
-- (MPACL_ChanACL_Builder*) setUserId:(uint32_t) value;
-- (MPACL_ChanACL_Builder*) clearUserId;
+- (UInt32) userId;
+- (MPACLChanACLBuilder*) setUserId:(UInt32) value;
+- (MPACLChanACLBuilder*) clearUserId;
 
 - (BOOL) hasGroup;
 - (NSString*) group;
-- (MPACL_ChanACL_Builder*) setGroup:(NSString*) value;
-- (MPACL_ChanACL_Builder*) clearGroup;
+- (MPACLChanACLBuilder*) setGroup:(NSString*) value;
+- (MPACLChanACLBuilder*) clearGroup;
 
 - (BOOL) hasGrant;
-- (uint32_t) grant;
-- (MPACL_ChanACL_Builder*) setGrant:(uint32_t) value;
-- (MPACL_ChanACL_Builder*) clearGrant;
+- (UInt32) grant;
+- (MPACLChanACLBuilder*) setGrant:(UInt32) value;
+- (MPACLChanACLBuilder*) clearGrant;
 
 - (BOOL) hasDeny;
-- (uint32_t) deny;
-- (MPACL_ChanACL_Builder*) setDeny:(uint32_t) value;
-- (MPACL_ChanACL_Builder*) clearDeny;
+- (UInt32) deny;
+- (MPACLChanACLBuilder*) setDeny:(UInt32) value;
+- (MPACLChanACLBuilder*) clearDeny;
 @end
 
-@interface MPACL_Builder : PBGeneratedMessage_Builder {
+@interface MPACLBuilder : PBGeneratedMessageBuilder {
 @private
-  MPACL* result;
+  MPACL* resultAcl;
 }
 
 - (MPACL*) defaultInstance;
 
-- (MPACL_Builder*) clear;
-- (MPACL_Builder*) clone;
+- (MPACLBuilder*) clear;
+- (MPACLBuilder*) clone;
 
 - (MPACL*) build;
 - (MPACL*) buildPartial;
 
-- (MPACL_Builder*) mergeFrom:(MPACL*) other;
-- (MPACL_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPACL_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPACLBuilder*) mergeFrom:(MPACL*) other;
+- (MPACLBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPACLBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPACL_Builder*) setChannelId:(uint32_t) value;
-- (MPACL_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPACLBuilder*) setChannelId:(UInt32) value;
+- (MPACLBuilder*) clearChannelId;
 
 - (BOOL) hasInheritAcls;
 - (BOOL) inheritAcls;
-- (MPACL_Builder*) setInheritAcls:(BOOL) value;
-- (MPACL_Builder*) clearInheritAcls;
+- (MPACLBuilder*) setInheritAcls:(BOOL) value;
+- (MPACLBuilder*) clearInheritAcls;
 
-- (PBAppendableArray *)groups;
-- (MPACL_ChanGroup*)groupsAtIndex:(NSUInteger)index;
-- (MPACL_Builder *)addGroups:(MPACL_ChanGroup*)value;
-- (MPACL_Builder *)setGroupsArray:(NSArray *)array;
-- (MPACL_Builder *)setGroupsValues:(const MPACL_ChanGroup* *)values count:(NSUInteger)count;
-- (MPACL_Builder *)clearGroups;
+- (NSMutableArray<MPACLChanGroup*> *)groups;
+- (MPACLChanGroup*)groupsAtIndex:(NSUInteger)index;
+- (MPACLBuilder *)addGroups:(MPACLChanGroup*)value;
+- (MPACLBuilder *)setGroupsArray:(NSArray<MPACLChanGroup*> *)array;
+- (MPACLBuilder *)clearGroups;
 
-- (PBAppendableArray *)acls;
-- (MPACL_ChanACL*)aclsAtIndex:(NSUInteger)index;
-- (MPACL_Builder *)addAcls:(MPACL_ChanACL*)value;
-- (MPACL_Builder *)setAclsArray:(NSArray *)array;
-- (MPACL_Builder *)setAclsValues:(const MPACL_ChanACL* *)values count:(NSUInteger)count;
-- (MPACL_Builder *)clearAcls;
+- (NSMutableArray<MPACLChanACL*> *)acls;
+- (MPACLChanACL*)aclsAtIndex:(NSUInteger)index;
+- (MPACLBuilder *)addAcls:(MPACLChanACL*)value;
+- (MPACLBuilder *)setAclsArray:(NSArray<MPACLChanACL*> *)array;
+- (MPACLBuilder *)clearAcls;
 
 - (BOOL) hasQuery;
 - (BOOL) query;
-- (MPACL_Builder*) setQuery:(BOOL) value;
-- (MPACL_Builder*) clearQuery;
+- (MPACLBuilder*) setQuery:(BOOL) value;
+- (MPACLBuilder*) clearQuery;
 @end
 
-@interface MPQueryUsers : PBGeneratedMessage {
+#define QueryUsers_ids @"ids"
+#define QueryUsers_names @"names"
+@interface MPQueryUsers : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
-  PBAppendableArray * namesArray;
+  NSMutableArray * namesArray;
   PBAppendableArray * idsArray;
 }
-@property (readonly, retain) PBArray * ids;
-@property (readonly, retain) PBArray * names;
-- (uint32_t)idsAtIndex:(NSUInteger)index;
+@property (readonly, strong) PBArray * ids;
+@property (readonly, strong) NSArray * names;
+- (UInt32)idsAtIndex:(NSUInteger)index;
 - (NSString*)namesAtIndex:(NSUInteger)index;
 
-+ (MPQueryUsers*) defaultInstance;
-- (MPQueryUsers*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPQueryUsers_Builder*) builder;
-+ (MPQueryUsers_Builder*) builder;
-+ (MPQueryUsers_Builder*) builderWithPrototype:(MPQueryUsers*) prototype;
-- (MPQueryUsers_Builder*) toBuilder;
+- (MPQueryUsersBuilder*) builder;
++ (MPQueryUsersBuilder*) builder;
++ (MPQueryUsersBuilder*) builderWithPrototype:(MPQueryUsers*) prototype;
+- (MPQueryUsersBuilder*) toBuilder;
 
 + (MPQueryUsers*) parseFromData:(NSData*) data;
 + (MPQueryUsers*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1879,39 +1959,41 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPQueryUsers*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPQueryUsers_Builder : PBGeneratedMessage_Builder {
+@interface MPQueryUsersBuilder : PBGeneratedMessageBuilder {
 @private
-  MPQueryUsers* result;
+  MPQueryUsers* resultQueryUsers;
 }
 
 - (MPQueryUsers*) defaultInstance;
 
-- (MPQueryUsers_Builder*) clear;
-- (MPQueryUsers_Builder*) clone;
+- (MPQueryUsersBuilder*) clear;
+- (MPQueryUsersBuilder*) clone;
 
 - (MPQueryUsers*) build;
 - (MPQueryUsers*) buildPartial;
 
-- (MPQueryUsers_Builder*) mergeFrom:(MPQueryUsers*) other;
-- (MPQueryUsers_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPQueryUsers_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPQueryUsersBuilder*) mergeFrom:(MPQueryUsers*) other;
+- (MPQueryUsersBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPQueryUsersBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (PBAppendableArray *)ids;
-- (uint32_t)idsAtIndex:(NSUInteger)index;
-- (MPQueryUsers_Builder *)addIds:(uint32_t)value;
-- (MPQueryUsers_Builder *)setIdsArray:(NSArray *)array;
-- (MPQueryUsers_Builder *)setIdsValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPQueryUsers_Builder *)clearIds;
+- (UInt32)idsAtIndex:(NSUInteger)index;
+- (MPQueryUsersBuilder *)addIds:(UInt32)value;
+- (MPQueryUsersBuilder *)setIdsArray:(NSArray *)array;
+- (MPQueryUsersBuilder *)setIdsValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPQueryUsersBuilder *)clearIds;
 
-- (PBAppendableArray *)names;
+- (NSMutableArray *)names;
 - (NSString*)namesAtIndex:(NSUInteger)index;
-- (MPQueryUsers_Builder *)addNames:(NSString*)value;
-- (MPQueryUsers_Builder *)setNamesArray:(NSArray *)array;
-- (MPQueryUsers_Builder *)setNamesValues:(const NSString* *)values count:(NSUInteger)count;
-- (MPQueryUsers_Builder *)clearNames;
+- (MPQueryUsersBuilder *)addNames:(NSString*)value;
+- (MPQueryUsersBuilder *)setNamesArray:(NSArray *)array;
+- (MPQueryUsersBuilder *)clearNames;
 @end
 
-@interface MPCryptSetup : PBGeneratedMessage {
+#define CryptSetup_key @"key"
+#define CryptSetup_client_nonce @"clientNonce"
+#define CryptSetup_server_nonce @"serverNonce"
+@interface MPCryptSetup : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasKey_:1;
   BOOL hasClientNonce_:1;
@@ -1923,19 +2005,19 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasKey;
 - (BOOL) hasClientNonce;
 - (BOOL) hasServerNonce;
-@property (readonly, retain) NSData* key;
-@property (readonly, retain) NSData* clientNonce;
-@property (readonly, retain) NSData* serverNonce;
+@property (readonly, strong) NSData* key;
+@property (readonly, strong) NSData* clientNonce;
+@property (readonly, strong) NSData* serverNonce;
 
-+ (MPCryptSetup*) defaultInstance;
-- (MPCryptSetup*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPCryptSetup_Builder*) builder;
-+ (MPCryptSetup_Builder*) builder;
-+ (MPCryptSetup_Builder*) builderWithPrototype:(MPCryptSetup*) prototype;
-- (MPCryptSetup_Builder*) toBuilder;
+- (MPCryptSetupBuilder*) builder;
++ (MPCryptSetupBuilder*) builder;
++ (MPCryptSetupBuilder*) builderWithPrototype:(MPCryptSetup*) prototype;
+- (MPCryptSetupBuilder*) toBuilder;
 
 + (MPCryptSetup*) parseFromData:(NSData*) data;
 + (MPCryptSetup*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -1945,40 +2027,44 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPCryptSetup*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPCryptSetup_Builder : PBGeneratedMessage_Builder {
+@interface MPCryptSetupBuilder : PBGeneratedMessageBuilder {
 @private
-  MPCryptSetup* result;
+  MPCryptSetup* resultCryptSetup;
 }
 
 - (MPCryptSetup*) defaultInstance;
 
-- (MPCryptSetup_Builder*) clear;
-- (MPCryptSetup_Builder*) clone;
+- (MPCryptSetupBuilder*) clear;
+- (MPCryptSetupBuilder*) clone;
 
 - (MPCryptSetup*) build;
 - (MPCryptSetup*) buildPartial;
 
-- (MPCryptSetup_Builder*) mergeFrom:(MPCryptSetup*) other;
-- (MPCryptSetup_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPCryptSetup_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPCryptSetupBuilder*) mergeFrom:(MPCryptSetup*) other;
+- (MPCryptSetupBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPCryptSetupBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasKey;
 - (NSData*) key;
-- (MPCryptSetup_Builder*) setKey:(NSData*) value;
-- (MPCryptSetup_Builder*) clearKey;
+- (MPCryptSetupBuilder*) setKey:(NSData*) value;
+- (MPCryptSetupBuilder*) clearKey;
 
 - (BOOL) hasClientNonce;
 - (NSData*) clientNonce;
-- (MPCryptSetup_Builder*) setClientNonce:(NSData*) value;
-- (MPCryptSetup_Builder*) clearClientNonce;
+- (MPCryptSetupBuilder*) setClientNonce:(NSData*) value;
+- (MPCryptSetupBuilder*) clearClientNonce;
 
 - (BOOL) hasServerNonce;
 - (NSData*) serverNonce;
-- (MPCryptSetup_Builder*) setServerNonce:(NSData*) value;
-- (MPCryptSetup_Builder*) clearServerNonce;
+- (MPCryptSetupBuilder*) setServerNonce:(NSData*) value;
+- (MPCryptSetupBuilder*) clearServerNonce;
 @end
 
-@interface MPContextActionModify : PBGeneratedMessage {
+#define ContextActionModify_action @"action"
+#define ContextActionModify_text @"text"
+#define ContextActionModify_context @"context"
+#define ContextActionModify_operation @"operation"
+@interface MPContextActionModify : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasAction_:1;
   BOOL hasText_:1;
@@ -1986,27 +2072,27 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL hasOperation_:1;
   NSString* action;
   NSString* text;
-  uint32_t context;
-  MPContextActionModify_Operation operation;
+  UInt32 context;
+  MPContextActionModifyOperation operation;
 }
 - (BOOL) hasAction;
 - (BOOL) hasText;
 - (BOOL) hasContext;
 - (BOOL) hasOperation;
-@property (readonly, retain) NSString* action;
-@property (readonly, retain) NSString* text;
-@property (readonly) uint32_t context;
-@property (readonly) MPContextActionModify_Operation operation;
+@property (readonly, strong) NSString* action;
+@property (readonly, strong) NSString* text;
+@property (readonly) UInt32 context;
+@property (readonly) MPContextActionModifyOperation operation;
 
-+ (MPContextActionModify*) defaultInstance;
-- (MPContextActionModify*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPContextActionModify_Builder*) builder;
-+ (MPContextActionModify_Builder*) builder;
-+ (MPContextActionModify_Builder*) builderWithPrototype:(MPContextActionModify*) prototype;
-- (MPContextActionModify_Builder*) toBuilder;
+- (MPContextActionModifyBuilder*) builder;
++ (MPContextActionModifyBuilder*) builder;
++ (MPContextActionModifyBuilder*) builderWithPrototype:(MPContextActionModify*) prototype;
+- (MPContextActionModifyBuilder*) toBuilder;
 
 + (MPContextActionModify*) parseFromData:(NSData*) data;
 + (MPContextActionModify*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2016,69 +2102,72 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPContextActionModify*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPContextActionModify_Builder : PBGeneratedMessage_Builder {
+@interface MPContextActionModifyBuilder : PBGeneratedMessageBuilder {
 @private
-  MPContextActionModify* result;
+  MPContextActionModify* resultContextActionModify;
 }
 
 - (MPContextActionModify*) defaultInstance;
 
-- (MPContextActionModify_Builder*) clear;
-- (MPContextActionModify_Builder*) clone;
+- (MPContextActionModifyBuilder*) clear;
+- (MPContextActionModifyBuilder*) clone;
 
 - (MPContextActionModify*) build;
 - (MPContextActionModify*) buildPartial;
 
-- (MPContextActionModify_Builder*) mergeFrom:(MPContextActionModify*) other;
-- (MPContextActionModify_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPContextActionModify_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPContextActionModifyBuilder*) mergeFrom:(MPContextActionModify*) other;
+- (MPContextActionModifyBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPContextActionModifyBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasAction;
 - (NSString*) action;
-- (MPContextActionModify_Builder*) setAction:(NSString*) value;
-- (MPContextActionModify_Builder*) clearAction;
+- (MPContextActionModifyBuilder*) setAction:(NSString*) value;
+- (MPContextActionModifyBuilder*) clearAction;
 
 - (BOOL) hasText;
 - (NSString*) text;
-- (MPContextActionModify_Builder*) setText:(NSString*) value;
-- (MPContextActionModify_Builder*) clearText;
+- (MPContextActionModifyBuilder*) setText:(NSString*) value;
+- (MPContextActionModifyBuilder*) clearText;
 
 - (BOOL) hasContext;
-- (uint32_t) context;
-- (MPContextActionModify_Builder*) setContext:(uint32_t) value;
-- (MPContextActionModify_Builder*) clearContext;
+- (UInt32) context;
+- (MPContextActionModifyBuilder*) setContext:(UInt32) value;
+- (MPContextActionModifyBuilder*) clearContext;
 
 - (BOOL) hasOperation;
-- (MPContextActionModify_Operation) operation;
-- (MPContextActionModify_Builder*) setOperation:(MPContextActionModify_Operation) value;
-- (MPContextActionModify_Builder*) clearOperation;
+- (MPContextActionModifyOperation) operation;
+- (MPContextActionModifyBuilder*) setOperation:(MPContextActionModifyOperation) value;
+- (MPContextActionModifyBuilder*) clearOperation;
 @end
 
-@interface MPContextAction : PBGeneratedMessage {
+#define ContextAction_session @"session"
+#define ContextAction_channel_id @"channelId"
+#define ContextAction_action @"action"
+@interface MPContextAction : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasAction_:1;
   BOOL hasSession_:1;
   BOOL hasChannelId_:1;
   NSString* action;
-  uint32_t session;
-  uint32_t channelId;
+  UInt32 session;
+  UInt32 channelId;
 }
 - (BOOL) hasSession;
 - (BOOL) hasChannelId;
 - (BOOL) hasAction;
-@property (readonly) uint32_t session;
-@property (readonly) uint32_t channelId;
-@property (readonly, retain) NSString* action;
+@property (readonly) UInt32 session;
+@property (readonly) UInt32 channelId;
+@property (readonly, strong) NSString* action;
 
-+ (MPContextAction*) defaultInstance;
-- (MPContextAction*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPContextAction_Builder*) builder;
-+ (MPContextAction_Builder*) builder;
-+ (MPContextAction_Builder*) builderWithPrototype:(MPContextAction*) prototype;
-- (MPContextAction_Builder*) toBuilder;
+- (MPContextActionBuilder*) builder;
++ (MPContextActionBuilder*) builder;
++ (MPContextActionBuilder*) builderWithPrototype:(MPContextAction*) prototype;
+- (MPContextActionBuilder*) toBuilder;
 
 + (MPContextAction*) parseFromData:(NSData*) data;
 + (MPContextAction*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2088,55 +2177,56 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPContextAction*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPContextAction_Builder : PBGeneratedMessage_Builder {
+@interface MPContextActionBuilder : PBGeneratedMessageBuilder {
 @private
-  MPContextAction* result;
+  MPContextAction* resultContextAction;
 }
 
 - (MPContextAction*) defaultInstance;
 
-- (MPContextAction_Builder*) clear;
-- (MPContextAction_Builder*) clone;
+- (MPContextActionBuilder*) clear;
+- (MPContextActionBuilder*) clone;
 
 - (MPContextAction*) build;
 - (MPContextAction*) buildPartial;
 
-- (MPContextAction_Builder*) mergeFrom:(MPContextAction*) other;
-- (MPContextAction_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPContextAction_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPContextActionBuilder*) mergeFrom:(MPContextAction*) other;
+- (MPContextActionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPContextActionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPContextAction_Builder*) setSession:(uint32_t) value;
-- (MPContextAction_Builder*) clearSession;
+- (UInt32) session;
+- (MPContextActionBuilder*) setSession:(UInt32) value;
+- (MPContextActionBuilder*) clearSession;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPContextAction_Builder*) setChannelId:(uint32_t) value;
-- (MPContextAction_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPContextActionBuilder*) setChannelId:(UInt32) value;
+- (MPContextActionBuilder*) clearChannelId;
 
 - (BOOL) hasAction;
 - (NSString*) action;
-- (MPContextAction_Builder*) setAction:(NSString*) value;
-- (MPContextAction_Builder*) clearAction;
+- (MPContextActionBuilder*) setAction:(NSString*) value;
+- (MPContextActionBuilder*) clearAction;
 @end
 
-@interface MPUserList : PBGeneratedMessage {
+#define UserList_users @"users"
+@interface MPUserList : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
-  PBAppendableArray * usersArray;
+  NSMutableArray * usersArray;
 }
-@property (readonly, retain) PBArray * users;
-- (MPUserList_User*)usersAtIndex:(NSUInteger)index;
+@property (readonly, strong) NSArray<MPUserListUser*> * users;
+- (MPUserListUser*)usersAtIndex:(NSUInteger)index;
 
-+ (MPUserList*) defaultInstance;
-- (MPUserList*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserList_Builder*) builder;
-+ (MPUserList_Builder*) builder;
-+ (MPUserList_Builder*) builderWithPrototype:(MPUserList*) prototype;
-- (MPUserList_Builder*) toBuilder;
+- (MPUserListBuilder*) builder;
++ (MPUserListBuilder*) builder;
++ (MPUserListBuilder*) builderWithPrototype:(MPUserList*) prototype;
+- (MPUserListBuilder*) toBuilder;
 
 + (MPUserList*) parseFromData:(NSData*) data;
 + (MPUserList*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2146,109 +2236,132 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPUserList*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserList_User : PBGeneratedMessage {
+#define User_user_id @"userId"
+#define User_name @"name"
+#define User_last_seen @"lastSeen"
+#define User_last_channel @"lastChannel"
+@interface MPUserListUser : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasName_:1;
+  BOOL hasLastSeen_:1;
   BOOL hasUserId_:1;
+  BOOL hasLastChannel_:1;
   NSString* name;
-  uint32_t userId;
+  NSString* lastSeen;
+  UInt32 userId;
+  UInt32 lastChannel;
 }
 - (BOOL) hasUserId;
 - (BOOL) hasName;
-@property (readonly) uint32_t userId;
-@property (readonly, retain) NSString* name;
+- (BOOL) hasLastSeen;
+- (BOOL) hasLastChannel;
+@property (readonly) UInt32 userId;
+@property (readonly, strong) NSString* name;
+@property (readonly, strong) NSString* lastSeen;
+@property (readonly) UInt32 lastChannel;
 
-+ (MPUserList_User*) defaultInstance;
-- (MPUserList_User*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserList_User_Builder*) builder;
-+ (MPUserList_User_Builder*) builder;
-+ (MPUserList_User_Builder*) builderWithPrototype:(MPUserList_User*) prototype;
-- (MPUserList_User_Builder*) toBuilder;
+- (MPUserListUserBuilder*) builder;
++ (MPUserListUserBuilder*) builder;
++ (MPUserListUserBuilder*) builderWithPrototype:(MPUserListUser*) prototype;
+- (MPUserListUserBuilder*) toBuilder;
 
-+ (MPUserList_User*) parseFromData:(NSData*) data;
-+ (MPUserList_User*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPUserList_User*) parseFromInputStream:(NSInputStream*) input;
-+ (MPUserList_User*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPUserList_User*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPUserList_User*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserListUser*) parseFromData:(NSData*) data;
++ (MPUserListUser*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserListUser*) parseFromInputStream:(NSInputStream*) input;
++ (MPUserListUser*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserListUser*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPUserListUser*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserList_User_Builder : PBGeneratedMessage_Builder {
+@interface MPUserListUserBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserList_User* result;
+  MPUserListUser* resultUser;
 }
 
-- (MPUserList_User*) defaultInstance;
+- (MPUserListUser*) defaultInstance;
 
-- (MPUserList_User_Builder*) clear;
-- (MPUserList_User_Builder*) clone;
+- (MPUserListUserBuilder*) clear;
+- (MPUserListUserBuilder*) clone;
 
-- (MPUserList_User*) build;
-- (MPUserList_User*) buildPartial;
+- (MPUserListUser*) build;
+- (MPUserListUser*) buildPartial;
 
-- (MPUserList_User_Builder*) mergeFrom:(MPUserList_User*) other;
-- (MPUserList_User_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserList_User_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserListUserBuilder*) mergeFrom:(MPUserListUser*) other;
+- (MPUserListUserBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserListUserBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasUserId;
-- (uint32_t) userId;
-- (MPUserList_User_Builder*) setUserId:(uint32_t) value;
-- (MPUserList_User_Builder*) clearUserId;
+- (UInt32) userId;
+- (MPUserListUserBuilder*) setUserId:(UInt32) value;
+- (MPUserListUserBuilder*) clearUserId;
 
 - (BOOL) hasName;
 - (NSString*) name;
-- (MPUserList_User_Builder*) setName:(NSString*) value;
-- (MPUserList_User_Builder*) clearName;
+- (MPUserListUserBuilder*) setName:(NSString*) value;
+- (MPUserListUserBuilder*) clearName;
+
+- (BOOL) hasLastSeen;
+- (NSString*) lastSeen;
+- (MPUserListUserBuilder*) setLastSeen:(NSString*) value;
+- (MPUserListUserBuilder*) clearLastSeen;
+
+- (BOOL) hasLastChannel;
+- (UInt32) lastChannel;
+- (MPUserListUserBuilder*) setLastChannel:(UInt32) value;
+- (MPUserListUserBuilder*) clearLastChannel;
 @end
 
-@interface MPUserList_Builder : PBGeneratedMessage_Builder {
+@interface MPUserListBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserList* result;
+  MPUserList* resultUserList;
 }
 
 - (MPUserList*) defaultInstance;
 
-- (MPUserList_Builder*) clear;
-- (MPUserList_Builder*) clone;
+- (MPUserListBuilder*) clear;
+- (MPUserListBuilder*) clone;
 
 - (MPUserList*) build;
 - (MPUserList*) buildPartial;
 
-- (MPUserList_Builder*) mergeFrom:(MPUserList*) other;
-- (MPUserList_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserList_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserListBuilder*) mergeFrom:(MPUserList*) other;
+- (MPUserListBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserListBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
-- (PBAppendableArray *)users;
-- (MPUserList_User*)usersAtIndex:(NSUInteger)index;
-- (MPUserList_Builder *)addUsers:(MPUserList_User*)value;
-- (MPUserList_Builder *)setUsersArray:(NSArray *)array;
-- (MPUserList_Builder *)setUsersValues:(const MPUserList_User* *)values count:(NSUInteger)count;
-- (MPUserList_Builder *)clearUsers;
+- (NSMutableArray<MPUserListUser*> *)users;
+- (MPUserListUser*)usersAtIndex:(NSUInteger)index;
+- (MPUserListBuilder *)addUsers:(MPUserListUser*)value;
+- (MPUserListBuilder *)setUsersArray:(NSArray<MPUserListUser*> *)array;
+- (MPUserListBuilder *)clearUsers;
 @end
 
-@interface MPVoiceTarget : PBGeneratedMessage {
+#define VoiceTarget_id @"id"
+#define VoiceTarget_targets @"targets"
+@interface MPVoiceTarget : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasId_:1;
-  uint32_t id;
-  PBAppendableArray * targetsArray;
+  UInt32 id;
+  NSMutableArray * targetsArray;
 }
 - (BOOL) hasId;
-@property (readonly) uint32_t id;
-@property (readonly, retain) PBArray * targets;
-- (MPVoiceTarget_Target*)targetsAtIndex:(NSUInteger)index;
+@property (readonly) UInt32 id;
+@property (readonly, strong) NSArray<MPVoiceTargetTarget*> * targets;
+- (MPVoiceTargetTarget*)targetsAtIndex:(NSUInteger)index;
 
-+ (MPVoiceTarget*) defaultInstance;
-- (MPVoiceTarget*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPVoiceTarget_Builder*) builder;
-+ (MPVoiceTarget_Builder*) builder;
-+ (MPVoiceTarget_Builder*) builderWithPrototype:(MPVoiceTarget*) prototype;
-- (MPVoiceTarget_Builder*) toBuilder;
+- (MPVoiceTargetBuilder*) builder;
++ (MPVoiceTargetBuilder*) builder;
++ (MPVoiceTargetBuilder*) builderWithPrototype:(MPVoiceTarget*) prototype;
+- (MPVoiceTargetBuilder*) toBuilder;
 
 + (MPVoiceTarget*) parseFromData:(NSData*) data;
 + (MPVoiceTarget*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2258,7 +2371,12 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPVoiceTarget*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPVoiceTarget_Target : PBGeneratedMessage {
+#define Target_session @"session"
+#define Target_channel_id @"channelId"
+#define Target_group @"group"
+#define Target_links @"links"
+#define Target_children @"children"
+@interface MPVoiceTargetTarget : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasLinks_:1;
   BOOL hasChildren_:1;
@@ -2267,138 +2385,140 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL links_:1;
   BOOL children_:1;
   NSString* group;
-  uint32_t channelId;
+  UInt32 channelId;
   PBAppendableArray * sessionArray;
 }
 - (BOOL) hasChannelId;
 - (BOOL) hasGroup;
 - (BOOL) hasLinks;
 - (BOOL) hasChildren;
-@property (readonly, retain) PBArray * session;
-@property (readonly) uint32_t channelId;
-@property (readonly, retain) NSString* group;
+@property (readonly, strong) PBArray * session;
+@property (readonly) UInt32 channelId;
+@property (readonly, strong) NSString* group;
 - (BOOL) links;
 - (BOOL) children;
-- (uint32_t)sessionAtIndex:(NSUInteger)index;
+- (UInt32)sessionAtIndex:(NSUInteger)index;
 
-+ (MPVoiceTarget_Target*) defaultInstance;
-- (MPVoiceTarget_Target*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPVoiceTarget_Target_Builder*) builder;
-+ (MPVoiceTarget_Target_Builder*) builder;
-+ (MPVoiceTarget_Target_Builder*) builderWithPrototype:(MPVoiceTarget_Target*) prototype;
-- (MPVoiceTarget_Target_Builder*) toBuilder;
+- (MPVoiceTargetTargetBuilder*) builder;
++ (MPVoiceTargetTargetBuilder*) builder;
++ (MPVoiceTargetTargetBuilder*) builderWithPrototype:(MPVoiceTargetTarget*) prototype;
+- (MPVoiceTargetTargetBuilder*) toBuilder;
 
-+ (MPVoiceTarget_Target*) parseFromData:(NSData*) data;
-+ (MPVoiceTarget_Target*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPVoiceTarget_Target*) parseFromInputStream:(NSInputStream*) input;
-+ (MPVoiceTarget_Target*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPVoiceTarget_Target*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPVoiceTarget_Target*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPVoiceTargetTarget*) parseFromData:(NSData*) data;
++ (MPVoiceTargetTarget*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPVoiceTargetTarget*) parseFromInputStream:(NSInputStream*) input;
++ (MPVoiceTargetTarget*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPVoiceTargetTarget*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPVoiceTargetTarget*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPVoiceTarget_Target_Builder : PBGeneratedMessage_Builder {
+@interface MPVoiceTargetTargetBuilder : PBGeneratedMessageBuilder {
 @private
-  MPVoiceTarget_Target* result;
+  MPVoiceTargetTarget* resultTarget;
 }
 
-- (MPVoiceTarget_Target*) defaultInstance;
+- (MPVoiceTargetTarget*) defaultInstance;
 
-- (MPVoiceTarget_Target_Builder*) clear;
-- (MPVoiceTarget_Target_Builder*) clone;
+- (MPVoiceTargetTargetBuilder*) clear;
+- (MPVoiceTargetTargetBuilder*) clone;
 
-- (MPVoiceTarget_Target*) build;
-- (MPVoiceTarget_Target*) buildPartial;
+- (MPVoiceTargetTarget*) build;
+- (MPVoiceTargetTarget*) buildPartial;
 
-- (MPVoiceTarget_Target_Builder*) mergeFrom:(MPVoiceTarget_Target*) other;
-- (MPVoiceTarget_Target_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPVoiceTarget_Target_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPVoiceTargetTargetBuilder*) mergeFrom:(MPVoiceTargetTarget*) other;
+- (MPVoiceTargetTargetBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPVoiceTargetTargetBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (PBAppendableArray *)session;
-- (uint32_t)sessionAtIndex:(NSUInteger)index;
-- (MPVoiceTarget_Target_Builder *)addSession:(uint32_t)value;
-- (MPVoiceTarget_Target_Builder *)setSessionArray:(NSArray *)array;
-- (MPVoiceTarget_Target_Builder *)setSessionValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPVoiceTarget_Target_Builder *)clearSession;
+- (UInt32)sessionAtIndex:(NSUInteger)index;
+- (MPVoiceTargetTargetBuilder *)addSession:(UInt32)value;
+- (MPVoiceTargetTargetBuilder *)setSessionArray:(NSArray *)array;
+- (MPVoiceTargetTargetBuilder *)setSessionValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPVoiceTargetTargetBuilder *)clearSession;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPVoiceTarget_Target_Builder*) setChannelId:(uint32_t) value;
-- (MPVoiceTarget_Target_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPVoiceTargetTargetBuilder*) setChannelId:(UInt32) value;
+- (MPVoiceTargetTargetBuilder*) clearChannelId;
 
 - (BOOL) hasGroup;
 - (NSString*) group;
-- (MPVoiceTarget_Target_Builder*) setGroup:(NSString*) value;
-- (MPVoiceTarget_Target_Builder*) clearGroup;
+- (MPVoiceTargetTargetBuilder*) setGroup:(NSString*) value;
+- (MPVoiceTargetTargetBuilder*) clearGroup;
 
 - (BOOL) hasLinks;
 - (BOOL) links;
-- (MPVoiceTarget_Target_Builder*) setLinks:(BOOL) value;
-- (MPVoiceTarget_Target_Builder*) clearLinks;
+- (MPVoiceTargetTargetBuilder*) setLinks:(BOOL) value;
+- (MPVoiceTargetTargetBuilder*) clearLinks;
 
 - (BOOL) hasChildren;
 - (BOOL) children;
-- (MPVoiceTarget_Target_Builder*) setChildren:(BOOL) value;
-- (MPVoiceTarget_Target_Builder*) clearChildren;
+- (MPVoiceTargetTargetBuilder*) setChildren:(BOOL) value;
+- (MPVoiceTargetTargetBuilder*) clearChildren;
 @end
 
-@interface MPVoiceTarget_Builder : PBGeneratedMessage_Builder {
+@interface MPVoiceTargetBuilder : PBGeneratedMessageBuilder {
 @private
-  MPVoiceTarget* result;
+  MPVoiceTarget* resultVoiceTarget;
 }
 
 - (MPVoiceTarget*) defaultInstance;
 
-- (MPVoiceTarget_Builder*) clear;
-- (MPVoiceTarget_Builder*) clone;
+- (MPVoiceTargetBuilder*) clear;
+- (MPVoiceTargetBuilder*) clone;
 
 - (MPVoiceTarget*) build;
 - (MPVoiceTarget*) buildPartial;
 
-- (MPVoiceTarget_Builder*) mergeFrom:(MPVoiceTarget*) other;
-- (MPVoiceTarget_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPVoiceTarget_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPVoiceTargetBuilder*) mergeFrom:(MPVoiceTarget*) other;
+- (MPVoiceTargetBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPVoiceTargetBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasId;
-- (uint32_t) id;
-- (MPVoiceTarget_Builder*) setId:(uint32_t) value;
-- (MPVoiceTarget_Builder*) clearId;
+- (UInt32) id;
+- (MPVoiceTargetBuilder*) setId:(UInt32) value;
+- (MPVoiceTargetBuilder*) clearId;
 
-- (PBAppendableArray *)targets;
-- (MPVoiceTarget_Target*)targetsAtIndex:(NSUInteger)index;
-- (MPVoiceTarget_Builder *)addTargets:(MPVoiceTarget_Target*)value;
-- (MPVoiceTarget_Builder *)setTargetsArray:(NSArray *)array;
-- (MPVoiceTarget_Builder *)setTargetsValues:(const MPVoiceTarget_Target* *)values count:(NSUInteger)count;
-- (MPVoiceTarget_Builder *)clearTargets;
+- (NSMutableArray<MPVoiceTargetTarget*> *)targets;
+- (MPVoiceTargetTarget*)targetsAtIndex:(NSUInteger)index;
+- (MPVoiceTargetBuilder *)addTargets:(MPVoiceTargetTarget*)value;
+- (MPVoiceTargetBuilder *)setTargetsArray:(NSArray<MPVoiceTargetTarget*> *)array;
+- (MPVoiceTargetBuilder *)clearTargets;
 @end
 
-@interface MPPermissionQuery : PBGeneratedMessage {
+#define PermissionQuery_channel_id @"channelId"
+#define PermissionQuery_permissions @"permissions"
+#define PermissionQuery_flush @"flush"
+@interface MPPermissionQuery : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasFlush_:1;
   BOOL hasChannelId_:1;
   BOOL hasPermissions_:1;
   BOOL flush_:1;
-  uint32_t channelId;
-  uint32_t permissions;
+  UInt32 channelId;
+  UInt32 permissions;
 }
 - (BOOL) hasChannelId;
 - (BOOL) hasPermissions;
 - (BOOL) hasFlush;
-@property (readonly) uint32_t channelId;
-@property (readonly) uint32_t permissions;
+@property (readonly) UInt32 channelId;
+@property (readonly) UInt32 permissions;
 - (BOOL) flush;
 
-+ (MPPermissionQuery*) defaultInstance;
-- (MPPermissionQuery*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPPermissionQuery_Builder*) builder;
-+ (MPPermissionQuery_Builder*) builder;
-+ (MPPermissionQuery_Builder*) builderWithPrototype:(MPPermissionQuery*) prototype;
-- (MPPermissionQuery_Builder*) toBuilder;
+- (MPPermissionQueryBuilder*) builder;
++ (MPPermissionQueryBuilder*) builder;
++ (MPPermissionQueryBuilder*) builderWithPrototype:(MPPermissionQuery*) prototype;
+- (MPPermissionQueryBuilder*) toBuilder;
 
 + (MPPermissionQuery*) parseFromData:(NSData*) data;
 + (MPPermissionQuery*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2408,40 +2528,44 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPPermissionQuery*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPPermissionQuery_Builder : PBGeneratedMessage_Builder {
+@interface MPPermissionQueryBuilder : PBGeneratedMessageBuilder {
 @private
-  MPPermissionQuery* result;
+  MPPermissionQuery* resultPermissionQuery;
 }
 
 - (MPPermissionQuery*) defaultInstance;
 
-- (MPPermissionQuery_Builder*) clear;
-- (MPPermissionQuery_Builder*) clone;
+- (MPPermissionQueryBuilder*) clear;
+- (MPPermissionQueryBuilder*) clone;
 
 - (MPPermissionQuery*) build;
 - (MPPermissionQuery*) buildPartial;
 
-- (MPPermissionQuery_Builder*) mergeFrom:(MPPermissionQuery*) other;
-- (MPPermissionQuery_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPPermissionQuery_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPPermissionQueryBuilder*) mergeFrom:(MPPermissionQuery*) other;
+- (MPPermissionQueryBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPPermissionQueryBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasChannelId;
-- (uint32_t) channelId;
-- (MPPermissionQuery_Builder*) setChannelId:(uint32_t) value;
-- (MPPermissionQuery_Builder*) clearChannelId;
+- (UInt32) channelId;
+- (MPPermissionQueryBuilder*) setChannelId:(UInt32) value;
+- (MPPermissionQueryBuilder*) clearChannelId;
 
 - (BOOL) hasPermissions;
-- (uint32_t) permissions;
-- (MPPermissionQuery_Builder*) setPermissions:(uint32_t) value;
-- (MPPermissionQuery_Builder*) clearPermissions;
+- (UInt32) permissions;
+- (MPPermissionQueryBuilder*) setPermissions:(UInt32) value;
+- (MPPermissionQueryBuilder*) clearPermissions;
 
 - (BOOL) hasFlush;
 - (BOOL) flush;
-- (MPPermissionQuery_Builder*) setFlush:(BOOL) value;
-- (MPPermissionQuery_Builder*) clearFlush;
+- (MPPermissionQueryBuilder*) setFlush:(BOOL) value;
+- (MPPermissionQueryBuilder*) clearFlush;
 @end
 
-@interface MPCodecVersion : PBGeneratedMessage {
+#define CodecVersion_alpha @"alpha"
+#define CodecVersion_beta @"beta"
+#define CodecVersion_prefer_alpha @"preferAlpha"
+#define CodecVersion_opus @"opus"
+@interface MPCodecVersion : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasPreferAlpha_:1;
   BOOL hasOpus_:1;
@@ -2449,27 +2573,27 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
   BOOL hasBeta_:1;
   BOOL preferAlpha_:1;
   BOOL opus_:1;
-  int32_t alpha;
-  int32_t beta;
+  SInt32 alpha;
+  SInt32 beta;
 }
 - (BOOL) hasAlpha;
 - (BOOL) hasBeta;
 - (BOOL) hasPreferAlpha;
 - (BOOL) hasOpus;
-@property (readonly) int32_t alpha;
-@property (readonly) int32_t beta;
+@property (readonly) SInt32 alpha;
+@property (readonly) SInt32 beta;
 - (BOOL) preferAlpha;
 - (BOOL) opus;
 
-+ (MPCodecVersion*) defaultInstance;
-- (MPCodecVersion*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPCodecVersion_Builder*) builder;
-+ (MPCodecVersion_Builder*) builder;
-+ (MPCodecVersion_Builder*) builderWithPrototype:(MPCodecVersion*) prototype;
-- (MPCodecVersion_Builder*) toBuilder;
+- (MPCodecVersionBuilder*) builder;
++ (MPCodecVersionBuilder*) builder;
++ (MPCodecVersionBuilder*) builderWithPrototype:(MPCodecVersion*) prototype;
+- (MPCodecVersionBuilder*) toBuilder;
 
 + (MPCodecVersion*) parseFromData:(NSData*) data;
 + (MPCodecVersion*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2479,82 +2603,101 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPCodecVersion*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPCodecVersion_Builder : PBGeneratedMessage_Builder {
+@interface MPCodecVersionBuilder : PBGeneratedMessageBuilder {
 @private
-  MPCodecVersion* result;
+  MPCodecVersion* resultCodecVersion;
 }
 
 - (MPCodecVersion*) defaultInstance;
 
-- (MPCodecVersion_Builder*) clear;
-- (MPCodecVersion_Builder*) clone;
+- (MPCodecVersionBuilder*) clear;
+- (MPCodecVersionBuilder*) clone;
 
 - (MPCodecVersion*) build;
 - (MPCodecVersion*) buildPartial;
 
-- (MPCodecVersion_Builder*) mergeFrom:(MPCodecVersion*) other;
-- (MPCodecVersion_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPCodecVersion_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPCodecVersionBuilder*) mergeFrom:(MPCodecVersion*) other;
+- (MPCodecVersionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPCodecVersionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasAlpha;
-- (int32_t) alpha;
-- (MPCodecVersion_Builder*) setAlpha:(int32_t) value;
-- (MPCodecVersion_Builder*) clearAlpha;
+- (SInt32) alpha;
+- (MPCodecVersionBuilder*) setAlpha:(SInt32) value;
+- (MPCodecVersionBuilder*) clearAlpha;
 
 - (BOOL) hasBeta;
-- (int32_t) beta;
-- (MPCodecVersion_Builder*) setBeta:(int32_t) value;
-- (MPCodecVersion_Builder*) clearBeta;
+- (SInt32) beta;
+- (MPCodecVersionBuilder*) setBeta:(SInt32) value;
+- (MPCodecVersionBuilder*) clearBeta;
 
 - (BOOL) hasPreferAlpha;
 - (BOOL) preferAlpha;
-- (MPCodecVersion_Builder*) setPreferAlpha:(BOOL) value;
-- (MPCodecVersion_Builder*) clearPreferAlpha;
+- (MPCodecVersionBuilder*) setPreferAlpha:(BOOL) value;
+- (MPCodecVersionBuilder*) clearPreferAlpha;
 
 - (BOOL) hasOpus;
 - (BOOL) opus;
-- (MPCodecVersion_Builder*) setOpus:(BOOL) value;
-- (MPCodecVersion_Builder*) clearOpus;
+- (MPCodecVersionBuilder*) setOpus:(BOOL) value;
+- (MPCodecVersionBuilder*) clearOpus;
 @end
 
-@interface MPUserStats : PBGeneratedMessage {
+#define UserStats_session @"session"
+#define UserStats_stats_only @"statsOnly"
+#define UserStats_certificates @"certificates"
+#define UserStats_from_client @"fromClient"
+#define UserStats_from_server @"fromServer"
+#define UserStats_udp_packets @"udpPackets"
+#define UserStats_tcp_packets @"tcpPackets"
+#define UserStats_udp_ping_avg @"udpPingAvg"
+#define UserStats_udp_ping_var @"udpPingVar"
+#define UserStats_tcp_ping_avg @"tcpPingAvg"
+#define UserStats_tcp_ping_var @"tcpPingVar"
+#define UserStats_version @"version"
+#define UserStats_celt_versions @"celtVersions"
+#define UserStats_address @"address"
+#define UserStats_bandwidth @"bandwidth"
+#define UserStats_onlinesecs @"onlinesecs"
+#define UserStats_idlesecs @"idlesecs"
+#define UserStats_strong_certificate @"strongCertificate"
+#define UserStats_opus @"opus"
+@interface MPUserStats : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
-  BOOL hasOpus_:1;
   BOOL hasStatsOnly_:1;
   BOOL hasStrongCertificate_:1;
-  BOOL hasTcpPingVar_:1;
-  BOOL hasTcpPingAvg_:1;
-  BOOL hasUdpPingVar_:1;
+  BOOL hasOpus_:1;
   BOOL hasUdpPingAvg_:1;
-  BOOL hasFromServer_:1;
+  BOOL hasUdpPingVar_:1;
+  BOOL hasTcpPingAvg_:1;
+  BOOL hasTcpPingVar_:1;
   BOOL hasFromClient_:1;
+  BOOL hasFromServer_:1;
   BOOL hasVersion_:1;
   BOOL hasAddress_:1;
-  BOOL hasTcpPackets_:1;
+  BOOL hasSession_:1;
   BOOL hasUdpPackets_:1;
+  BOOL hasTcpPackets_:1;
   BOOL hasBandwidth_:1;
   BOOL hasOnlinesecs_:1;
   BOOL hasIdlesecs_:1;
-  BOOL hasSession_:1;
-  BOOL opus_:1;
   BOOL statsOnly_:1;
   BOOL strongCertificate_:1;
-  Float32 tcpPingVar;
-  Float32 tcpPingAvg;
-  Float32 udpPingVar;
+  BOOL opus_:1;
   Float32 udpPingAvg;
-  MPUserStats_Stats* fromServer;
-  MPUserStats_Stats* fromClient;
+  Float32 udpPingVar;
+  Float32 tcpPingAvg;
+  Float32 tcpPingVar;
+  MPUserStatsStats* fromClient;
+  MPUserStatsStats* fromServer;
   MPVersion* version;
   NSData* address;
-  uint32_t tcpPackets;
-  uint32_t udpPackets;
-  uint32_t bandwidth;
-  uint32_t onlinesecs;
-  uint32_t idlesecs;
-  uint32_t session;
+  UInt32 session;
+  UInt32 udpPackets;
+  UInt32 tcpPackets;
+  UInt32 bandwidth;
+  UInt32 onlinesecs;
+  UInt32 idlesecs;
   PBAppendableArray * celtVersionsArray;
-  PBAppendableArray * certificatesArray;
+  NSMutableArray * certificatesArray;
 }
 - (BOOL) hasSession;
 - (BOOL) hasStatsOnly;
@@ -2573,37 +2716,37 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 - (BOOL) hasIdlesecs;
 - (BOOL) hasStrongCertificate;
 - (BOOL) hasOpus;
-@property (readonly) uint32_t session;
+@property (readonly) UInt32 session;
 - (BOOL) statsOnly;
-@property (readonly, retain) PBArray * certificates;
-@property (readonly, retain) MPUserStats_Stats* fromClient;
-@property (readonly, retain) MPUserStats_Stats* fromServer;
-@property (readonly) uint32_t udpPackets;
-@property (readonly) uint32_t tcpPackets;
+@property (readonly, strong) NSArray * certificates;
+@property (readonly, strong) MPUserStatsStats* fromClient;
+@property (readonly, strong) MPUserStatsStats* fromServer;
+@property (readonly) UInt32 udpPackets;
+@property (readonly) UInt32 tcpPackets;
 @property (readonly) Float32 udpPingAvg;
 @property (readonly) Float32 udpPingVar;
 @property (readonly) Float32 tcpPingAvg;
 @property (readonly) Float32 tcpPingVar;
-@property (readonly, retain) MPVersion* version;
-@property (readonly, retain) PBArray * celtVersions;
-@property (readonly, retain) NSData* address;
-@property (readonly) uint32_t bandwidth;
-@property (readonly) uint32_t onlinesecs;
-@property (readonly) uint32_t idlesecs;
+@property (readonly, strong) MPVersion* version;
+@property (readonly, strong) PBArray * celtVersions;
+@property (readonly, strong) NSData* address;
+@property (readonly) UInt32 bandwidth;
+@property (readonly) UInt32 onlinesecs;
+@property (readonly) UInt32 idlesecs;
 - (BOOL) strongCertificate;
 - (BOOL) opus;
 - (NSData*)certificatesAtIndex:(NSUInteger)index;
-- (int32_t)celtVersionsAtIndex:(NSUInteger)index;
+- (SInt32)celtVersionsAtIndex:(NSUInteger)index;
 
-+ (MPUserStats*) defaultInstance;
-- (MPUserStats*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserStats_Builder*) builder;
-+ (MPUserStats_Builder*) builder;
-+ (MPUserStats_Builder*) builderWithPrototype:(MPUserStats*) prototype;
-- (MPUserStats_Builder*) toBuilder;
+- (MPUserStatsBuilder*) builder;
++ (MPUserStatsBuilder*) builder;
++ (MPUserStatsBuilder*) builderWithPrototype:(MPUserStats*) prototype;
+- (MPUserStatsBuilder*) toBuilder;
 
 + (MPUserStats*) parseFromData:(NSData*) data;
 + (MPUserStats*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2613,294 +2756,233 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPUserStats*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserStats_Stats : PBGeneratedMessage {
+#define Stats_good @"good"
+#define Stats_late @"late"
+#define Stats_lost @"lost"
+#define Stats_resync @"resync"
+@interface MPUserStatsStats : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   BOOL hasGood_:1;
   BOOL hasLate_:1;
   BOOL hasLost_:1;
   BOOL hasResync_:1;
-  uint32_t good;
-  uint32_t late;
-  uint32_t lost;
-  uint32_t resync;
+  UInt32 good;
+  UInt32 late;
+  UInt32 lost;
+  UInt32 resync;
 }
 - (BOOL) hasGood;
 - (BOOL) hasLate;
 - (BOOL) hasLost;
 - (BOOL) hasResync;
-@property (readonly) uint32_t good;
-@property (readonly) uint32_t late;
-@property (readonly) uint32_t lost;
-@property (readonly) uint32_t resync;
+@property (readonly) UInt32 good;
+@property (readonly) UInt32 late;
+@property (readonly) UInt32 lost;
+@property (readonly) UInt32 resync;
 
-+ (MPUserStats_Stats*) defaultInstance;
-- (MPUserStats_Stats*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPUserStats_Stats_Builder*) builder;
-+ (MPUserStats_Stats_Builder*) builder;
-+ (MPUserStats_Stats_Builder*) builderWithPrototype:(MPUserStats_Stats*) prototype;
-- (MPUserStats_Stats_Builder*) toBuilder;
+- (MPUserStatsStatsBuilder*) builder;
++ (MPUserStatsStatsBuilder*) builder;
++ (MPUserStatsStatsBuilder*) builderWithPrototype:(MPUserStatsStats*) prototype;
+- (MPUserStatsStatsBuilder*) toBuilder;
 
-+ (MPUserStats_Stats*) parseFromData:(NSData*) data;
-+ (MPUserStats_Stats*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPUserStats_Stats*) parseFromInputStream:(NSInputStream*) input;
-+ (MPUserStats_Stats*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPUserStats_Stats*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPUserStats_Stats*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserStatsStats*) parseFromData:(NSData*) data;
++ (MPUserStatsStats*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserStatsStats*) parseFromInputStream:(NSInputStream*) input;
++ (MPUserStatsStats*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPUserStatsStats*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPUserStatsStats*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPUserStats_Stats_Builder : PBGeneratedMessage_Builder {
+@interface MPUserStatsStatsBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserStats_Stats* result;
+  MPUserStatsStats* resultStats;
 }
 
-- (MPUserStats_Stats*) defaultInstance;
+- (MPUserStatsStats*) defaultInstance;
 
-- (MPUserStats_Stats_Builder*) clear;
-- (MPUserStats_Stats_Builder*) clone;
+- (MPUserStatsStatsBuilder*) clear;
+- (MPUserStatsStatsBuilder*) clone;
 
-- (MPUserStats_Stats*) build;
-- (MPUserStats_Stats*) buildPartial;
+- (MPUserStatsStats*) build;
+- (MPUserStatsStats*) buildPartial;
 
-- (MPUserStats_Stats_Builder*) mergeFrom:(MPUserStats_Stats*) other;
-- (MPUserStats_Stats_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserStats_Stats_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserStatsStatsBuilder*) mergeFrom:(MPUserStatsStats*) other;
+- (MPUserStatsStatsBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserStatsStatsBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasGood;
-- (uint32_t) good;
-- (MPUserStats_Stats_Builder*) setGood:(uint32_t) value;
-- (MPUserStats_Stats_Builder*) clearGood;
+- (UInt32) good;
+- (MPUserStatsStatsBuilder*) setGood:(UInt32) value;
+- (MPUserStatsStatsBuilder*) clearGood;
 
 - (BOOL) hasLate;
-- (uint32_t) late;
-- (MPUserStats_Stats_Builder*) setLate:(uint32_t) value;
-- (MPUserStats_Stats_Builder*) clearLate;
+- (UInt32) late;
+- (MPUserStatsStatsBuilder*) setLate:(UInt32) value;
+- (MPUserStatsStatsBuilder*) clearLate;
 
 - (BOOL) hasLost;
-- (uint32_t) lost;
-- (MPUserStats_Stats_Builder*) setLost:(uint32_t) value;
-- (MPUserStats_Stats_Builder*) clearLost;
+- (UInt32) lost;
+- (MPUserStatsStatsBuilder*) setLost:(UInt32) value;
+- (MPUserStatsStatsBuilder*) clearLost;
 
 - (BOOL) hasResync;
-- (uint32_t) resync;
-- (MPUserStats_Stats_Builder*) setResync:(uint32_t) value;
-- (MPUserStats_Stats_Builder*) clearResync;
+- (UInt32) resync;
+- (MPUserStatsStatsBuilder*) setResync:(UInt32) value;
+- (MPUserStatsStatsBuilder*) clearResync;
 @end
 
-@interface MPUserStats_Builder : PBGeneratedMessage_Builder {
+@interface MPUserStatsBuilder : PBGeneratedMessageBuilder {
 @private
-  MPUserStats* result;
+  MPUserStats* resultUserStats;
 }
 
 - (MPUserStats*) defaultInstance;
 
-- (MPUserStats_Builder*) clear;
-- (MPUserStats_Builder*) clone;
+- (MPUserStatsBuilder*) clear;
+- (MPUserStatsBuilder*) clone;
 
 - (MPUserStats*) build;
 - (MPUserStats*) buildPartial;
 
-- (MPUserStats_Builder*) mergeFrom:(MPUserStats*) other;
-- (MPUserStats_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPUserStats_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPUserStatsBuilder*) mergeFrom:(MPUserStats*) other;
+- (MPUserStatsBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPUserStatsBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (BOOL) hasSession;
-- (uint32_t) session;
-- (MPUserStats_Builder*) setSession:(uint32_t) value;
-- (MPUserStats_Builder*) clearSession;
+- (UInt32) session;
+- (MPUserStatsBuilder*) setSession:(UInt32) value;
+- (MPUserStatsBuilder*) clearSession;
 
 - (BOOL) hasStatsOnly;
 - (BOOL) statsOnly;
-- (MPUserStats_Builder*) setStatsOnly:(BOOL) value;
-- (MPUserStats_Builder*) clearStatsOnly;
+- (MPUserStatsBuilder*) setStatsOnly:(BOOL) value;
+- (MPUserStatsBuilder*) clearStatsOnly;
 
-- (PBAppendableArray *)certificates;
+- (NSMutableArray *)certificates;
 - (NSData*)certificatesAtIndex:(NSUInteger)index;
-- (MPUserStats_Builder *)addCertificates:(NSData*)value;
-- (MPUserStats_Builder *)setCertificatesArray:(NSArray *)array;
-- (MPUserStats_Builder *)setCertificatesValues:(const NSData* *)values count:(NSUInteger)count;
-- (MPUserStats_Builder *)clearCertificates;
+- (MPUserStatsBuilder *)addCertificates:(NSData*)value;
+- (MPUserStatsBuilder *)setCertificatesArray:(NSArray *)array;
+- (MPUserStatsBuilder *)clearCertificates;
 
 - (BOOL) hasFromClient;
-- (MPUserStats_Stats*) fromClient;
-- (MPUserStats_Builder*) setFromClient:(MPUserStats_Stats*) value;
-- (MPUserStats_Builder*) setFromClientBuilder:(MPUserStats_Stats_Builder*) builderForValue;
-- (MPUserStats_Builder*) mergeFromClient:(MPUserStats_Stats*) value;
-- (MPUserStats_Builder*) clearFromClient;
+- (MPUserStatsStats*) fromClient;
+- (MPUserStatsBuilder*) setFromClient:(MPUserStatsStats*) value;
+- (MPUserStatsBuilder*) setFromClientBuilder:(MPUserStatsStatsBuilder*) builderForValue;
+- (MPUserStatsBuilder*) mergeFromClient:(MPUserStatsStats*) value;
+- (MPUserStatsBuilder*) clearFromClient;
 
 - (BOOL) hasFromServer;
-- (MPUserStats_Stats*) fromServer;
-- (MPUserStats_Builder*) setFromServer:(MPUserStats_Stats*) value;
-- (MPUserStats_Builder*) setFromServerBuilder:(MPUserStats_Stats_Builder*) builderForValue;
-- (MPUserStats_Builder*) mergeFromServer:(MPUserStats_Stats*) value;
-- (MPUserStats_Builder*) clearFromServer;
+- (MPUserStatsStats*) fromServer;
+- (MPUserStatsBuilder*) setFromServer:(MPUserStatsStats*) value;
+- (MPUserStatsBuilder*) setFromServerBuilder:(MPUserStatsStatsBuilder*) builderForValue;
+- (MPUserStatsBuilder*) mergeFromServer:(MPUserStatsStats*) value;
+- (MPUserStatsBuilder*) clearFromServer;
 
 - (BOOL) hasUdpPackets;
-- (uint32_t) udpPackets;
-- (MPUserStats_Builder*) setUdpPackets:(uint32_t) value;
-- (MPUserStats_Builder*) clearUdpPackets;
+- (UInt32) udpPackets;
+- (MPUserStatsBuilder*) setUdpPackets:(UInt32) value;
+- (MPUserStatsBuilder*) clearUdpPackets;
 
 - (BOOL) hasTcpPackets;
-- (uint32_t) tcpPackets;
-- (MPUserStats_Builder*) setTcpPackets:(uint32_t) value;
-- (MPUserStats_Builder*) clearTcpPackets;
+- (UInt32) tcpPackets;
+- (MPUserStatsBuilder*) setTcpPackets:(UInt32) value;
+- (MPUserStatsBuilder*) clearTcpPackets;
 
 - (BOOL) hasUdpPingAvg;
 - (Float32) udpPingAvg;
-- (MPUserStats_Builder*) setUdpPingAvg:(Float32) value;
-- (MPUserStats_Builder*) clearUdpPingAvg;
+- (MPUserStatsBuilder*) setUdpPingAvg:(Float32) value;
+- (MPUserStatsBuilder*) clearUdpPingAvg;
 
 - (BOOL) hasUdpPingVar;
 - (Float32) udpPingVar;
-- (MPUserStats_Builder*) setUdpPingVar:(Float32) value;
-- (MPUserStats_Builder*) clearUdpPingVar;
+- (MPUserStatsBuilder*) setUdpPingVar:(Float32) value;
+- (MPUserStatsBuilder*) clearUdpPingVar;
 
 - (BOOL) hasTcpPingAvg;
 - (Float32) tcpPingAvg;
-- (MPUserStats_Builder*) setTcpPingAvg:(Float32) value;
-- (MPUserStats_Builder*) clearTcpPingAvg;
+- (MPUserStatsBuilder*) setTcpPingAvg:(Float32) value;
+- (MPUserStatsBuilder*) clearTcpPingAvg;
 
 - (BOOL) hasTcpPingVar;
 - (Float32) tcpPingVar;
-- (MPUserStats_Builder*) setTcpPingVar:(Float32) value;
-- (MPUserStats_Builder*) clearTcpPingVar;
+- (MPUserStatsBuilder*) setTcpPingVar:(Float32) value;
+- (MPUserStatsBuilder*) clearTcpPingVar;
 
 - (BOOL) hasVersion;
 - (MPVersion*) version;
-- (MPUserStats_Builder*) setVersion:(MPVersion*) value;
-- (MPUserStats_Builder*) setVersionBuilder:(MPVersion_Builder*) builderForValue;
-- (MPUserStats_Builder*) mergeVersion:(MPVersion*) value;
-- (MPUserStats_Builder*) clearVersion;
+- (MPUserStatsBuilder*) setVersion:(MPVersion*) value;
+- (MPUserStatsBuilder*) setVersionBuilder:(MPVersionBuilder*) builderForValue;
+- (MPUserStatsBuilder*) mergeVersion:(MPVersion*) value;
+- (MPUserStatsBuilder*) clearVersion;
 
 - (PBAppendableArray *)celtVersions;
-- (int32_t)celtVersionsAtIndex:(NSUInteger)index;
-- (MPUserStats_Builder *)addCeltVersions:(int32_t)value;
-- (MPUserStats_Builder *)setCeltVersionsArray:(NSArray *)array;
-- (MPUserStats_Builder *)setCeltVersionsValues:(const int32_t *)values count:(NSUInteger)count;
-- (MPUserStats_Builder *)clearCeltVersions;
+- (SInt32)celtVersionsAtIndex:(NSUInteger)index;
+- (MPUserStatsBuilder *)addCeltVersions:(SInt32)value;
+- (MPUserStatsBuilder *)setCeltVersionsArray:(NSArray *)array;
+- (MPUserStatsBuilder *)setCeltVersionsValues:(const SInt32 *)values count:(NSUInteger)count;
+- (MPUserStatsBuilder *)clearCeltVersions;
 
 - (BOOL) hasAddress;
 - (NSData*) address;
-- (MPUserStats_Builder*) setAddress:(NSData*) value;
-- (MPUserStats_Builder*) clearAddress;
+- (MPUserStatsBuilder*) setAddress:(NSData*) value;
+- (MPUserStatsBuilder*) clearAddress;
 
 - (BOOL) hasBandwidth;
-- (uint32_t) bandwidth;
-- (MPUserStats_Builder*) setBandwidth:(uint32_t) value;
-- (MPUserStats_Builder*) clearBandwidth;
+- (UInt32) bandwidth;
+- (MPUserStatsBuilder*) setBandwidth:(UInt32) value;
+- (MPUserStatsBuilder*) clearBandwidth;
 
 - (BOOL) hasOnlinesecs;
-- (uint32_t) onlinesecs;
-- (MPUserStats_Builder*) setOnlinesecs:(uint32_t) value;
-- (MPUserStats_Builder*) clearOnlinesecs;
+- (UInt32) onlinesecs;
+- (MPUserStatsBuilder*) setOnlinesecs:(UInt32) value;
+- (MPUserStatsBuilder*) clearOnlinesecs;
 
 - (BOOL) hasIdlesecs;
-- (uint32_t) idlesecs;
-- (MPUserStats_Builder*) setIdlesecs:(uint32_t) value;
-- (MPUserStats_Builder*) clearIdlesecs;
+- (UInt32) idlesecs;
+- (MPUserStatsBuilder*) setIdlesecs:(UInt32) value;
+- (MPUserStatsBuilder*) clearIdlesecs;
 
 - (BOOL) hasStrongCertificate;
 - (BOOL) strongCertificate;
-- (MPUserStats_Builder*) setStrongCertificate:(BOOL) value;
-- (MPUserStats_Builder*) clearStrongCertificate;
+- (MPUserStatsBuilder*) setStrongCertificate:(BOOL) value;
+- (MPUserStatsBuilder*) clearStrongCertificate;
 
 - (BOOL) hasOpus;
 - (BOOL) opus;
-- (MPUserStats_Builder*) setOpus:(BOOL) value;
-- (MPUserStats_Builder*) clearOpus;
+- (MPUserStatsBuilder*) setOpus:(BOOL) value;
+- (MPUserStatsBuilder*) clearOpus;
 @end
 
-@interface MPSuggestConfig : PBGeneratedMessage {
-@private
-  BOOL hasPositional_:1;
-  BOOL hasPushToTalk_:1;
-  BOOL hasVersion_:1;
-  BOOL positional_:1;
-  BOOL pushToTalk_:1;
-  uint32_t version;
-}
-- (BOOL) hasVersion;
-- (BOOL) hasPositional;
-- (BOOL) hasPushToTalk;
-@property (readonly) uint32_t version;
-- (BOOL) positional;
-- (BOOL) pushToTalk;
-
-+ (MPSuggestConfig*) defaultInstance;
-- (MPSuggestConfig*) defaultInstance;
-
-- (BOOL) isInitialized;
-- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPSuggestConfig_Builder*) builder;
-+ (MPSuggestConfig_Builder*) builder;
-+ (MPSuggestConfig_Builder*) builderWithPrototype:(MPSuggestConfig*) prototype;
-- (MPSuggestConfig_Builder*) toBuilder;
-
-+ (MPSuggestConfig*) parseFromData:(NSData*) data;
-+ (MPSuggestConfig*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPSuggestConfig*) parseFromInputStream:(NSInputStream*) input;
-+ (MPSuggestConfig*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-+ (MPSuggestConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input;
-+ (MPSuggestConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-@end
-
-@interface MPSuggestConfig_Builder : PBGeneratedMessage_Builder {
-@private
-  MPSuggestConfig* result;
-}
-
-- (MPSuggestConfig*) defaultInstance;
-
-- (MPSuggestConfig_Builder*) clear;
-- (MPSuggestConfig_Builder*) clone;
-
-- (MPSuggestConfig*) build;
-- (MPSuggestConfig*) buildPartial;
-
-- (MPSuggestConfig_Builder*) mergeFrom:(MPSuggestConfig*) other;
-- (MPSuggestConfig_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPSuggestConfig_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
-
-- (BOOL) hasVersion;
-- (uint32_t) version;
-- (MPSuggestConfig_Builder*) setVersion:(uint32_t) value;
-- (MPSuggestConfig_Builder*) clearVersion;
-
-- (BOOL) hasPositional;
-- (BOOL) positional;
-- (MPSuggestConfig_Builder*) setPositional:(BOOL) value;
-- (MPSuggestConfig_Builder*) clearPositional;
-
-- (BOOL) hasPushToTalk;
-- (BOOL) pushToTalk;
-- (MPSuggestConfig_Builder*) setPushToTalk:(BOOL) value;
-- (MPSuggestConfig_Builder*) clearPushToTalk;
-@end
-
-@interface MPRequestBlob : PBGeneratedMessage {
+#define RequestBlob_session_texture @"sessionTexture"
+#define RequestBlob_session_comment @"sessionComment"
+#define RequestBlob_channel_description @"channelDescription"
+@interface MPRequestBlob : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
   PBAppendableArray * sessionTextureArray;
   PBAppendableArray * sessionCommentArray;
   PBAppendableArray * channelDescriptionArray;
 }
-@property (readonly, retain) PBArray * sessionTexture;
-@property (readonly, retain) PBArray * sessionComment;
-@property (readonly, retain) PBArray * channelDescription;
-- (uint32_t)sessionTextureAtIndex:(NSUInteger)index;
-- (uint32_t)sessionCommentAtIndex:(NSUInteger)index;
-- (uint32_t)channelDescriptionAtIndex:(NSUInteger)index;
+@property (readonly, strong) PBArray * sessionTexture;
+@property (readonly, strong) PBArray * sessionComment;
+@property (readonly, strong) PBArray * channelDescription;
+- (UInt32)sessionTextureAtIndex:(NSUInteger)index;
+- (UInt32)sessionCommentAtIndex:(NSUInteger)index;
+- (UInt32)channelDescriptionAtIndex:(NSUInteger)index;
 
-+ (MPRequestBlob*) defaultInstance;
-- (MPRequestBlob*) defaultInstance;
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
 
 - (BOOL) isInitialized;
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
-- (MPRequestBlob_Builder*) builder;
-+ (MPRequestBlob_Builder*) builder;
-+ (MPRequestBlob_Builder*) builderWithPrototype:(MPRequestBlob*) prototype;
-- (MPRequestBlob_Builder*) toBuilder;
+- (MPRequestBlobBuilder*) builder;
++ (MPRequestBlobBuilder*) builder;
++ (MPRequestBlobBuilder*) builderWithPrototype:(MPRequestBlob*) prototype;
+- (MPRequestBlobBuilder*) toBuilder;
 
 + (MPRequestBlob*) parseFromData:(NSData*) data;
 + (MPRequestBlob*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
@@ -2910,42 +2992,296 @@ BOOL MPContextActionModify_OperationIsValidValue(MPContextActionModify_Operation
 + (MPRequestBlob*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 @end
 
-@interface MPRequestBlob_Builder : PBGeneratedMessage_Builder {
+@interface MPRequestBlobBuilder : PBGeneratedMessageBuilder {
 @private
-  MPRequestBlob* result;
+  MPRequestBlob* resultRequestBlob;
 }
 
 - (MPRequestBlob*) defaultInstance;
 
-- (MPRequestBlob_Builder*) clear;
-- (MPRequestBlob_Builder*) clone;
+- (MPRequestBlobBuilder*) clear;
+- (MPRequestBlobBuilder*) clone;
 
 - (MPRequestBlob*) build;
 - (MPRequestBlob*) buildPartial;
 
-- (MPRequestBlob_Builder*) mergeFrom:(MPRequestBlob*) other;
-- (MPRequestBlob_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
-- (MPRequestBlob_Builder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+- (MPRequestBlobBuilder*) mergeFrom:(MPRequestBlob*) other;
+- (MPRequestBlobBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPRequestBlobBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
 
 - (PBAppendableArray *)sessionTexture;
-- (uint32_t)sessionTextureAtIndex:(NSUInteger)index;
-- (MPRequestBlob_Builder *)addSessionTexture:(uint32_t)value;
-- (MPRequestBlob_Builder *)setSessionTextureArray:(NSArray *)array;
-- (MPRequestBlob_Builder *)setSessionTextureValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPRequestBlob_Builder *)clearSessionTexture;
+- (UInt32)sessionTextureAtIndex:(NSUInteger)index;
+- (MPRequestBlobBuilder *)addSessionTexture:(UInt32)value;
+- (MPRequestBlobBuilder *)setSessionTextureArray:(NSArray *)array;
+- (MPRequestBlobBuilder *)setSessionTextureValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPRequestBlobBuilder *)clearSessionTexture;
 
 - (PBAppendableArray *)sessionComment;
-- (uint32_t)sessionCommentAtIndex:(NSUInteger)index;
-- (MPRequestBlob_Builder *)addSessionComment:(uint32_t)value;
-- (MPRequestBlob_Builder *)setSessionCommentArray:(NSArray *)array;
-- (MPRequestBlob_Builder *)setSessionCommentValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPRequestBlob_Builder *)clearSessionComment;
+- (UInt32)sessionCommentAtIndex:(NSUInteger)index;
+- (MPRequestBlobBuilder *)addSessionComment:(UInt32)value;
+- (MPRequestBlobBuilder *)setSessionCommentArray:(NSArray *)array;
+- (MPRequestBlobBuilder *)setSessionCommentValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPRequestBlobBuilder *)clearSessionComment;
 
 - (PBAppendableArray *)channelDescription;
-- (uint32_t)channelDescriptionAtIndex:(NSUInteger)index;
-- (MPRequestBlob_Builder *)addChannelDescription:(uint32_t)value;
-- (MPRequestBlob_Builder *)setChannelDescriptionArray:(NSArray *)array;
-- (MPRequestBlob_Builder *)setChannelDescriptionValues:(const uint32_t *)values count:(NSUInteger)count;
-- (MPRequestBlob_Builder *)clearChannelDescription;
+- (UInt32)channelDescriptionAtIndex:(NSUInteger)index;
+- (MPRequestBlobBuilder *)addChannelDescription:(UInt32)value;
+- (MPRequestBlobBuilder *)setChannelDescriptionArray:(NSArray *)array;
+- (MPRequestBlobBuilder *)setChannelDescriptionValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPRequestBlobBuilder *)clearChannelDescription;
 @end
 
+#define ServerConfig_max_bandwidth @"maxBandwidth"
+#define ServerConfig_welcome_text @"welcomeText"
+#define ServerConfig_allow_html @"allowHtml"
+#define ServerConfig_message_length @"messageLength"
+#define ServerConfig_image_message_length @"imageMessageLength"
+#define ServerConfig_max_users @"maxUsers"
+@interface MPServerConfig : PBGeneratedMessage<GeneratedMessageProtocol> {
+@private
+  BOOL hasAllowHtml_:1;
+  BOOL hasWelcomeText_:1;
+  BOOL hasMaxBandwidth_:1;
+  BOOL hasMessageLength_:1;
+  BOOL hasImageMessageLength_:1;
+  BOOL hasMaxUsers_:1;
+  BOOL allowHtml_:1;
+  NSString* welcomeText;
+  UInt32 maxBandwidth;
+  UInt32 messageLength;
+  UInt32 imageMessageLength;
+  UInt32 maxUsers;
+}
+- (BOOL) hasMaxBandwidth;
+- (BOOL) hasWelcomeText;
+- (BOOL) hasAllowHtml;
+- (BOOL) hasMessageLength;
+- (BOOL) hasImageMessageLength;
+- (BOOL) hasMaxUsers;
+@property (readonly) UInt32 maxBandwidth;
+@property (readonly, strong) NSString* welcomeText;
+- (BOOL) allowHtml;
+@property (readonly) UInt32 messageLength;
+@property (readonly) UInt32 imageMessageLength;
+@property (readonly) UInt32 maxUsers;
+
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
+
+- (BOOL) isInitialized;
+- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
+- (MPServerConfigBuilder*) builder;
++ (MPServerConfigBuilder*) builder;
++ (MPServerConfigBuilder*) builderWithPrototype:(MPServerConfig*) prototype;
+- (MPServerConfigBuilder*) toBuilder;
+
++ (MPServerConfig*) parseFromData:(NSData*) data;
++ (MPServerConfig*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPServerConfig*) parseFromInputStream:(NSInputStream*) input;
++ (MPServerConfig*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPServerConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPServerConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+@end
+
+@interface MPServerConfigBuilder : PBGeneratedMessageBuilder {
+@private
+  MPServerConfig* resultServerConfig;
+}
+
+- (MPServerConfig*) defaultInstance;
+
+- (MPServerConfigBuilder*) clear;
+- (MPServerConfigBuilder*) clone;
+
+- (MPServerConfig*) build;
+- (MPServerConfig*) buildPartial;
+
+- (MPServerConfigBuilder*) mergeFrom:(MPServerConfig*) other;
+- (MPServerConfigBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPServerConfigBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+
+- (BOOL) hasMaxBandwidth;
+- (UInt32) maxBandwidth;
+- (MPServerConfigBuilder*) setMaxBandwidth:(UInt32) value;
+- (MPServerConfigBuilder*) clearMaxBandwidth;
+
+- (BOOL) hasWelcomeText;
+- (NSString*) welcomeText;
+- (MPServerConfigBuilder*) setWelcomeText:(NSString*) value;
+- (MPServerConfigBuilder*) clearWelcomeText;
+
+- (BOOL) hasAllowHtml;
+- (BOOL) allowHtml;
+- (MPServerConfigBuilder*) setAllowHtml:(BOOL) value;
+- (MPServerConfigBuilder*) clearAllowHtml;
+
+- (BOOL) hasMessageLength;
+- (UInt32) messageLength;
+- (MPServerConfigBuilder*) setMessageLength:(UInt32) value;
+- (MPServerConfigBuilder*) clearMessageLength;
+
+- (BOOL) hasImageMessageLength;
+- (UInt32) imageMessageLength;
+- (MPServerConfigBuilder*) setImageMessageLength:(UInt32) value;
+- (MPServerConfigBuilder*) clearImageMessageLength;
+
+- (BOOL) hasMaxUsers;
+- (UInt32) maxUsers;
+- (MPServerConfigBuilder*) setMaxUsers:(UInt32) value;
+- (MPServerConfigBuilder*) clearMaxUsers;
+@end
+
+#define SuggestConfig_version @"version"
+#define SuggestConfig_positional @"positional"
+#define SuggestConfig_push_to_talk @"pushToTalk"
+@interface MPSuggestConfig : PBGeneratedMessage<GeneratedMessageProtocol> {
+@private
+  BOOL hasPositional_:1;
+  BOOL hasPushToTalk_:1;
+  BOOL hasVersion_:1;
+  BOOL positional_:1;
+  BOOL pushToTalk_:1;
+  UInt32 version;
+}
+- (BOOL) hasVersion;
+- (BOOL) hasPositional;
+- (BOOL) hasPushToTalk;
+@property (readonly) UInt32 version;
+- (BOOL) positional;
+- (BOOL) pushToTalk;
+
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
+
+- (BOOL) isInitialized;
+- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
+- (MPSuggestConfigBuilder*) builder;
++ (MPSuggestConfigBuilder*) builder;
++ (MPSuggestConfigBuilder*) builderWithPrototype:(MPSuggestConfig*) prototype;
+- (MPSuggestConfigBuilder*) toBuilder;
+
++ (MPSuggestConfig*) parseFromData:(NSData*) data;
++ (MPSuggestConfig*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPSuggestConfig*) parseFromInputStream:(NSInputStream*) input;
++ (MPSuggestConfig*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPSuggestConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPSuggestConfig*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+@end
+
+@interface MPSuggestConfigBuilder : PBGeneratedMessageBuilder {
+@private
+  MPSuggestConfig* resultSuggestConfig;
+}
+
+- (MPSuggestConfig*) defaultInstance;
+
+- (MPSuggestConfigBuilder*) clear;
+- (MPSuggestConfigBuilder*) clone;
+
+- (MPSuggestConfig*) build;
+- (MPSuggestConfig*) buildPartial;
+
+- (MPSuggestConfigBuilder*) mergeFrom:(MPSuggestConfig*) other;
+- (MPSuggestConfigBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPSuggestConfigBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+
+- (BOOL) hasVersion;
+- (UInt32) version;
+- (MPSuggestConfigBuilder*) setVersion:(UInt32) value;
+- (MPSuggestConfigBuilder*) clearVersion;
+
+- (BOOL) hasPositional;
+- (BOOL) positional;
+- (MPSuggestConfigBuilder*) setPositional:(BOOL) value;
+- (MPSuggestConfigBuilder*) clearPositional;
+
+- (BOOL) hasPushToTalk;
+- (BOOL) pushToTalk;
+- (MPSuggestConfigBuilder*) setPushToTalk:(BOOL) value;
+- (MPSuggestConfigBuilder*) clearPushToTalk;
+@end
+
+#define PluginDataTransmission_senderSession @"senderSession"
+#define PluginDataTransmission_receiverSessions @"receiverSessions"
+#define PluginDataTransmission_data @"data"
+#define PluginDataTransmission_dataID @"dataId"
+@interface MPPluginDataTransmission : PBGeneratedMessage<GeneratedMessageProtocol> {
+@private
+  BOOL hasDataId_:1;
+  BOOL hasData_:1;
+  BOOL hasSenderSession_:1;
+  NSString* dataId;
+  NSData* data;
+  UInt32 senderSession;
+  PBAppendableArray * receiverSessionsArray;
+  SInt32 receiverSessionsMemoizedSerializedSize;
+}
+- (BOOL) hasSenderSession;
+- (BOOL) hasData;
+- (BOOL) hasDataId;
+@property (readonly) UInt32 senderSession;
+@property (readonly, strong) PBArray * receiverSessions;
+@property (readonly, strong) NSData* data;
+@property (readonly, strong) NSString* dataId;
+- (UInt32)receiverSessionsAtIndex:(NSUInteger)index;
+
++ (instancetype) defaultInstance;
+- (instancetype) defaultInstance;
+
+- (BOOL) isInitialized;
+- (void) writeToCodedOutputStream:(PBCodedOutputStream*) output;
+- (MPPluginDataTransmissionBuilder*) builder;
++ (MPPluginDataTransmissionBuilder*) builder;
++ (MPPluginDataTransmissionBuilder*) builderWithPrototype:(MPPluginDataTransmission*) prototype;
+- (MPPluginDataTransmissionBuilder*) toBuilder;
+
++ (MPPluginDataTransmission*) parseFromData:(NSData*) data;
++ (MPPluginDataTransmission*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPPluginDataTransmission*) parseFromInputStream:(NSInputStream*) input;
++ (MPPluginDataTransmission*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
++ (MPPluginDataTransmission*) parseFromCodedInputStream:(PBCodedInputStream*) input;
++ (MPPluginDataTransmission*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+@end
+
+@interface MPPluginDataTransmissionBuilder : PBGeneratedMessageBuilder {
+@private
+  MPPluginDataTransmission* resultPluginDataTransmission;
+}
+
+- (MPPluginDataTransmission*) defaultInstance;
+
+- (MPPluginDataTransmissionBuilder*) clear;
+- (MPPluginDataTransmissionBuilder*) clone;
+
+- (MPPluginDataTransmission*) build;
+- (MPPluginDataTransmission*) buildPartial;
+
+- (MPPluginDataTransmissionBuilder*) mergeFrom:(MPPluginDataTransmission*) other;
+- (MPPluginDataTransmissionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input;
+- (MPPluginDataTransmissionBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry;
+
+- (BOOL) hasSenderSession;
+- (UInt32) senderSession;
+- (MPPluginDataTransmissionBuilder*) setSenderSession:(UInt32) value;
+- (MPPluginDataTransmissionBuilder*) clearSenderSession;
+
+- (PBAppendableArray *)receiverSessions;
+- (UInt32)receiverSessionsAtIndex:(NSUInteger)index;
+- (MPPluginDataTransmissionBuilder *)addReceiverSessions:(UInt32)value;
+- (MPPluginDataTransmissionBuilder *)setReceiverSessionsArray:(NSArray *)array;
+- (MPPluginDataTransmissionBuilder *)setReceiverSessionsValues:(const UInt32 *)values count:(NSUInteger)count;
+- (MPPluginDataTransmissionBuilder *)clearReceiverSessions;
+
+- (BOOL) hasData;
+- (NSData*) data;
+- (MPPluginDataTransmissionBuilder*) setData:(NSData*) value;
+- (MPPluginDataTransmissionBuilder*) clearData;
+
+- (BOOL) hasDataId;
+- (NSString*) dataId;
+- (MPPluginDataTransmissionBuilder*) setDataId:(NSString*) value;
+- (MPPluginDataTransmissionBuilder*) clearDataId;
+@end
+
+
+// @@protoc_insertion_point(global_scope)

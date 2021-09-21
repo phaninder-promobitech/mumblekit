@@ -11,8 +11,8 @@
 #
 # Grab the latest Mumble.proto file from desktop Mumble.
 #
-curl "https://raw.github.com/mumble-voip/mumble/master/src/Mumble.proto" > Mumble.proto.clean
-cat Mumble.proto.objc Mumble.proto.clean > Mumble.proto
+# curl "https://raw.githubusercontent.com/mumble-voip/mumble/master/src/Mumble.proto" > Mumble.proto.clean
+# cat Mumble.proto.objc Mumble.proto.clean > Mumble.proto
 sed -i '' -e  's, hash =, cert_hash =,g' Mumble.proto
 /usr/local/bin/protoc --objc_out=. \
 	-I. \

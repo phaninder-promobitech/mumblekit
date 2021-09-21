@@ -4,12 +4,12 @@
 [submodule "3rdparty/celt-0.7.0"]
 	path = 3rdparty/celt-0.7.0
 	url = git://github.com/mumble-voip/celt-0.7.0.git
-[submodule "3rdparty/protobuf"]
-	path = 3rdparty/protobuf
-	url = git://github.com/booyah/protobuf-objc.git
 [submodule "3rdparty/openssl"]
 	path = 3rdparty/openssl
 	url = git://github.com/mkrautz/openssl-mirror.git
 [submodule "3rdparty/opus"]
 	path = 3rdparty/opus
 	url = git://github.com/xiph/opus.git
+[submodule "3rdparty/protobuf/protobuf-objc"]
+	path = 3rdparty/protobuf/protobuf-objc
+	url = git://github.com/alexeyxo/protobuf-objc.git

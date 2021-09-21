@@ -349,7 +349,7 @@ static void MKConnectionUDPCallback(CFSocketRef sock, CFSocketCallBackType type,
 
 - (void) authenticateWithUsername:(NSString *)userName password:(NSString *)password accessTokens:(NSArray *)tokens {
      NSData *data;
-     MPVersion_Builder *version = [MPVersion builder];
+     MPVersionBuilder *version = [MPVersion builder];
 
     //
     // Query the OS name and version
@@ -373,7 +373,7 @@ static void MKConnectionUDPCallback(CFSocketRef sock, CFSocketCallBackType type,
     data = [[version build] data];
     [self sendMessageWithType:VersionMessage data:data];
 
-    MPAuthenticate_Builder *authenticate = [MPAuthenticate builder];
+    MPAuthenticateBuilder *authenticate = [MPAuthenticate builder];
     [authenticate setUsername:userName];
     if (password) {
         [authenticate setPassword:password];
@@ -861,7 +861,7 @@ out:
     [pds release];
         
     // Then the TCP ping...
-    MPPing_Builder *ping = [MPPing builder];
+    MPPingBuilder *ping = [MPPing builder];
 
     [ping setTimestamp:timeStamp];
 

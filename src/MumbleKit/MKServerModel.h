@@ -624,4 +624,6 @@
 
 - (void) removePrioritySpeaker;
 
+- (void) addChannelListener:(UInt32)channelID;
+
 @end
