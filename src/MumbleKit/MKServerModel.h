@@ -626,4 +626,6 @@
 
 - (void) addChannelListener:(UInt32)channelID;
 
+- (void) removeChannelListener:(UInt32)channelID;
+
 @end

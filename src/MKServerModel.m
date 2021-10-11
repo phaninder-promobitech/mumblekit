@@ -1192,4 +1192,12 @@
     [_connection sendMessageWithType:UserStateMessage data:data];
 }
 
+- (void) removeChannelListener:(UInt32)channelID {
+    MPUserStateBuilder *mpus = [MPUserState builder];
+    [mpus addListeningChannelRemove:channelID];
+    NSData *data = [[mpus build] data];
+    [_connection sendMessageWithType:UserStateMessage data:data];
+}
+
+
 @end
