@@ -624,8 +624,9 @@
 
 - (void) removePrioritySpeaker;
 
-- (void) addChannelListener:(UInt32)channelID;
+- (void) addChannelListener:(UInt32)channelID withChannelUUID: (NSString *)channelUUID;
 
-- (void) removeChannelListener:(UInt32)channelID;
+- (void) removeChannelListener:(UInt32)channelID withChannelUUID: (NSString *)channelUUID;
 
+- (NSDictionary *)listenerMap;
 @end
