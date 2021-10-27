@@ -355,9 +355,6 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
         _sidetoneOutput = nil;
         _running = NO;
     }
-#if TARGET_OS_IPHONE == 1
-    AudioSessionSetActive(NO);
-#endif
 }
 
 // Start the audio engine

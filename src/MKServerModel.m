@@ -39,6 +39,7 @@
     id<MKServerModelDelegate> _delegate;
     WhisperTargetList         *_whisperTargetList;
     NSInteger                 _voiceTargetId;
+    NSMutableDictionary       *_listenerChannelMap;
 }
 
 // Notifications
@@ -84,6 +85,7 @@
         _userMap = [[NSMutableDictionary alloc] init];
         _channelMap = [[NSMutableDictionary alloc] init];
         _whisperTargetList = [[WhisperTargetList alloc] init];
+        _listenerChannelMap = [[NSMutableDictionary alloc] init];
         _rootChannel = [[MKChannel alloc] init];
         [_rootChannel setChannelId:0];
         [_rootChannel setChannelName:@"Root"];
@@ -1184,12 +1186,27 @@
     [[AudioPriorityManager shared] clearPrioritySpeaker];
 }
 
-- (void) addChannelListener:(UInt32)channelID {
+- (void) addChannelListener:(UInt32)channelID withChannelUUID: (NSString *)channelUUID {
     MPUserStateBuilder *mpus = [MPUserState builder];
     [mpus addListeningChannelAdd:channelID];
+    [_listenerChannelMap setObject:[NSNumber numberWithUnsignedInteger: channelID] forKey: channelUUID];
 
     NSData *data = [[mpus build] data];
     [_connection sendMessageWithType:UserStateMessage data:data];
 }
+
+- (void) removeChannelListener:(UInt32)channelID withChannelUUID: (NSString *)channelUUID {
+    MPUserStateBuilder *mpus = [MPUserState builder];
+    [mpus addListeningChannelRemove:channelID];
+    [_listenerChannelMap removeObjectForKey: channelUUID];
+
+    NSData *data = [[mpus build] data];
+    [_connection sendMessageWithType:UserStateMessage data:data];
+}
+
+- (NSDictionary *)listenerMap {
+    return _listenerChannelMap;
+}
+
 
 @end
