@@ -357,6 +357,13 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
     }
 }
 
+- (void) stopAudioAndInvalidateAudioSession {
+    [self stop];
+#if TARGET_OS_IPHONE == 1
+    AudioSessionSetActive(NO);
+#endif
+}
+
 // Start the audio engine
 - (void) start {
 #if TARGET_OS_IPHONE == 1

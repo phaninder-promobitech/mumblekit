@@ -158,6 +158,8 @@ typedef struct _MKAudioSettings {
 /// Stops the MumbleKit audio subsystem.
 - (void) stop;
 
+- (void) stopAudioAndInvalidateAudioSession;
+
 /// Restarts MumbleKit's audio subsystem.
 - (void) restart;
 
