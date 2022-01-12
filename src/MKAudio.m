@@ -353,6 +353,10 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
     }
 }
 
+- (BOOL) isAudioConfiguredForAppActiveState {
+    return _audioSettings.isAppActive;
+}
+
 - (void) stopAudioAndInvalidateAudioSession {
     [self stop];
 #if TARGET_OS_IPHONE == 1

@@ -58,7 +58,7 @@ typedef struct _MKAudioSettings {
     BOOL            preferReceiverOverSpeaker;
     BOOL            opusForceCELTMode;
     BOOL            audioMixerDebug;
-    BOOL            isAppInActive;
+    BOOL            isAppActive;
 } MKAudioSettings;
 
 /// @protocol MKAudioDelegate MKAudio.h MumbleKit/MKAudio.h
@@ -178,6 +178,8 @@ typedef struct _MKAudioSettings {
 ///
 /// @param settings  A pointer to a MKAudioSettings struct with the new audio subsystem settings.
 - (void) updateAudioSettings:(MKAudioSettings *)settings;
+
+- (BOOL) isAudioConfiguredForAppActiveState;
 
 ///-------------------
 /// @name Transmission
