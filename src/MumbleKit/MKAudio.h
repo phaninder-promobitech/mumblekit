@@ -67,6 +67,9 @@ typedef struct _MKAudioSettings {
 /// that helps MKAudio in its operation.
 @protocol MKAudioDelegate
 
+- (void)audioSetupFailed;
+- (void)audioSetupSuccessful;
+
 // All methods are currently optional.
 @optional
 

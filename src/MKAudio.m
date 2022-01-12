@@ -381,7 +381,18 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
 #else
 # error Missing MKAudioDevice
 #endif
-        [_audioDevice setupDevice];
+        BOOL setupSuccessful = [_audioDevice setupDevice];
+        id<MKAudioDelegate> delegate;
+        @synchronized(self) {
+            delegate = _delegate;
+        }
+        if (setupSuccessful) {
+            NSLog(@"Setup successful");
+            [delegate audioSetupSuccessful];
+        } else {
+            NSLog(@"Setup was not successful");
+            [delegate audioSetupFailed];
+        }
         _audioInput = [[MKAudioInput alloc] initWithDevice:_audioDevice andSettings:&_audioSettings];
         [_audioInput setMainConnectionForAudio:_connection];
         _audioOutput = [[MKAudioOutput alloc] initWithDevice:_audioDevice andSettings:&_audioSettings];
