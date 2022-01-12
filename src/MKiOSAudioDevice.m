@@ -10,6 +10,9 @@
 #import <AudioUnit/AudioUnit.h>
 #import <AudioUnit/AUComponent.h>
 #import <AudioToolbox/AudioToolbox.h>
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import <UIKit/UIKit.h>
+#endif
 
 @interface MKiOSAudioDevice () {
 @public
@@ -138,14 +141,16 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
         NSLog(@"MKiOSAudioDevice: Unable to instantiate new AudioUnit.");
         return NO;
     }
-        
-    val = 1;
-    err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input, 1, &val, sizeof(UInt32));
-    if (err != noErr) {
-        NSLog(@"MKiOSAudioDevice: Unable to configure input scope on AudioUnit.");
-        return NO;
-    }
     
+    if (_settings.isAppInActive) {
+        val = 1;
+        err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input, 1, &val, sizeof(UInt32));
+        if (err != noErr) {
+            NSLog(@"MKiOSAudioDevice: Unable to configure input scope on AudioUnit.");
+            return NO;
+        }
+    }
+        
     val = 1;
     err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Output, 0, &val, sizeof(UInt32));
     if (err != noErr) {
@@ -154,13 +159,15 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
     }
     
     AURenderCallbackStruct cb;
-    cb.inputProc = inputCallback;
-    cb.inputProcRefCon = self;
-    len = sizeof(AURenderCallbackStruct);
-    err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_SetInputCallback, kAudioUnitScope_Global, 0, &cb, len);
-    if (err != noErr) {
-        NSLog(@"MKiOSAudioDevice: Unable to setup callback.");
-        return NO;
+    if (_settings.isAppInActive) {
+        cb.inputProc = inputCallback;
+        cb.inputProcRefCon = self;
+        len = sizeof(AURenderCallbackStruct);
+        err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_SetInputCallback, kAudioUnitScope_Global, 0, &cb, len);
+        if (err != noErr) {
+            NSLog(@"MKiOSAudioDevice: Unable to setup callback.");
+            return NO;
+        }
     }
     
     cb.inputProc = outputCallback;

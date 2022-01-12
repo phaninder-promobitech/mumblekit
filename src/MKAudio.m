@@ -329,11 +329,7 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
     // If no delegate is available, or the audioShouldBeRunning:
     // method is not implemented in the delegate, fall back to something
     // relatively sane.
-#if TARGET_OS_IPHONE == 1
-    return [[UIApplication sharedApplication] applicationState] == UIApplicationStateActive;
-#else
     return YES;
-#endif
 }
 
 // Has MKAudio been started?
