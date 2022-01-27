@@ -911,13 +911,18 @@
 
 - (MKUser *) userWithComment:(NSString *)comment {
     NSArray *usersArray = [_userMap allValues];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"comment==%@",comment];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"username==%@", [comment stringByReplacingOccurrencesOfString:@"-" withString:@""]];
     NSArray *results = [usersArray filteredArrayUsingPredicate:predicate];
     return [results firstObject];
 }
 
 - (NSArray<MKUser *> *) usersWithCommentIds:(NSArray<NSString *> *)comments {
-    return [self fetchUsersWithIds: comments];
+    NSMutableArray *userNames = [[NSMutableArray alloc] init];
+    for (int i = 0; i < comments.count; i++) {
+        NSString *userName = [comments[i] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        [userNames addObject: userName];
+    }
+    return [self fetchUsersWithIds: userNames];
 }
 
 - (NSDictionary *)userMap {

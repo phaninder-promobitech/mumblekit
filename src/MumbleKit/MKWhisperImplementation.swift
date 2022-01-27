@@ -140,7 +140,7 @@ import Foundation
     @objc func fetchUsersWithIds(_ userIds: [String]) -> [MKUser] {
         guard let userMap = self.userMap() as? [Int: MKUser] else { return [] }
         let filteredUsers = userMap.values.filter { (user) -> Bool in
-            userIds.contains(user.comment() ?? "")
+            userIds.contains(user.userName() ?? "")
         }
         return filteredUsers
     }
