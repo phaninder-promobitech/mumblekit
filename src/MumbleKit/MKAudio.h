@@ -59,6 +59,7 @@ typedef struct _MKAudioSettings {
     BOOL            opusForceCELTMode;
     BOOL            audioMixerDebug;
     BOOL            isAppActive;
+    BOOL            shouldInitialiseAudioInput;
 } MKAudioSettings;
 
 /// @protocol MKAudioDelegate MKAudio.h MumbleKit/MKAudio.h

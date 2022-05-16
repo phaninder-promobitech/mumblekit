@@ -117,6 +117,7 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
 }
 
 - (BOOL) setupDevice {
+    NSLog(@"***** setupDevice Called %d  %d",_settings.isAppActive, _settings.shouldInitialiseAudioInput);
     UInt32 len;
     UInt32 val;
     OSStatus err;
@@ -142,7 +143,7 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
         return NO;
     }
     
-    if (_settings.isAppActive) {
+    if (_settings.isAppActive && _settings.shouldInitialiseAudioInput) {
         val = 1;
         err = AudioUnitSetProperty(_audioUnit, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input, 1, &val, sizeof(UInt32));
         if (err != noErr) {
@@ -159,7 +160,7 @@ static OSStatus outputCallback(void *udata, AudioUnitRenderActionFlags *flags, c
     }
     
     AURenderCallbackStruct cb;
-    if (_settings.isAppActive) {
+    if (_settings.isAppActive && _settings.shouldInitialiseAudioInput) {
         cb.inputProc = inputCallback;
         cb.inputProcRefCon = self;
         len = sizeof(AURenderCallbackStruct);
