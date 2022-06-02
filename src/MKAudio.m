@@ -329,11 +329,7 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
     // If no delegate is available, or the audioShouldBeRunning:
     // method is not implemented in the delegate, fall back to something
     // relatively sane.
-#if TARGET_OS_IPHONE == 1
-    return [[UIApplication sharedApplication] applicationState] == UIApplicationStateActive;
-#else
     return YES;
-#endif
 }
 
 // Has MKAudio been started?
@@ -355,6 +351,10 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
         _sidetoneOutput = nil;
         _running = NO;
     }
+}
+
+- (BOOL) isAudioConfiguredForAppActiveState {
+    return _audioSettings.isAppActive;
 }
 
 - (void) stopAudioAndInvalidateAudioSession {
@@ -381,7 +381,18 @@ static void MKAudio_UpdateAudioSessionSettings(MKAudio *audio) {
 #else
 # error Missing MKAudioDevice
 #endif
-        [_audioDevice setupDevice];
+        BOOL setupSuccessful = [_audioDevice setupDevice];
+        id<MKAudioDelegate> delegate;
+        @synchronized(self) {
+            delegate = _delegate;
+        }
+        if (setupSuccessful) {
+            NSLog(@"Setup successful");
+            [delegate audioSetupSuccessful];
+        } else {
+            NSLog(@"Setup was not successful");
+            [delegate audioSetupFailed];
+        }
         _audioInput = [[MKAudioInput alloc] initWithDevice:_audioDevice andSettings:&_audioSettings];
         [_audioInput setMainConnectionForAudio:_connection];
         _audioOutput = [[MKAudioOutput alloc] initWithDevice:_audioDevice andSettings:&_audioSettings];

@@ -140,16 +140,16 @@ import Foundation
     @objc func fetchUsersWithIds(_ userIds: [String]) -> [MKUser] {
         guard let userMap = self.userMap() as? [Int: MKUser] else { return [] }
         let filteredUsers = userMap.values.filter { (user) -> Bool in
-            userIds.contains(user.comment() ?? "")
+            userIds.contains(user.userName() ?? "")
         }
         return filteredUsers
     }
     
-    @objc func sendMessageToUsers(_ users: [MKUser], fromUserName userName: String, andChannelId channelId: String?, withChannelName channelName: String?, talkType type: Int) {
+    @objc func sendMessageToUsers(_ users: [MKUser], fromUserName userName: String, andChannelId channelId: String?, withChannelName channelName: String?, talkType type: Int, sentAt: Int) {
         guard let connectedUser = self.connectedUser(),
               let userId = connectedUser.comment() else { return }
         var dict = ["user_id": userId,
-                    "sent_at": Int(Date().timeIntervalSince1970 * 1000),
+                    "sent_at": sentAt,
                     "type": type,
                     "ptt_session_id": connectedUser.session(),
                     "user_name": userName] as [String : Any]
