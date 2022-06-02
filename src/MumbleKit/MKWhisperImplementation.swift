@@ -9,7 +9,6 @@ import Foundation
 
 @objc public protocol WhisperTarget {
     
-    
     func createTarget() -> MPVoiceTargetTarget?
 
     // *
@@ -18,7 +17,7 @@ import Foundation
     func getName() -> String
 }
 
-@objc open class WhisperTargetUsers : NSObject, WhisperTarget {
+@objc open class WhisperTargetUsers: NSObject, WhisperTarget {
     
     public let users: [MKUser]
     
@@ -41,7 +40,7 @@ import Foundation
     }
 }
 
-@objc open class WhisperTargetChannel : NSObject, WhisperTarget {
+@objc open class WhisperTargetChannel: NSObject, WhisperTarget {
     private let channel: MKChannel
     private let includeLinked: Bool
     private let includeSubchannels: Bool
@@ -72,8 +71,8 @@ import Foundation
     }
 }
 @objc class WhisperTargetList: NSObject {
-    public let TARGET_MIN: Int = 1
-    public let TARGET_MAX: Int = 30
+    public let targetMin: Int = 1
+    public let targetMax: Int = 30
     private var mActiveTargets: [WhisperTarget?]
     //  Mumble stores voice targets using a 5-bit identifier.
     //  Use a bit vector to represent this 32-element range.
@@ -81,7 +80,7 @@ import Foundation
     private var mTakenIds: Int32 = 0
 
     public override init() {
-        mActiveTargets = [WhisperTarget?](repeating: nil, count: (TARGET_MAX - TARGET_MIN) + 1)
+        mActiveTargets = [WhisperTarget?](repeating: nil, count: (targetMax - targetMin) + 1)
         mTakenIds = 1 | (1 << 31)
     }
 
@@ -91,14 +90,14 @@ import Foundation
     //      * @return The slot number in range [1, 30].
     @objc public func append(_ target: WhisperTarget!) -> Int {
         var freeId: Int = -1
-        for i in TARGET_MIN ... TARGET_MAX - 1 {
-            if (mTakenIds & (1 << i)) == 0 {
-                freeId = i
+        for index in targetMin ... targetMax - 1 {
+            if mTakenIds & (1 << index) == 0 {
+                freeId = index
                 break
             }
         }
         if freeId != (-1) {
-            mActiveTargets[freeId - TARGET_MIN] = target
+            mActiveTargets[freeId - targetMin] = target
         }
         return freeId
     }
@@ -107,22 +106,22 @@ import Foundation
         if (mTakenIds & (1 << id)) > 0 {
             return nil
         }
-        return mActiveTargets[id - TARGET_MIN]
+        return mActiveTargets[id - targetMin]
     }
 
-    //TODO: Implemente this if this is necessary.
+    // TODO: Implemente this if this is necessary.
     @objc public func free(_ slot: Int) {
-        if (slot < TARGET_MIN) || (slot > TARGET_MAX) {
+        if (slot < targetMin) || (slot > targetMax) {
             return
 //            throw IllegalArgumentException()
         }
-        mTakenIds &= ~(1 << slot);
+        mTakenIds &= ~(1 << slot)
     }
 
     @objc public func spaceRemaining() -> Int32 {
         var counter: Int32 = 0
-        for i in TARGET_MIN ... TARGET_MAX - 1 {
-            if (mTakenIds & (1 << i)) == 0 {
+        for index in targetMin ... targetMax - 1 {
+            if mTakenIds & (1 << index) == 0 {
                 counter += 1
             }
         }
@@ -137,7 +136,7 @@ import Foundation
 
 @objc public extension MKServerModel {
     
-    @objc func fetchUsersWithIds(_ userIds: [String]) -> [MKUser] {
+    func fetchUsersWithIds(_ userIds: [String]) -> [MKUser] {
         guard let userMap = self.userMap() as? [Int: MKUser] else { return [] }
         let filteredUsers = userMap.values.filter { (user) -> Bool in
             userIds.contains(user.userName() ?? "")
@@ -145,14 +144,14 @@ import Foundation
         return filteredUsers
     }
     
-    @objc func sendMessageToUsers(_ users: [MKUser], fromUserName userName: String, andChannelId channelId: String?, withChannelName channelName: String?, talkType type: Int, sentAt: Int) {
+    func sendMessageToUsers(_ users: [MKUser], fromUserName userName: String, andChannelId channelId: String?, withChannelName channelName: String?, talkType type: Int, sentAt: Int) {
         guard let connectedUser = self.connectedUser(),
               let userId = connectedUser.comment() else { return }
         var dict = ["user_id": userId,
                     "sent_at": sentAt,
                     "type": type,
                     "ptt_session_id": connectedUser.session(),
-                    "user_name": userName] as [String : Any]
+                    "user_name": userName] as [String: Any]
         if let channelId = channelId {
             dict["channel_id"] = channelId
         }
