@@ -1047,7 +1047,8 @@ out:
             }
             NSUInteger session = [pds getUnsignedInt];
             NSUInteger seq = [pds getUnsignedInt];
-            if (seq == 0) {
+            BOOL sessionBelongsToCurrentOrg = [_msgHandler connection: self sessionBelongsToCurrentOrg: session];
+            if (!sessionBelongsToCurrentOrg || seq == 0) {
                 return;
             }
             NSMutableData *voicePacketData = [[NSMutableData alloc] initWithCapacity:[pds left]+1];
@@ -1063,7 +1064,7 @@ out:
         case UDPPingMessage: {
             uint64_t timeStamp = [pds getVarint];
             uint64_t now = [self _currentTimeStamp] - _connTime;
-            NSLog(@"UDP ping = %llu usec", now - timeStamp); 
+            NSLog(@"UDP ping = %llu usec", now - timeStamp);
             break;
         }
 

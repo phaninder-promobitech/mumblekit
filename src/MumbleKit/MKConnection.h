@@ -246,6 +246,8 @@ typedef enum {
 /// @param conn  The connection that received the message.
 /// @param msg   An internal representation of a permission query message.
 - (void) connection:(MKConnection *)conn handlePermissionQueryMessage: /* MPPermissionQuery */ (id)msg;
+
+- (BOOL) connection:(MKConnection *)conn sessionBelongsToCurrentOrg: (NSUInteger)session;
 @end
 
 /// @class MKConnection MKConnection.h MumbleKit/MKConnection.h

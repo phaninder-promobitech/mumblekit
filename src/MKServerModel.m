@@ -35,6 +35,7 @@
     MKChannel                 *_rootChannel;
     MKUser                    *_connectedUser;
     NSMutableDictionary       *_userMap;
+    NSMutableArray            *_currentOrgUserArray;
     NSMutableDictionary       *_channelMap;
     id<MKServerModelDelegate> _delegate;
     WhisperTargetList         *_whisperTargetList;
@@ -83,6 +84,7 @@
         _delegate = (id<MKServerModelDelegate>) [[MulticastDelegate alloc] init];
 
         _userMap = [[NSMutableDictionary alloc] init];
+        _currentOrgUserArray = [[NSMutableArray alloc] init];
         _channelMap = [[NSMutableDictionary alloc] init];
         _whisperTargetList = [[WhisperTargetList alloc] init];
         _listenerChannelMap = [[NSMutableDictionary alloc] init];
@@ -161,6 +163,8 @@
     [self removeAllUsersFromChannel:_rootChannel];
     [_userMap release];
     _userMap = nil;
+    [_currentOrgUserArray release];
+    _currentOrgUserArray = nil;
     
     [self removeAllChannels];
     [_channelMap release];
@@ -536,6 +540,10 @@
 }
 
 - (void) connection:(MKConnection *)conn handlePermissionQueryMessage: (MPPermissionQuery *)msg {
+}
+
+- (BOOL)connection:(MKConnection *)conn sessionBelongsToCurrentOrg:(NSUInteger)session {
+    return [self userBelongsToOrganisation: session];
 }
 
 #pragma mark -
@@ -932,6 +940,30 @@
 - (MKUser *) userWithHash:(NSString *)hash {
     return nil;
 }
+
+- (void) addUserToCurrentOrgArray:(NSString *)userName {
+    NSString *newUserName = [userName stringByReplacingOccurrencesOfString: @"-" withString: @""];
+    if ([_currentOrgUserArray containsObject: newUserName] == false) {
+        [_currentOrgUserArray addObject: newUserName];
+    }
+}
+
+- (void) removeUserToCurrentOrgArray:(NSString *)userName {
+    NSString *newUserName = [userName stringByReplacingOccurrencesOfString: @"-" withString: @""];
+    if ([_currentOrgUserArray containsObject: newUserName]) {
+        [_currentOrgUserArray removeObject: newUserName];
+    }
+}
+
+- (BOOL) userBelongsToOrganisation:(NSUInteger) session {
+    MKUser *user = [self userWithSession: session];
+    if ([_currentOrgUserArray containsObject: user.userName]) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 // Lookup a channel by its channelId.
 - (MKChannel *) channelWithId:(NSUInteger)channelId {
