@@ -618,6 +618,12 @@
 
 - (NSDictionary *)userMap;
 
+- (void) addUserToCurrentOrgArray:(NSString *)userName;
+
+- (void) removeUserToCurrentOrgArray:(NSString *)userName;
+
+- (BOOL) userBelongsToOrganisation:(NSUInteger) session;
+
 - (MKUser *) fetchPrioritySpeaker;
 
 - (void) setPrioritySpeaker:(MKUser *)user;
